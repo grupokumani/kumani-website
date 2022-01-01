@@ -2,6 +2,7 @@
  * KUMANI — Ponto de entrada JS (versão final)
  */
 
+import { initBackButton } from './utils/back-button.js';
 import { loadAllPartials } from './utils/load-partials.js';
 import { initNav } from './modules/nav.js';
 import { initHero } from './modules/hero.js';
@@ -27,6 +28,7 @@ async function bootstrap() {
   initNav();
   initSearch();
   initWhatsappFloat();
+  initBackButton();
 
   const page = document.body.dataset.page;
 

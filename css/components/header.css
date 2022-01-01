@@ -243,3 +243,141 @@
 body.menu-open {
   overflow: hidden;
 }
+
+/* ============================================
+   FASE 5C — DROPDOWNS DESKTOP
+   ============================================ */
+
+.header__nav-item {
+  position: relative;
+}
+
+.header__nav-link--btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.header__nav-link--btn::after {
+  content: '';
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 4px solid currentColor;
+  transition: transform var(--duration-fast) var(--ease-standard);
+}
+
+.header__nav-item--has-dropdown:hover .header__nav-link--btn::after,
+.header__nav-item--has-dropdown .header__nav-link--parent[aria-expanded="true"]::after {
+  transform: rotate(180deg);
+}
+
+.header__dropdown {
+  position: absolute;
+  top: calc(100% + 12px);
+  left: 0;
+  min-width: 240px;
+  background: var(--color-neutral-0);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  box-shadow: 0 12px 32px rgba(var(--color-brand-black-rgb), 0.12);
+  padding: var(--space-2) 0;
+  list-style: none;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-8px);
+  transition: opacity var(--duration-fast) var(--ease-standard),
+              transform var(--duration-fast) var(--ease-standard),
+              visibility var(--duration-fast);
+  z-index: 200;
+  pointer-events: none;
+}
+
+/* Abrir com hover (desktop) */
+.header__nav-item--has-dropdown:hover .header__dropdown,
+.header__nav-item--has-dropdown .header__nav-link--parent[aria-expanded="true"] ~ .header__dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.header__dropdown-link {
+  display: block;
+  padding: var(--space-3) var(--space-5);
+  font-size: var(--fs-sm);
+  color: var(--color-text-primary);
+  text-decoration: none;
+  transition: background var(--duration-fast) var(--ease-standard),
+              color var(--duration-fast) var(--ease-standard);
+}
+
+.header__dropdown-link:hover,
+.header__dropdown-link:focus {
+  background: var(--color-bg-subtle);
+  color: var(--kumani-green);
+  outline: none;
+}
+
+/* ============================================
+   FASE 5C — MENU MOBILE (acordeão)
+   ============================================ */
+
+.header__mobile-link--parent {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font: inherit;
+  color: inherit;
+  width: 100%;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-3) 0;
+  font-size: var(--fs-xl);
+  font-weight: var(--fw-bold);
+}
+
+.header__mobile-link--parent svg {
+  transition: transform var(--duration-fast) var(--ease-standard);
+  flex-shrink: 0;
+}
+
+.header__mobile-link--parent[aria-expanded="true"] svg {
+  transform: rotate(180deg);
+}
+
+.header__mobile-sub {
+  list-style: none;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height var(--duration-base) var(--ease-standard);
+}
+
+.header__mobile-sub.is-open {
+  max-height: 400px;
+}
+
+.header__mobile-sub-link {
+  display: block;
+  padding: var(--space-3) var(--space-4);
+  font-size: var(--fs-base);
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  border-left: 2px solid var(--kumani-green);
+  margin-left: var(--space-2);
+  margin-bottom: var(--space-1);
+}
+
+.header__mobile-sub-link:hover {
+  color: var(--kumani-green);
+}

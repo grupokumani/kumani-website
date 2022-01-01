@@ -1,0 +1,31 @@
+.eventos-pilares {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-6);
+  margin-top: var(--space-8);
+}
+
+.eventos-pilar {
+  padding: var(--space-6);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  border-top: 3px solid var(--kumani-green);
+}
+
+.eventos-pilar h3 {
+  font-size: var(--fs-md);
+  font-weight: var(--fw-bold);
+  margin-bottom: var(--space-3);
+}
+
+.eventos-pilar p {
+  font-size: var(--fs-sm);
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+}
+
+@media (max-width: 600px) {
+  .eventos-pilares {
+    grid-template-columns: 1fr;
+  }
+}

@@ -120,9 +120,74 @@ function initCartCount(header) {
 
 export function initNav() {
   const header = qs('[data-nav-root]');
+  initDropdowns();
+  initMobileAccordion();
   if (!header) return;
 
   initStickyBehaviour(header);
   initMobileMenu(header);
   initCartCount(header);
+
+  // --- Dropdowns desktop (teclado + rato) ---
+function initDropdowns() {
+  const toggles = document.querySelectorAll('[data-dropdown-toggle]');
+  toggles.forEach((toggle) => {
+    const parent = toggle.closest('.header__nav-item--has-dropdown');
+    const dropdown = parent?.querySelector('.header__dropdown');
+    if (!dropdown) return;
+
+    // Abrir/fechar com clique (teclado e toque)
+    toggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      const isOpen = toggle.getAttribute('aria-expanded') === 'true';
+      // Fechar todos os outros
+      toggles.forEach((t) => t.setAttribute('aria-expanded', 'false'));
+      toggle.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
+    });
+
+    // Fechar ao pressionar Escape
+    dropdown.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.focus();
+      }
+    });
+
+    // Fechar ao perder o foco do grupo todo
+    parent.addEventListener('focusout', (e) => {
+      if (!parent.contains(e.relatedTarget)) {
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  });
+
+  // Fechar ao clicar fora
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.header__nav-item--has-dropdown')) {
+      toggles.forEach((t) => t.setAttribute('aria-expanded', 'false'));
+    }
+  });
+}
+
+// --- Acordeão mobile ---
+function initMobileAccordion() {
+  const btns = document.querySelectorAll('[data-mobile-accordion]');
+  btns.forEach((btn) => {
+    const sub = btn.nextElementSibling;
+    if (!sub) return;
+    btn.addEventListener('click', () => {
+      const isOpen = btn.getAttribute('aria-expanded') === 'true';
+      // Fechar todos os outros
+      btns.forEach((b) => {
+        b.setAttribute('aria-expanded', 'false');
+        const s = b.nextElementSibling;
+        if (s) s.classList.remove('is-open');
+      });
+      if (!isOpen) {
+        btn.setAttribute('aria-expanded', 'true');
+        sub.classList.add('is-open');
+      }
+    });
+  });
+}
 }
