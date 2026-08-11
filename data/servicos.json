@@ -1,0 +1,86 @@
+[
+  {
+    "id": "publicidade",
+    "slug": "publicidade",
+    "nome": "Publicidade",
+    "resumo": "Campanhas que colocam a sua marca à frente do público certo.",
+    "corPlaceholder": "#2E7D32",
+    "paraQuem": "Empresas que precisam de lançar um produto, um evento ou reforçar presença de marca junto do público moçambicano.",
+    "inclui": [
+      "Criação de campanhas publicitárias",
+      "Anúncios digitais (Google Ads, Meta Ads)",
+      "Produção de conteúdo audiovisual",
+      "Branding publicitário"
+    ]
+  },
+  {
+    "id": "marketing-digital",
+    "slug": "marketing-digital",
+    "nome": "Marketing Digital",
+    "resumo": "Presença digital consistente, com dados a orientar cada decisão.",
+    "corPlaceholder": "#4CAF50",
+    "paraQuem": "Empresas que querem uma presença activa e mensurável nas redes sociais e nos motores de busca.",
+    "inclui": [
+      "Gestão de redes sociais",
+      "Calendário editorial estratégico",
+      "Gestão de tráfego pago",
+      "SEO/SEM e relatórios de desempenho"
+    ]
+  },
+  {
+    "id": "design-grafico",
+    "slug": "design-grafico",
+    "nome": "Design Gráfico",
+    "resumo": "Identidade visual e materiais que comunicam profissionalismo.",
+    "corPlaceholder": "#3D3D37",
+    "paraQuem": "Negócios que precisam de identidade visual nova ou de materiais promocionais consistentes com a marca.",
+    "inclui": [
+      "Identidade visual",
+      "Materiais promocionais (flyers, brochuras, cartões)",
+      "Design para redes sociais",
+      "Infográficos e apresentações"
+    ]
+  },
+  {
+    "id": "imagem-corporativa",
+    "slug": "imagem-corporativa",
+    "nome": "Imagem Corporativa",
+    "resumo": "Comunicação visual coesa, do manual de marca à apresentação.",
+    "corPlaceholder": "#1B1B1B",
+    "paraQuem": "Organizações e médias/grandes empresas que precisam de coerência visual em todos os pontos de contacto.",
+    "inclui": [
+      "Consultoria de imagem",
+      "Manuais de marca",
+      "Apresentações corporativas",
+      "Comunicação visual coesa"
+    ]
+  },
+  {
+    "id": "sinalizacao-impressao",
+    "slug": "sinalizacao-impressao",
+    "nome": "Sinalização e Impressão",
+    "resumo": "Presença física de qualidade, do outdoor à sinalética de loja.",
+    "corPlaceholder": "#D2691E",
+    "paraQuem": "Negócios com espaço físico (loja, escritório, viatura) que precisam de sinalização ou impressão de qualidade.",
+    "inclui": [
+      "Painéis luminosos e não luminosos",
+      "Outdoors, busdoors e banners",
+      "Branding de viaturas",
+      "Sinalização interna e externa"
+    ]
+  },
+  {
+    "id": "moveis-decoracao",
+    "slug": "moveis-decoracao",
+    "nome": "Móveis e Decoração",
+    "resumo": "Espaços residenciais e comerciais, do mobiliário à pavimentação.",
+    "corPlaceholder": "#75756B",
+    "paraQuem": "Proprietários, arrendatários e promotores imobiliários que precisam de mobilar ou decorar um espaço.",
+    "inclui": [
+      "Móveis sob medida e/ou catálogo",
+      "Decoração de interiores e exteriores",
+      "Pavimentação em pedras decorativas",
+      "Projectos chave-na-mão"
+    ]
+  }
+]

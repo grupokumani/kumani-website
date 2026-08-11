@@ -1,0 +1,173 @@
+/* ============================================
+   KUMANI — PÁGINA: /SERVICOS
+   ============================================ */
+
+.services-header {
+  padding: var(--space-10) var(--space-container-x) var(--space-7);
+  max-width: 640px;
+}
+
+.services-header__title {
+  font-size: var(--fs-4xl);
+  font-weight: var(--fw-bold);
+  text-transform: uppercase;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-3);
+  padding: 0 var(--space-container-x) var(--space-11);
+}
+
+.service-card {
+  display: block;
+  padding: var(--space-7) var(--space-6);
+  border-radius: var(--radius-card);
+  background: var(--color-bg-subtle);
+  border-top: 3px solid var(--color-brand-primary);
+  transition: transform var(--duration-fast) var(--ease-standard),
+              box-shadow var(--duration-fast) var(--ease-standard);
+}
+
+.service-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.service-card__name {
+  font-size: var(--fs-xl);
+  font-weight: var(--fw-bold);
+  text-transform: uppercase;
+  margin-bottom: var(--space-3);
+}
+
+.service-card__resumo {
+  font-size: var(--fs-sm);
+  color: var(--color-text-secondary);
+  line-height: var(--lh-relaxed);
+}
+
+@media (max-width: 1023px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* --- Página individual de serviço --- */
+.service-detail-hero {
+  padding: var(--space-10) var(--space-container-x) var(--space-8);
+}
+
+.service-detail-hero__category {
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-bold);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-widest);
+  color: var(--color-brand-primary-text);
+  margin-bottom: var(--space-3);
+}
+
+.service-detail-hero__title {
+  font-size: var(--fs-4xl);
+  font-weight: var(--fw-bold);
+  text-transform: uppercase;
+  max-width: 640px;
+  margin-bottom: var(--space-5);
+}
+
+.service-detail-hero__resumo {
+  font-size: var(--fs-lg);
+  color: var(--color-text-secondary);
+  max-width: 560px;
+}
+
+.service-detail-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-9);
+  padding: 0 var(--space-container-x) var(--space-11);
+  align-items: start;
+}
+
+.service-detail-body__label {
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-bold);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-wide);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-3);
+}
+
+.service-detail-body__inclui {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.service-detail-body__inclui li {
+  padding-left: var(--space-6);
+  position: relative;
+  font-size: var(--fs-base);
+}
+
+.service-detail-body__inclui li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 8px;
+  height: 8px;
+  border-radius: var(--radius-full);
+  background: var(--color-brand-primary);
+}
+
+.service-detail-body__paraquem {
+  font-size: var(--fs-base);
+  line-height: var(--lh-relaxed);
+  color: var(--color-text-secondary);
+}
+
+@media (max-width: 767px) {
+  .service-detail-body {
+    grid-template-columns: 1fr;
+    gap: var(--space-7);
+  }
+}
+
+/* --- Formulário de cotação --- */
+.quote-form-section {
+  background: var(--color-bg-subtle);
+  padding: var(--space-10) var(--space-container-x);
+}
+
+.quote-form {
+  max-width: 640px;
+  margin-inline: auto;
+}
+
+.quote-form__title {
+  font-size: var(--fs-2xl);
+  font-weight: var(--fw-bold);
+  text-transform: uppercase;
+  margin-bottom: var(--space-7);
+}
+
+.quote-form__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-5);
+}
+
+@media (max-width: 600px) {
+  .quote-form__row {
+    grid-template-columns: 1fr;
+  }
+}

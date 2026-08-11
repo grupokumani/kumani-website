@@ -1,0 +1,92 @@
+[
+  {
+    "id": "mr-houlang",
+    "slug": "mr-houlang",
+    "cliente": "Mr. Houlang",
+    "categoriaLabel": "Branding",
+    "categoriaSlug": "branding",
+    "destaqueHome": true,
+    "tamanho": "large",
+    "corPlaceholder": "#2E7D32",
+    "imagem": null,
+    "temVideo": false,
+    "youtubeId": null,
+    "problema": "[CONTEÚDO A FORNECER]",
+    "objectivo": "[CONTEÚDO A FORNECER]",
+    "estrategia": "[CONTEÚDO A FORNECER]",
+    "execucao": "[CONTEÚDO A FORNECER]",
+    "resultado": "[CONTEÚDO A FORNECER]",
+    "galeria": [
+      { "corPlaceholder": "#2E7D32", "imagem": null },
+      { "corPlaceholder": "#4CAF50", "imagem": null },
+      { "corPlaceholder": "#1B1B1B", "imagem": null }
+    ]
+  },
+  {
+    "id": "mozmeat",
+    "slug": "mozmeat",
+    "cliente": "MozMeat",
+    "categoriaLabel": "Sinalização",
+    "categoriaSlug": "sinalizacao",
+    "destaqueHome": true,
+    "tamanho": "small",
+    "corPlaceholder": "#D2691E",
+    "imagem": null,
+    "temVideo": false,
+    "youtubeId": null,
+    "problema": "[CONTEÚDO A FORNECER]",
+    "objectivo": "[CONTEÚDO A FORNECER]",
+    "estrategia": "[CONTEÚDO A FORNECER]",
+    "execucao": "[CONTEÚDO A FORNECER]",
+    "resultado": "[CONTEÚDO A FORNECER]",
+    "galeria": [
+      { "corPlaceholder": "#D2691E", "imagem": null },
+      { "corPlaceholder": "#3D3D37", "imagem": null }
+    ]
+  },
+  {
+    "id": "futai",
+    "slug": "futai",
+    "cliente": "Futai Internacional",
+    "categoriaLabel": "Design gráfico",
+    "categoriaSlug": "design-grafico",
+    "destaqueHome": true,
+    "tamanho": "small",
+    "corPlaceholder": "#3D3D37",
+    "imagem": null,
+    "temVideo": false,
+    "youtubeId": null,
+    "problema": "[CONTEÚDO A FORNECER]",
+    "objectivo": "[CONTEÚDO A FORNECER]",
+    "estrategia": "[CONTEÚDO A FORNECER]",
+    "execucao": "[CONTEÚDO A FORNECER]",
+    "resultado": "[CONTEÚDO A FORNECER]",
+    "galeria": [
+      { "corPlaceholder": "#3D3D37", "imagem": null },
+      { "corPlaceholder": "#75756B", "imagem": null }
+    ]
+  },
+  {
+    "id": "morrumbene-beach-resort",
+    "slug": "morrumbene-beach-resort",
+    "cliente": "Morrumbene Beach Resort",
+    "categoriaLabel": "Marketing digital",
+    "categoriaSlug": "marketing-digital",
+    "destaqueHome": false,
+    "tamanho": "small",
+    "corPlaceholder": "#4CAF50",
+    "imagem": null,
+    "temVideo": false,
+    "youtubeId": null,
+    "problema": "[CONTEÚDO A FORNECER]",
+    "objectivo": "[CONTEÚDO A FORNECER]",
+    "estrategia": "[CONTEÚDO A FORNECER]",
+    "execucao": "[CONTEÚDO A FORNECER]",
+    "resultado": "[CONTEÚDO A FORNECER]",
+    "galeria": [
+      { "corPlaceholder": "#4CAF50", "imagem": null },
+      { "corPlaceholder": "#2E7D32", "imagem": null },
+      { "corPlaceholder": "#1B1B1B", "imagem": null }
+    ]
+  }
+]
