@@ -1,0 +1,115 @@
+/* ============================================
+   KUMANI — PÁGINA: CASE STUDY INDIVIDUAL
+   ============================================ */
+
+.case-hero {
+  position: relative;
+  height: 60vh;
+  min-height: 400px;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.case-hero__media {
+  position: absolute;
+  inset: 0;
+}
+
+.case-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(27,27,27,0.1) 0%, rgba(27,27,27,0.75) 100%);
+}
+
+.case-hero__content {
+  position: relative;
+  z-index: 1;
+  padding: var(--space-9) var(--space-container-x);
+  color: var(--color-neutral-0);
+}
+
+.case-hero__category {
+  font-size: var(--fs-xs);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-widest);
+  color: var(--color-brand-gold);
+  margin-bottom: var(--space-3);
+}
+
+.case-hero__client {
+  font-size: var(--fs-4xl);
+  font-weight: var(--fw-bold);
+  text-transform: uppercase;
+}
+
+/* --- Corpo: Problema → Objectivo → Estratégia → Execução → Resultado --- */
+.case-body {
+  max-width: 760px;
+  margin-inline: auto;
+  padding: var(--space-10) var(--space-container-x);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-9);
+}
+
+.case-block__label {
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-bold);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-wide);
+  color: var(--color-brand-primary-text);
+  margin-bottom: var(--space-3);
+}
+
+.case-block__text {
+  font-size: var(--fs-lg);
+  line-height: var(--lh-relaxed);
+  color: var(--color-text-primary);
+}
+
+/* --- Galeria --- */
+.case-gallery {
+  padding: 0 var(--space-container-x) var(--space-10);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-3);
+}
+
+.case-gallery__item {
+  aspect-ratio: 1;
+  border-radius: var(--radius-md);
+  background-size: cover;
+  background-position: center;
+}
+
+@media (max-width: 767px) {
+  .case-gallery {
+    grid-template-columns: 1fr;
+  }
+  .case-hero__client {
+    font-size: var(--fs-3xl);
+  }
+}
+
+/* --- CTA de fecho --- */
+.case-cta {
+  background: var(--color-neutral-900);
+  padding: var(--space-11) var(--space-container-x);
+  text-align: center;
+}
+
+.case-cta__title {
+  color: var(--color-neutral-0);
+  font-size: var(--fs-2xl);
+  font-weight: var(--fw-bold);
+  text-transform: uppercase;
+  margin-bottom: var(--space-6);
+}
+
+.case-cta__actions {
+  display: flex;
+  gap: var(--space-4);
+  justify-content: center;
+  flex-wrap: wrap;
+}

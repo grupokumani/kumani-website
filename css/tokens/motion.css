@@ -1,0 +1,24 @@
+/* ============================================
+   KUMANI — TOKENS DE ANIMAÇÃO
+   Fonte: Especificação Mestra, secção 26 (Motion design)
+   ============================================ */
+
+:root {
+  /* --- Duração --- */
+  --duration-fast: 150ms;   /* hover, foco, micro-interações */
+  --duration-base: 250ms;   /* transições normais (header, botões) */
+  --duration-slow: 500ms;   /* scroll reveal de blocos e cards */
+
+  /* --- Curvas de easing --- */
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);     /* movimento normal, previsível */
+  --ease-emphasized: cubic-bezier(0.2, 0, 0, 1);      /* entrada de blocos por scroll, mais expressiva */
+}
+
+/* Respeita sempre a preferência do utilizador por menos animação */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --duration-fast: 0ms;
+    --duration-base: 0ms;
+    --duration-slow: 0ms;
+  }
+}

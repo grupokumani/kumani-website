@@ -1,0 +1,23 @@
+/* ============================================
+   KUMANI — TOKENS DE BREAKPOINTS
+   Fonte: Especificação Mestra, secção 27 (Responsive strategy)
+
+   IMPORTANTE (limitação técnica do CSS): estas variáveis servem de
+   referência/documentação e podem ser lidas em JavaScript, mas não
+   podem ser usadas dentro de @media (...) — os navegadores ainda não
+   permitem variáveis CSS dentro da condição de uma media query.
+   Nos ficheiros de componentes, os valores em pixel abaixo devem ser
+   escritos directamente, ex.: @media (min-width: 768px) { ... }
+   ============================================ */
+
+:root {
+  --bp-mobile: 375px;
+  --bp-tablet: 768px;
+  --bp-laptop: 1024px;
+  --bp-desktop: 1280px;
+  --bp-desktop-lg: 1440px;
+  --bp-ultrawide: 1920px;
+
+  /* Largura máxima de conteúdo — nunca esticar até à largura total do ecrã */
+  --container-max: 1440px;
+}

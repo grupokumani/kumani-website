@@ -1,0 +1,165 @@
+/* ============================================
+   KUMANI — PÁGINAS: /carrinho, /checkout, /encomenda-confirmada
+   ============================================ */
+
+.cart-page,
+.checkout-page,
+.confirmation-page {
+  max-width: 760px;
+  margin-inline: auto;
+  padding: var(--space-9) var(--space-container-x) var(--space-11);
+}
+
+.cart-page__title,
+.checkout-page__title {
+  font-size: var(--fs-3xl);
+  font-weight: var(--fw-bold);
+  text-transform: uppercase;
+  margin-bottom: var(--space-7);
+}
+
+.cart-empty {
+  text-align: center;
+  padding: var(--space-11) 0;
+  color: var(--color-text-secondary);
+}
+
+.cart-item {
+  display: grid;
+  grid-template-columns: 72px 1fr auto auto;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-5) 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.cart-item__media {
+  width: 72px;
+  height: 72px;
+  border-radius: var(--radius-sm);
+  background-size: cover;
+  background-position: center;
+}
+
+.cart-item__name {
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-sm);
+  margin-bottom: var(--space-2);
+}
+
+.cart-item__price {
+  font-size: var(--fs-xs);
+  color: var(--color-text-secondary);
+}
+
+.cart-item__qty {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.cart-item__qty-value {
+  min-width: 20px;
+  text-align: center;
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-bold);
+}
+
+.cart-item__remove {
+  font-size: var(--fs-xs);
+  color: var(--color-danger);
+}
+
+.cart-summary {
+  margin-top: var(--space-7);
+  padding-top: var(--space-6);
+  border-top: 2px solid var(--color-brand-black);
+}
+
+.cart-summary__row {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-bold);
+  margin-bottom: var(--space-6);
+}
+
+/* --- Checkout --- */
+.checkout-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: var(--space-9);
+  align-items: start;
+}
+
+.checkout-summary {
+  background: var(--color-bg-subtle);
+  border-radius: var(--radius-card);
+  padding: var(--space-6);
+}
+
+.checkout-summary__item {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--fs-sm);
+  margin-bottom: var(--space-3);
+}
+
+.checkout-summary__total {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-bold);
+  padding-top: var(--space-4);
+  margin-top: var(--space-4);
+  border-top: 1px solid var(--color-border-strong);
+}
+
+@media (max-width: 767px) {
+  .checkout-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* --- Confirmação --- */
+.confirmation-page {
+  text-align: center;
+  padding-top: var(--space-12);
+}
+
+.confirmation-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: var(--radius-full);
+  background: var(--color-brand-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--space-6);
+}
+
+.confirmation-icon svg {
+  width: 28px;
+  height: 28px;
+  color: var(--color-neutral-0);
+}
+
+.confirmation-page--pending .confirmation-icon {
+  background: var(--color-brand-copper);
+}
+
+.confirmation-page--failed .confirmation-icon {
+  background: var(--color-danger);
+}
+
+.confirmation-title {
+  font-size: var(--fs-2xl);
+  font-weight: var(--fw-bold);
+  text-transform: uppercase;
+  margin-bottom: var(--space-4);
+}
+
+.confirmation-text {
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-7);
+}

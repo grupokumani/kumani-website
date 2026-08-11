@@ -1,0 +1,23 @@
+/* ============================================
+   KUMANI — TOKENS DE ESPAÇAMENTO
+   Escala baseada em 4px, para todo o padding/margin/gap do site.
+   ============================================ */
+
+:root {
+  --space-1: 0.25rem;   /* 4px */
+  --space-2: 0.5rem;    /* 8px */
+  --space-3: 0.75rem;   /* 12px */
+  --space-4: 1rem;      /* 16px */
+  --space-5: 1.25rem;   /* 20px */
+  --space-6: 1.5rem;    /* 24px */
+  --space-7: 2rem;      /* 32px */
+  --space-8: 2.5rem;    /* 40px */
+  --space-9: 3rem;      /* 48px */
+  --space-10: 4rem;     /* 64px */
+  --space-11: 5rem;     /* 80px */
+  --space-12: 6rem;     /* 96px */
+
+  /* Espaçamento lateral de qualquer container: pequeno no telemóvel,
+     cresce em ecrãs largos, sem precisar de media queries. */
+  --space-container-x: clamp(1.25rem, 4vw, 4rem);
+}

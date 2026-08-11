@@ -1,0 +1,63 @@
+/* ============================================
+   KUMANI — ESTILOS BASE DE ELEMENTOS DE TEXTO
+   Aplica-se a texto corrido "normal" (parágrafos, listas, links
+   dentro de conteúdo) nas páginas de conteúdo (Sobre, Contacto, etc.).
+   Os componentes visuais (hero, cards, secções) continuam a definir
+   o seu próprio tamanho de título — isto é só a base sensata para
+   quando não há uma classe específica.
+   ============================================ */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-tight);
+  color: var(--color-text-primary);
+}
+
+h1 { font-size: var(--fs-4xl); }
+h2 { font-size: var(--fs-3xl); }
+h3 { font-size: var(--fs-2xl); }
+h4 { font-size: var(--fs-xl); }
+h5 { font-size: var(--fs-lg); }
+h6 { font-size: var(--fs-md); }
+
+p {
+  font-size: var(--fs-base);
+  line-height: var(--lh-relaxed);
+  color: var(--color-text-primary);
+}
+
+p + p {
+  margin-top: var(--space-4);
+}
+
+a:not([class]) {
+  color: var(--color-brand-primary-text);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+a:not([class]):hover {
+  color: var(--color-brand-primary);
+}
+
+ul:not([class]),
+ol:not([class]) {
+  list-style: revert;
+  padding-inline-start: var(--space-6);
+}
+
+ul:not([class]) li + li,
+ol:not([class]) li + li {
+  margin-top: var(--space-2);
+}
+
+strong { font-weight: var(--fw-bold); }
+em { font-style: italic; }
+
+blockquote {
+  border-left: 3px solid var(--color-brand-primary);
+  padding-left: var(--space-5);
+  color: var(--color-text-secondary);
+  font-style: italic;
+}

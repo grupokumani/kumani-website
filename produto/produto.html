@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-MZ">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Produto — Loja KUMANI</title>
+  <meta name="description" content="Detalhe de produto da Loja KUMANI.">
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+<body data-page="produto">
+
+  <a href="#main-content" class="skip-link">Saltar para o conteúdo principal</a>
+
+  <div data-partial="header"></div>
+
+  <main id="main-content" class="u-header-offset" data-product-detail>
+    <div class="product-detail">
+      <div class="product-detail__media" data-product-media></div>
+      <div>
+        <span class="product-detail__badge" data-product-badge style="display:none;"></span>
+        <h1 class="product-detail__name" data-product-name></h1>
+        <div class="product-detail__price" data-product-price></div>
+        <p class="product-detail__descricao" data-product-descricao></p>
+
+        <div class="product-detail__quantity">
+          <button type="button" class="btn-icon" data-qty-decrease aria-label="Diminuir quantidade">−</button>
+          <span class="product-detail__qty-value" data-qty-value>1</span>
+          <button type="button" class="btn-icon" data-qty-increase aria-label="Aumentar quantidade">+</button>
+        </div>
+
+        <button type="button" class="btn btn--primary btn--full" data-add-to-cart>Adicionar ao carrinho</button>
+      </div>
+    </div>
+  </main>
+
+  <div data-partial="footer"></div>
+
+  <script type="module" src="/js/main.js"></script>
+</body>
+</html>

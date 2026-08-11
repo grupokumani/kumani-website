@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-MZ">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Serviço — KUMANI</title>
+  <meta name="description" content="Detalhe de serviço KUMANI e pedido de cotação.">
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+<body data-page="servico-detalhe">
+
+  <a href="#main-content" class="skip-link">Saltar para o conteúdo principal</a>
+
+  <div data-partial="header"></div>
+
+  <main id="main-content" class="u-header-offset">
+
+    <section class="service-detail-hero">
+      <p class="service-detail-hero__category" data-service-category></p>
+      <h1 class="service-detail-hero__title" data-service-title></h1>
+      <p class="service-detail-hero__resumo" data-service-resumo></p>
+    </section>
+
+    <section class="service-detail-body">
+      <div>
+        <p class="service-detail-body__label">O que inclui</p>
+        <ul class="service-detail-body__inclui" data-service-inclui></ul>
+      </div>
+      <div>
+        <p class="service-detail-body__label">Para quem é indicado</p>
+        <p class="service-detail-body__paraquem" data-service-paraquem></p>
+      </div>
+    </section>
+
+    <section class="quote-form-section">
+      <form class="quote-form" data-quote-form novalidate>
+        <h2 class="quote-form__title">Pedir cotação</h2>
+
+        <div class="quote-form__row">
+          <div class="field">
+            <label class="field__label" for="q-nome">Nome<span class="field__required">*</span></label>
+            <input class="field__input" id="q-nome" name="nome" type="text" required>
+          </div>
+          <div class="field">
+            <label class="field__label" for="q-empresa">Empresa</label>
+            <input class="field__input" id="q-empresa" name="empresa" type="text">
+          </div>
+        </div>
+
+        <div class="quote-form__row">
+          <div class="field">
+            <label class="field__label" for="q-email">Email<span class="field__required">*</span></label>
+            <input class="field__input" id="q-email" name="email" type="email" required>
+          </div>
+          <div class="field">
+            <label class="field__label" for="q-telefone">Telefone<span class="field__required">*</span></label>
+            <input class="field__input" id="q-telefone" name="telefone" type="tel" required>
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="field__label" for="q-necessidade">Tipo de necessidade<span class="field__required">*</span></label>
+          <select class="field__select" id="q-necessidade" name="tipoNecessidade" data-field-necessidade required>
+            <option value="">Seleccione...</option>
+            <option value="Publicidade">Publicidade</option>
+            <option value="Marketing Digital">Marketing Digital</option>
+            <option value="Design Gráfico">Design Gráfico</option>
+            <option value="Imagem Corporativa">Imagem Corporativa</option>
+            <option value="Sinalização e Impressão">Sinalização e Impressão</option>
+            <option value="Móveis e Decoração">Móveis e Decoração</option>
+            <option value="Outro">Outro</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label class="field__label" for="q-orcamento">Orçamento indicativo (opcional)</label>
+          <input class="field__input" id="q-orcamento" name="orcamento" type="text" placeholder="Ex.: 20.000 - 50.000 MZN">
+        </div>
+
+        <div class="field">
+          <label class="field__label" for="q-mensagem">Mensagem<span class="field__required">*</span></label>
+          <textarea class="field__textarea" id="q-mensagem" name="mensagem" required></textarea>
+        </div>
+
+        <div class="field field--checkbox">
+          <input type="checkbox" id="q-consentimento" name="consentimento" required>
+          <label class="field__label" for="q-consentimento">Autorizo a KUMANI a usar os meus dados para me contactar sobre este pedido.</label>
+        </div>
+
+        <button type="submit" class="btn btn--primary btn--full" data-quote-submit>Enviar pedido</button>
+
+        <div data-quote-message></div>
+      </form>
+    </section>
+
+  </main>
+
+  <div data-partial="footer"></div>
+
+  <script type="module" src="/js/main.js"></script>
+</body>
+</html>

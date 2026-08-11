@@ -1,0 +1,18 @@
+/* ============================================
+   KUMANI — TOKENS DE SOMBRA E ARREDONDAMENTO
+   ============================================ */
+
+:root {
+  /* --- Sombras --- */
+  --shadow-sm: 0 1px 3px rgba(var(--color-brand-black-rgb), 0.12);
+  --shadow-md: 0 4px 12px rgba(var(--color-brand-black-rgb), 0.15);
+  --shadow-brand: 0 4px 14px rgba(76, 175, 80, 0.35); /* sombra verde suave, para botões primários */
+
+  /* --- Arredondamento de cantos (border-radius) --- */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-input: 8px;
+  --radius-card: 12px;
+  --radius-button: 999px;  /* botões em forma de pílula */
+  --radius-full: 999px;    /* círculos perfeitos: avatares, ícones */
+}

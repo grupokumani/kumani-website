@@ -1,0 +1,60 @@
+<header class="header" id="site-header" data-nav-root>
+  <div class="header__inner">
+
+    <a href="/" class="header__logo" aria-label="KUMANI — página inicial">
+      KUMANI
+    </a>
+
+    <nav class="header__nav" aria-label="Navegação principal">
+      <ul class="header__nav-list">
+        <li><a href="/sobre.html" class="header__nav-link">Sobre</a></li>
+        <li><a href="/servicos.html" class="header__nav-link">Serviços</a></li>
+        <li><a href="/portfolio.html" class="header__nav-link">Portfólio</a></li>
+        <li><a href="/loja.html" class="header__nav-link">Loja</a></li>
+        <li><a href="/clientes.html" class="header__nav-link">Clientes</a></li>
+        <li><a href="/contacto.html" class="header__nav-link">Contacto</a></li>
+      </ul>
+    </nav>
+
+    <div class="header__actions">
+      <a href="/carrinho.html" class="header__cart" aria-label="Carrinho de compras, 0 artigos" data-cart-link>
+        <svg class="header__cart-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="9" cy="21" r="1"></circle>
+          <circle cx="20" cy="21" r="1"></circle>
+          <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+        </svg>
+        <span class="header__cart-count" data-cart-count aria-hidden="true">0</span>
+      </a>
+
+      <button
+        type="button"
+        class="header__menu-toggle"
+        data-menu-toggle
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+        aria-label="Abrir menu de navegação"
+      >
+        <span class="header__menu-icon" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </button>
+    </div>
+
+  </div>
+
+  <div class="header__mobile-panel" id="mobile-menu" data-mobile-panel>
+    <nav aria-label="Navegação principal (mobile)">
+      <ul class="header__mobile-list">
+        <li><a href="/sobre.html" class="header__mobile-link">Sobre</a></li>
+        <li><a href="/servicos.html" class="header__mobile-link">Serviços</a></li>
+        <li><a href="/portfolio.html" class="header__mobile-link">Portfólio</a></li>
+        <li><a href="/loja.html" class="header__mobile-link">Loja</a></li>
+        <li><a href="/clientes.html" class="header__mobile-link">Clientes</a></li>
+        <li><a href="/contacto.html" class="header__mobile-link">Contacto</a></li>
+      </ul>
+    </nav>
+    <a href="/contacto.html" class="header__mobile-cta">Fale connosco</a>
+  </div>
+</header>

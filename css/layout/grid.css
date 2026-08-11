@@ -1,0 +1,32 @@
+/* ============================================
+   KUMANI — LAYOUT: GRID GENÉRICA
+   Utilitários de grid reutilizáveis para páginas futuras.
+   As grelhas específicas (product-grid, work-grid, clients-grid,
+   services-grid, etc.) já têm a sua própria definição nos
+   respectivos ficheiros de componente/página — este ficheiro não
+   os substitui, apenas cobre casos novos sem teres de repetir CSS.
+   ============================================ */
+
+.grid {
+  display: grid;
+  gap: var(--space-6);
+}
+
+.grid--2 { grid-template-columns: repeat(2, 1fr); }
+.grid--3 { grid-template-columns: repeat(3, 1fr); }
+.grid--4 { grid-template-columns: repeat(4, 1fr); }
+
+@media (max-width: 1023px) {
+  .grid--3,
+  .grid--4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .grid--2,
+  .grid--3,
+  .grid--4 {
+    grid-template-columns: 1fr;
+  }
+}

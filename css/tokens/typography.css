@@ -1,0 +1,38 @@
+/* ============================================
+   KUMANI — TOKENS DE TIPOGRAFIA
+   Fonte: KUMANI_Especificação_Mestra_UXUIDesign.md, secção 23
+   Helvetica é a fonte da marca; Arial só entra como
+   reserva quando o sistema do utilizador não tem Helvetica.
+   ============================================ */
+
+:root {
+  --font-primary: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-display: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+  /* --- Escala de tamanho de letra (font-size) --- */
+  --fs-xs: 0.75rem;    /* 12px — legendas, notas pequenas */
+  --fs-sm: 0.875rem;   /* 14px — texto secundário, labels */
+  --fs-base: 1rem;     /* 16px — corpo de texto */
+  --fs-md: 1.125rem;   /* 18px — texto de destaque, nav */
+  --fs-lg: 1.25rem;    /* 20px — subtítulos pequenos */
+  --fs-xl: 1.5rem;     /* 24px — subtítulos */
+  --fs-2xl: 2rem;      /* 32px — títulos de secção */
+  --fs-3xl: 2.5rem;    /* 40px — títulos grandes */
+  --fs-4xl: 3.5rem;    /* 56px — headline do Hero (mobile/tablet) */
+  --fs-5xl: 4.5rem;    /* 72px — headline do Hero (desktop) */
+
+  /* --- Peso da letra (font-weight) --- */
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-bold: 700;
+
+  /* --- Altura de linha (line-height) --- */
+  --lh-tight: 1.1;     /* títulos grandes em maiúsculas */
+  --lh-snug: 1.25;     /* subtítulos */
+  --lh-normal: 1.5;    /* corpo de texto */
+  --lh-relaxed: 1.65;  /* parágrafos longos */
+
+  /* --- Espaçamento entre letras (letter-spacing) --- */
+  --ls-wide: 0.02em;
+  --ls-widest: 0.08em; /* títulos em maiúsculas, tira de indicadores */
+}
