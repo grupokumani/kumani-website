@@ -89,8 +89,9 @@
   inset: 0;
   background: linear-gradient(
     180deg,
-    rgba(var(--color-brand-black-rgb), 0.15) 0%,
-    rgba(var(--color-brand-black-rgb), 0.78) 100%
+    rgba(var(--color-brand-black-rgb), 0.35) 0%,
+    rgba(var(--color-brand-black-rgb), 0.5) 45%,
+    rgba(var(--color-brand-black-rgb), 0.88) 100%
   );
 }
 
@@ -115,12 +116,15 @@
 }
 
 .hero__headline {
+  font-family: var(--font-display);
   font-size: var(--fs-5xl);
   font-weight: var(--fw-bold);
   text-transform: uppercase;
-  line-height: var(--lh-tight);
+  line-height: 0.95;
   letter-spacing: -0.01em;
   margin-bottom: var(--space-6);
+  color: var(--color-neutral-0);
+  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.4);
 }
 
 .hero__cta {
@@ -152,5 +156,59 @@
   .hero__content {
     padding-inline: var(--space-5);
     padding-bottom: var(--space-9);
+  }
+}
+
+/* --- Reveal palavra-a-palavra do headline (efeito "cortina") --- */
+.hero__headline-mask {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: top;
+  padding-bottom: 0.08em; /* evita cortar a cauda de letras como "g", "p" */
+}
+
+.hero__headline-word {
+  display: inline-block;
+  transform: translateY(110%);
+  filter: blur(6px);
+  opacity: 0;
+  transition: transform var(--duration-cinematic) var(--ease-emphasized),
+              filter var(--duration-cinematic) var(--ease-emphasized),
+              opacity var(--duration-cinematic) var(--ease-standard);
+}
+
+.hero--words-visible .hero__headline-word {
+  transform: translateY(0);
+  filter: blur(0);
+  opacity: 1;
+}
+
+/* O badge e o botão entram depois do headline, não ao mesmo tempo */
+.hero__badge,
+.hero__cta {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity var(--duration-slow) var(--ease-standard),
+              transform var(--duration-slow) var(--ease-standard);
+}
+
+.hero--content-visible .hero__badge,
+.hero--content-visible .hero__cta {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__headline-word {
+    transition: none;
+    transform: translateY(0);
+    filter: blur(0);
+    opacity: 1;
+  }
+  .hero__badge,
+  .hero__cta {
+    transition: none;
+    opacity: 1;
+    transform: translateY(0);
   }
 }

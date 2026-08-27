@@ -5,9 +5,11 @@
    reserva quando o sistema do utilizador não tem Helvetica.
    ============================================ */
 
+   @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+   
 :root {
   --font-primary: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  --font-display: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-display: 'Archivo Black', sans-serif;
 
   /* --- Escala de tamanho de letra (font-size) --- */
   --fs-xs: 0.75rem;    /* 12px — legendas, notas pequenas */
