@@ -104,18 +104,18 @@ export async function initHomepage() {
   const clientsGridEl = qs('[data-clients-grid]');
 
   if (workGridEl) {
-   const portfolio = await fetchJSON('/data/portfolio.json');
+   const portfolio = await fetchJSON('data/portfolio.json');
    const destaques = portfolio.filter((item) => item.destaqueHome);
    workGridEl.innerHTML = renderWorkGrid(destaques);
   }
 
   if (productGridEl) {
-    const produtos = await fetchJSON('/data/produtos.json');
+    const produtos = await fetchJSON('data/produtos.json');
     productGridEl.innerHTML = produtos.map(renderProductCard).join('');
   }
 
   if (clientsGridEl) {
-    const clientes = await fetchJSON('/data/clientes.json');
+    const clientes = await fetchJSON('data/clientes.json');
     clientsGridEl.innerHTML = clientes.map(renderClientLogo).join('');
   }
 }
