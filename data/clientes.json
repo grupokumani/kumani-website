@@ -1,10 +1,10 @@
 [
-  { "id": "cliente-1", "nome": "[CONTEÚDO A FORNECER]" },
-  { "id": "cliente-2", "nome": "[CONTEÚDO A FORNECER]" },
-  { "id": "cliente-3", "nome": "[CONTEÚDO A FORNECER]" },
-  { "id": "cliente-4", "nome": "[CONTEÚDO A FORNECER]" },
-  { "id": "cliente-5", "nome": "[CONTEÚDO A FORNECER]" },
-  { "id": "cliente-6", "nome": "[CONTEÚDO A FORNECER]" },
-  { "id": "cliente-7", "nome": "[CONTEÚDO A FORNECER]" },
-  { "id": "cliente-8", "nome": "[CONTEÚDO A FORNECER]" }
+  { "id": "mr-houlang", "nome": "Mr. Houlang", "logo": null },
+  { "id": "mozmeat", "nome": "MozMeat", "logo": null },
+  { "id": "futai-internacional", "nome": "Futai Internacional", "logo": null },
+  { "id": "morrumbene-beach-resort", "nome": "Morrumbene Beach Resort", "logo": null },
+  { "id": "napee-baby", "nome": "Napee Baby", "logo": null },
+  { "id": "gold-royal", "nome": "Gold Royal", "logo": null },
+  { "id": "mama-linda", "nome": "Mama Linda", "logo": null },
+  { "id": "grupo-kumani", "nome": "Grupo KUMANI", "logo": null }
 ]

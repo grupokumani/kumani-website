@@ -5,10 +5,11 @@
 import { qs } from '../utils/dom.js';
 
 function renderClientLogo(item) {
+  const label = item.nome || 'Cliente';
   const content = item.logo
-    ? `<img src="${item.logo}" alt="${item.nome}" loading="lazy">`
-    : '';
-  return `<div class="clients-grid__logo">${content}</div>`;
+    ? `<img src="${item.logo}" alt="${label}" loading="lazy">`
+    : `<span class="clients-grid__name">${label}</span>`;
+  return `<div class="clients-grid__logo" aria-label="${label}">${content}</div>`;
 }
 
 export async function initClientesPage() {

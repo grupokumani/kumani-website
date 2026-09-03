@@ -69,6 +69,18 @@
   filter: brightness(0) invert(1); /* logótipos a branco sobre fundo escuro */
 }
 
+.clients-grid__name {
+  display: inline-block;
+  color: var(--color-neutral-0);
+  font-size: 10px;
+  font-weight: var(--fw-bold);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 0 var(--space-2);
+  line-height: 1.2;
+}
+
 @media (max-width: 1023px) {
   .clients-grid {
     grid-template-columns: repeat(3, 1fr);
