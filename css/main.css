@@ -32,3 +32,6 @@
 @import url('pages/carrinho-checkout.css');
 
 @import url('utilities/utilities.css');
+
+@import url('components/search.css');
+@import url('components/whatsapp-float.css');

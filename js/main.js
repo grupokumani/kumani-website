@@ -15,11 +15,17 @@ import { initProdutoDetalhe } from './modules/produto.js';
 import { initCarrinho } from './modules/carrinho.js';
 import { initCheckout } from './modules/checkout.js';
 import { initConfirmacao } from './modules/confirmacao.js';
+import { initContacto } from './modules/contacto.js';
+import { initClientesPage } from './modules/clientes.js';
+import { initSearch } from './modules/search.js';
+import { initWhatsappFloat } from './modules/whatsapp-float.js';
 import { initRevealOnScroll } from './utils/reveal-on-scroll.js';
 
 async function bootstrap() {
   await loadAllPartials();
   initNav();
+  initSearch();
+  initWhatsappFloat();
 
   const page = document.body.dataset.page;
 
@@ -36,6 +42,8 @@ async function bootstrap() {
   if (page === 'carrinho') initCarrinho();
   if (page === 'checkout') initCheckout();
   if (page === 'confirmacao') await initConfirmacao();
+  if (page === 'contacto') initContacto();
+  if (page === 'clientes') await initClientesPage();
 
   initRevealOnScroll();
 }

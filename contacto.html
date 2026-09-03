@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-MZ">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto — KUMANI</title>
+  <meta name="description" content="Fale com a KUMANI: Estrada Nacional nº1, Bairro 29 de Setembro, Distrito de Marracuene, Maputo. geral@grupokumani.com">
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+<body data-page="contacto">
+
+  <a href="#main-content" class="skip-link">Saltar para o conteúdo principal</a>
+
+  <div data-partial="header"></div>
+
+  <main id="main-content" class="u-header-offset">
+    <section style="padding:64px 24px 40px;">
+      <h1 style="font-size:36px;font-weight:700;text-transform:uppercase;">Vamos conversar.</h1>
+    </section>
+
+    <section style="padding:0 24px 64px;display:grid;grid-template-columns:1fr 1.3fr;gap:48px;max-width:1000px;align-items:start;">
+      <div>
+        <p style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--color-text-secondary);margin-bottom:8px;">Morada</p>
+        <p style="margin-bottom:24px;">Estrada Nacional nº1, Bairro 29 de Setembro<br>Distrito de Marracuene, Maputo</p>
+
+        <p style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--color-text-secondary);margin-bottom:8px;">Email</p>
+        <p style="margin-bottom:24px;"><a href="mailto:geral@grupokumani.com" style="color:var(--color-brand-primary-text);font-weight:700;">geral@grupokumani.com</a></p>
+
+        <p style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--color-text-secondary);margin-bottom:8px;">Redes sociais</p>
+        <p>Instagram: @kumani_media<br>Facebook: Kumani</p>
+      </div>
+
+      <form data-contact-form novalidate>
+        <div class="field">
+          <label class="field__label" for="ct-nome">Nome<span class="field__required">*</span></label>
+          <input class="field__input" id="ct-nome" name="nome" type="text" required>
+        </div>
+        <div class="field">
+          <label class="field__label" for="ct-email">Email<span class="field__required">*</span></label>
+          <input class="field__input" id="ct-email" name="email" type="email" required>
+        </div>
+        <div class="field">
+          <label class="field__label" for="ct-telefone">Telefone<span class="field__required">*</span></label>
+          <input class="field__input" id="ct-telefone" name="telefone" type="tel" required>
+        </div>
+        <div class="field">
+          <label class="field__label" for="ct-mensagem">Mensagem<span class="field__required">*</span></label>
+          <textarea class="field__textarea" id="ct-mensagem" name="mensagem" required></textarea>
+        </div>
+        <div class="field field--checkbox">
+          <input type="checkbox" id="ct-consentimento" name="consentimento" required>
+          <label class="field__label" for="ct-consentimento">Autorizo a KUMANI a usar os meus dados para me contactar.</label>
+        </div>
+        <button type="submit" class="btn btn--primary btn--full" data-contact-submit>Enviar mensagem</button>
+        <div data-contact-message></div>
+      </form>
+    </section>
+  </main>
+
+  <div data-partial="footer"></div>
+
+  <script type="module" src="/js/main.js"></script>
+</body>
+</html>

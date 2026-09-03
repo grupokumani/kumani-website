@@ -1,0 +1,38 @@
+/* ============================================
+   KUMANI — COMPONENTE: BOTÃO FLUTUANTE WHATSAPP
+   ============================================ */
+
+.whatsapp-float {
+  position: fixed;
+  bottom: var(--space-6);
+  right: var(--space-6);
+  z-index: 90;
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-full);
+  background: #25D366;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  transition: transform var(--duration-fast) var(--ease-standard);
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.08);
+}
+
+.whatsapp-float svg {
+  width: 28px;
+  height: 28px;
+  color: var(--color-neutral-0);
+}
+
+@media (max-width: 600px) {
+  .whatsapp-float {
+    bottom: var(--space-5);
+    right: var(--space-5);
+    width: 52px;
+    height: 52px;
+  }
+}

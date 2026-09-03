@@ -20,8 +20,6 @@ async function fetchJSON(path) {
 }
 
 function renderWorkBlock(item) {
-  const sizeClass =
-    item.tamanho === 'large' ? 'work-block--large' : 'work-block--small';
   const mediaStyle = item.imagem
     ? `background-image:url('${item.imagem}');background-size:cover;background-position:center;`
     : `background-color:${item.corPlaceholder};`;
@@ -33,28 +31,20 @@ function renderWorkBlock(item) {
     : '';
 
   return `
-    <a href="/projectos/projecto.html?slug=${item.slug}" class="work-block ${sizeClass}" data-reveal aria-label="Ver case study: ${item.cliente}">
+    <a href="/projectos/projecto.html?slug=${item.slug}" class="work-block work-block--uniform" data-reveal aria-label="Ver case study: ${item.cliente}">
       <div class="work-block__media" style="${mediaStyle}"></div>
       <div class="work-block__overlay"></div>
       ${playIcon}
       <div class="work-block__caption">
         <div class="work-block__client">${item.cliente}</div>
-        <div class="work-block__category">${item.categoria}</div>
+        <div class="work-block__category">${item.categoriaLabel}</div>
       </div>
     </a>
   `;
 }
 
 function renderWorkGrid(items) {
-  const large = items.find((item) => item.tamanho === 'large');
-  const small = items.filter((item) => item.tamanho === 'small');
-
-  return `
-    ${large ? renderWorkBlock(large) : ''}
-    <div class="work-grid__stack">
-      ${small.map(renderWorkBlock).join('')}
-    </div>
-  `;
+  return `<div class="work-grid--pairs">${items.map(renderWorkBlock).join('')}</div>`;
 }
 
 function formatPrice(value, currency) {
