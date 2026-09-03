@@ -8,7 +8,7 @@
 
 export async function loadPartial(name, targetElement) {
   try {
-    const response = await fetch(`/kumani-website/partials/${name}.html`);
+   const response = await fetch(`/partials/${name}.html`);
 
     if (!response.ok) {
       throw new Error(`Falha ao carregar partial "${name}": ${response.status}`);
