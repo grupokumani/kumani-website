@@ -105,14 +105,19 @@
 }
 
 .hero__badge {
-  display: inline-block;
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  padding: var(--space-2) var(--space-4);
-  font-size: 10px;
-  font-weight: var(--fw-medium);
+  display: inline-flex;
+  align-items: center;
+  background: rgba(76, 175, 80, 0.9);
+  border: none;
+  color: var(--color-neutral-0);
+  padding: var(--space-3) var(--space-5);
+  font-size: 11px;
+  font-weight: var(--fw-bold);
   letter-spacing: var(--ls-widest);
   text-transform: uppercase;
-  margin-bottom: var(--space-5);
+  border-radius: var(--radius-sm);
+  margin-bottom: var(--space-6);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
 }
 
 .hero__headline {
@@ -120,11 +125,11 @@
   font-size: var(--fs-5xl);
   font-weight: var(--fw-bold);
   text-transform: uppercase;
-  line-height: 0.95;
+  line-height: 0.98;
   letter-spacing: -0.01em;
   margin-bottom: var(--space-6);
   color: var(--color-neutral-0);
-  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.4);
+  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.45);
 }
 
 .hero__cta {
@@ -159,37 +164,36 @@
   }
 }
 
-/* --- Reveal palavra-a-palavra do headline (efeito "cortina") --- */
-.hero__headline-mask {
-  display: inline-block;
+/* --- Reveal linha-a-linha e palavra-a-palavra do headline --- */
+.hero__line {
+  display: block;
   overflow: hidden;
-  vertical-align: top;
-  padding-bottom: 0.08em; /* evita cortar a cauda de letras como "g", "p" */
+  padding-bottom: 0.1em; /* evita cortar caudas de letras como "p", "g" */
 }
 
-.hero__headline-word {
+.hero__word {
   display: inline-block;
-  transform: translateY(110%);
-  filter: blur(6px);
+  transform: translateY(115%);
+  filter: blur(8px);
   opacity: 0;
-  transition: transform var(--duration-cinematic) var(--ease-emphasized),
-              filter var(--duration-cinematic) var(--ease-emphasized),
-              opacity var(--duration-cinematic) var(--ease-standard);
+  transition: transform 1.1s var(--ease-emphasized),
+              filter 1.1s var(--ease-emphasized),
+              opacity 0.9s var(--ease-standard);
 }
 
-.hero--words-visible .hero__headline-word {
+.hero--words-visible .hero__word {
   transform: translateY(0);
   filter: blur(0);
   opacity: 1;
 }
 
-/* O badge e o botão entram depois do headline, não ao mesmo tempo */
+/* Badge e botão entram bem depois do headline terminar, não em cima dele */
 .hero__badge,
 .hero__cta {
   opacity: 0;
-  transform: translateY(12px);
-  transition: opacity var(--duration-slow) var(--ease-standard),
-              transform var(--duration-slow) var(--ease-standard);
+  transform: translateY(14px);
+  transition: opacity 0.8s var(--ease-standard),
+              transform 0.8s var(--ease-standard);
 }
 
 .hero--content-visible .hero__badge,
@@ -199,7 +203,7 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .hero__headline-word {
+  .hero__word {
     transition: none;
     transform: translateY(0);
     filter: blur(0);

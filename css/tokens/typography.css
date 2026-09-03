@@ -9,7 +9,7 @@
    
 :root {
   --font-primary: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  --font-display: 'Archivo Black', sans-serif;
+  --font-display: 'Archivo Black', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
   /* --- Escala de tamanho de letra (font-size) --- */
   --fs-xs: 0.75rem;    /* 12px — legendas, notas pequenas */

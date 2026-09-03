@@ -1,48 +1,55 @@
 /**
  * KUMANI — Módulo do Hero
  * Decide entre modo vídeo e modo fallback (crossfade de imagens), e
- * dispara o reveal palavra-a-palavra do headline ("efeito cortina")
- * assim que a página estiver pronta a mostrar conteúdo.
+ * dispara o reveal linha-a-linha, palavra-a-palavra do headline —
+ * deliberadamente lento (não instantâneo), com o badge e o CTA a
+ * entrarem só depois do headline terminar.
  */
 
-import { qs } from '../utils/dom.js';
+import { qs, qsa } from '../utils/dom.js';
 
 const VIDEO_TIMEOUT_MS = 3000;
+const ATRASO_ENTRE_PALAVRAS_MS = 140;
+const ATRASO_INICIAL_MS = 300;
 
 function prepararHeadlineParaReveal(hero) {
-  const headlineEl = qs('.hero__headline', hero);
-  if (!headlineEl || headlineEl.dataset.split === 'true') return;
+  const linhas = qsa('[data-hero-line]', hero);
+  if (linhas.length === 0 || linhas[0].dataset.split === 'true') return;
 
-  const textoOriginal = headlineEl.textContent.trim();
-  const palavras = textoOriginal.split(/\s+/);
+  let contadorPalavras = 0;
 
-  headlineEl.setAttribute('aria-label', textoOriginal);
-  headlineEl.innerHTML = palavras
-    .map(
-      (palavra, index) => `
-        <span class="hero__headline-mask" aria-hidden="true">
-          <span class="hero__headline-word" style="transition-delay:${index * 80}ms">${palavra}</span>
-        </span>
-      `
-    )
-    .join(' ');
+  linhas.forEach((linhaEl) => {
+    const textoOriginal = linhaEl.textContent.trim();
+    linhaEl.setAttribute('aria-label', textoOriginal);
 
-  headlineEl.dataset.split = 'true';
+    const palavras = textoOriginal.split(/\s+/);
+    linhaEl.innerHTML = palavras
+      .map((palavra) => {
+        const atraso = ATRASO_INICIAL_MS + contadorPalavras * ATRASO_ENTRE_PALAVRAS_MS;
+        contadorPalavras += 1;
+        return `<span class="hero__word" style="transition-delay:${atraso}ms">${palavra}</span>`;
+      })
+      .join(' ');
+
+    linhaEl.dataset.split = 'true';
+  });
+
+  return contadorPalavras;
 }
 
-function dispararReveal(hero) {
-  // requestAnimationFrame duplo garante que o browser já pintou o
-  // estado inicial (invisível) antes de aplicarmos a classe que activa
-  // a transição — sem isto, a animação às vezes "salta" sem se ver.
+function dispararReveal(hero, totalPalavras) {
   requestAnimationFrame(() => {
     requestAnimationFrame(() => {
       hero.classList.add('hero--words-visible');
     });
   });
 
+  // O badge/CTA só entram depois de a última palavra ter começado a
+  // aparecer, com uma pequena folga — nunca ao mesmo tempo que o texto.
+  const atrasoConteudo = ATRASO_INICIAL_MS + totalPalavras * ATRASO_ENTRE_PALAVRAS_MS + 300;
   setTimeout(() => {
     hero.classList.add('hero--content-visible');
-  }, 500);
+  }, atrasoConteudo);
 }
 
 export function initHero() {
@@ -53,12 +60,12 @@ export function initHero() {
     '(prefers-reduced-motion: reduce)'
   ).matches;
 
-  prepararHeadlineParaReveal(hero);
+  const totalPalavras = prepararHeadlineParaReveal(hero) || 0;
 
   if (prefersReduced) {
     hero.classList.add('hero--words-visible', 'hero--content-visible');
   } else {
-    dispararReveal(hero);
+    dispararReveal(hero, totalPalavras);
   }
 
   const video = qs('[data-hero-video]', hero);
