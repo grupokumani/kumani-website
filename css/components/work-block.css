@@ -100,34 +100,45 @@
   margin-top: var(--space-1);
 }
 
-/* --- Grelha assimétrica (1 bloco largo + coluna de 2 empilhados) --- */
-.work-grid {
+/* --- Grelha edge-to-edge (sem margens, sem gap grande, sem cantos arredondados) --- */
+.work-grid--bleed {
   display: grid;
-  grid-template-columns: 1.4fr 1fr;
-  gap: var(--space-2);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
 }
 
-.work-grid__stack {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-2);
+.work-grid--bleed .work-block {
+  aspect-ratio: 1;
+  border-radius: 0;
 }
 
-.work-block--large {
-  height: 460px;
+/* Nesta grelha densa, a legenda fica discreta — só a base da imagem,
+   não a meio ecrã como antes — para não competir com a própria foto */
+.work-grid--bleed .work-block__overlay {
+  background: linear-gradient(
+    180deg,
+    rgba(var(--color-brand-black-rgb), 0) 65%,
+    rgba(var(--color-brand-black-rgb), 0.75) 100%
+  );
 }
 
-.work-block--small {
-  height: 226px;
+.work-grid--bleed .work-block__client {
+  font-size: var(--fs-sm);
 }
 
-@media (max-width: 767px) {
-  .work-grid {
-    grid-template-columns: 1fr;
+.work-grid--bleed .work-block__category {
+  font-size: 10px;
+}
+
+@media (max-width: 1023px) {
+  .work-grid--bleed {
+    grid-template-columns: repeat(2, 1fr);
   }
-  .work-block--large,
-  .work-block--small {
-    height: 320px;
+}
+
+@media (max-width: 480px) {
+  .work-grid--bleed {
+    grid-template-columns: 1fr;
   }
 }
 

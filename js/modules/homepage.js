@@ -31,7 +31,7 @@ function renderWorkBlock(item) {
     : '';
 
   return `
-    <a href="/projectos/projecto.html?slug=${item.slug}" class="work-block work-block--uniform" data-reveal aria-label="Ver case study: ${item.cliente}">
+    <a href="/projectos/projecto.html?slug=${item.slug}" class="work-block" data-reveal aria-label="Ver case study: ${item.cliente}">
       <div class="work-block__media" style="${mediaStyle}"></div>
       <div class="work-block__overlay"></div>
       ${playIcon}
@@ -44,7 +44,7 @@ function renderWorkBlock(item) {
 }
 
 function renderWorkGrid(items) {
-  return `<div class="work-grid--pairs">${items.map(renderWorkBlock).join('')}</div>`;
+  return items.map(renderWorkBlock).join('');
 }
 
 function formatPrice(value, currency) {

@@ -5,6 +5,13 @@
 .section {
   padding: var(--space-11) var(--space-container-x);
 }
+.section--bleed {
+  padding-inline: 0;
+}
+
+.section__header--padded {
+  padding-inline: var(--space-container-x);
+}
 
 .section--subtle {
   background: var(--color-bg-subtle);

@@ -172,23 +172,5 @@
     "execucao": "[CONTEÚDO A FORNECER]",
     "resultado": "[CONTEÚDO A FORNECER]",
     "galeria": [{ "corPlaceholder": "#262622", "imagem": null }]
-  },
-  {
-    "id": "projeto-10",
-    "slug": "projeto-10",
-    "cliente": "[NOME DO CLIENTE — SUBSTITUIR]",
-    "categoriaLabel": "[Categoria a definir]",
-    "categoriaSlug": "outro",
-    "destaqueHome": true,
-    "corPlaceholder": "#D2691E",
-    "imagem": null,
-    "temVideo": false,
-    "youtubeId": null,
-    "problema": "[CONTEÚDO A FORNECER]",
-    "objectivo": "[CONTEÚDO A FORNECER]",
-    "estrategia": "[CONTEÚDO A FORNECER]",
-    "execucao": "[CONTEÚDO A FORNECER]",
-    "resultado": "[CONTEÚDO A FORNECER]",
-    "galeria": [{ "corPlaceholder": "#D2691E", "imagem": null }]
   }
 ]
