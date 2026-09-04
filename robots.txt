@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /checkout.html
+Disallow: /carrinho.html
+Disallow: /encomenda-confirmada.html
+
+Sitemap: https://www.grupokumani.com/sitemap.xml
