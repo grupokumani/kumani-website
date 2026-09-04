@@ -8,7 +8,7 @@
  * (configurar no painel do Cloudflare Pages, nunca no código).
  */
 
-const EMAIL_DESTINO = 'geral@grupokumani.com';
+const EMAIL_DESTINO = 'comercial@grupokumani.com';
 const EMAIL_ORIGEM = 'website@grupokumani.com';
 
 function validarCampos(dados) {
