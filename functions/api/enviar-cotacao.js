@@ -1,12 +1,15 @@
 /**
  * KUMANI — Cloudflare Pages Function
  * Recebe o formulário de cotação (POST /api/enviar-cotacao) e envia
- * um email via MailChannels — serviço gratuito, integrado nativamente
- * com Cloudflare Workers/Pages, sem necessidade de conta ou API key.
- * Documentação: https://developers.cloudflare.com/pages/functions/plugins/mailchannels/
+ * um email via Resend (plano gratuito: 100 emails/dia).
+ * Documentação: https://resend.com/docs/api-reference/emails/send-email
+ *
+ * Variável de ambiente necessária: RESEND_API_KEY
+ * (configurar no painel do Cloudflare Pages, nunca no código).
  */
 
 const EMAIL_DESTINO = 'geral@grupokumani.com';
+const EMAIL_ORIGEM = 'website@grupokumani.com';
 
 function validarCampos(dados) {
   const erros = [];
@@ -33,7 +36,7 @@ function validarCampos(dados) {
   return erros;
 }
 
-export async function onRequestPost({ request }) {
+export async function onRequestPost({ request, env }) {
   let dados;
 
   try {
@@ -68,23 +71,26 @@ ${dados.mensagem}
   `.trim();
 
   const payload = {
-    personalizations: [{ to: [{ email: EMAIL_DESTINO, name: 'KUMANI' }] }],
-    from: { email: 'website@grupokumani.com', name: 'Website KUMANI' },
-    reply_to: { email: dados.email, name: dados.nome },
+    from: `Website KUMANI <${EMAIL_ORIGEM}>`,
+    to: [EMAIL_DESTINO],
+    reply_to: dados.email,
     subject: `Novo pedido de cotação — ${dados.tipoNecessidade}`,
-    content: [{ type: 'text/plain', value: corpoEmail }],
+    text: corpoEmail,
   };
 
   try {
-    const resposta = await fetch('https://api.mailchannels.net/tx/v1/send', {
+    const resposta = await fetch('https://api.resend.com/emails', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: {
+        Authorization: `Bearer ${env.RESEND_API_KEY}`,
+        'Content-Type': 'application/json',
+      },
       body: JSON.stringify(payload),
     });
 
     if (!resposta.ok) {
       const detalhe = await resposta.text();
-      console.error('Falha no envio MailChannels:', detalhe);
+      console.error('Falha no envio Resend:', detalhe);
       return new Response(
         JSON.stringify({
           sucesso: false,
@@ -99,7 +105,7 @@ ${dados.mensagem}
       headers: { 'Content-Type': 'application/json' },
     });
   } catch (error) {
-    console.error('Erro ao contactar MailChannels:', error);
+    console.error('Erro ao contactar Resend:', error);
     return new Response(
       JSON.stringify({
         sucesso: false,
