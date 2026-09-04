@@ -4,7 +4,14 @@
    ============================================ */
 
 :root {
-  /* --- Cores de marca (Guia de Marca oficial) --- */
+    /* --- Cores de marca (Guia de Marca oficial) ---
+     REGRA DE MARCA: Verde é a cor dominante; Branco secundária;
+     Preto terciária. Ouro, Cobre e Vermelho são EXCEPÇÕES
+     DOCUMENTADAS E APROVADAS (decisão do cliente, 2026-09),
+     usadas apenas em detalhes pontuais: badges de preço/destaque
+     (Ouro), acentos decorativos raros (Cobre) e mensagens de
+     erro (Vermelho). Nunca usar como cor dominante de secção. --- */
+     
   --color-brand-primary: #4CAF50;            /* Verde Vivo — identidade dominante */
   --color-brand-primary-text: #2E7D32;       /* Verde acessível — texto/ícone sobre verde, cumpre AA */
   --color-brand-green-accessible: #2E7D32;   /* mesmo verde acessível, usado em fundos pequenos */
