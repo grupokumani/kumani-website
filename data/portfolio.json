@@ -1,44 +1,122 @@
 [
   {
-    "id": "mr-houlang",
-    "slug": "mr-houlang",
-    "cliente": "Mr. Houlang",
-    "categoriaLabel": "Branding",
-    "categoriaSlug": "branding",
+    "id": "ministro-elcidio-manhique",
+    "slug": "ministro-elcidio-manhique",
+    "cliente": null,
+    "categoriaLabel": "Relacões públicas e Internacionais",
+    "categoriaSlug": "relacoes-publicas-e-internacionais",
     "destaqueHome": true,
-    "corPlaceholder": "#2E7D32",
-    "imagem": null,
+    "corPlaceholder": null,
+    "imagem": assets/images/portfolio/relacoes-publicas-e-internacionais/ministro-elcidio-manhique-rp.jpg,
     "temVideo": false,
     "youtubeId": null,
-    "problema": "[CONTEÚDO A FORNECER]",
-    "objectivo": "[CONTEÚDO A FORNECER]",
-    "estrategia": "[CONTEÚDO A FORNECER]",
-    "execucao": "[CONTEÚDO A FORNECER]",
-    "resultado": "[CONTEÚDO A FORNECER]",
+    "descricao": Design e produção de materiais de comunicação para o Ministro Elcídio Manhique, incluindo gestão de redes sociais e criação de estratégias de Relações Públicas.,
     "galeria": [
-      { "corPlaceholder": "#2E7D32", "imagem": null },
-      { "corPlaceholder": "#4CAF50", "imagem": null }
+      { "corPlaceholder": null, "imagem": assets/images/portfolio/relacoes-publicas-e-internacionais/ministro-elcidio-manhique-1.jpg },
+      { "corPlaceholder": null, "imagem": assets/images/portfolio/relacoes-publicas-e-internacionais/ministro-elcidio-manhique-2.jpg },
+      { "corPlaceholder": null, "imagem": assets/images/portfolio/relacoes-publicas-e-internacionais/ministro-elcidio-manhique-3.jpg }
     ]
   },
   {
     "id": "mozmeat",
     "slug": "mozmeat",
-    "cliente": "MozMeat",
-    "categoriaLabel": "Sinalização",
-    "categoriaSlug": "sinalizacao",
+    "cliente": null,
+    "categoriaLabel": "Design gráfico",
+    "categoriaSlug": "design-grafico",
     "destaqueHome": true,
-    "corPlaceholder": "#D2691E",
-    "imagem": null,
+    "corPlaceholder": null,
+    "imagem": assets/images/portfolio/design-grafico/moz-meat/moz-meat-design-grafico.jpg,
     "temVideo": false,
     "youtubeId": null,
-    "problema": "[CONTEÚDO A FORNECER]",
-    "objectivo": "[CONTEÚDO A FORNECER]",
-    "estrategia": "[CONTEÚDO A FORNECER]",
-    "execucao": "[CONTEÚDO A FORNECER]",
-    "resultado": "[CONTEÚDO A FORNECER]",
+    "descricao: "Design e produção de materiais de comunicação para a Moz Meat, incluindo gestão de redes sociais e criação de estratégias de marketing digital.",
     "galeria": [
-      { "corPlaceholder": "#D2691E", "imagem": null },
-      { "corPlaceholder": "#3D3D37", "imagem": null }
+      { "corPlaceholder": null, "imagem": assets/images/portfolio/design-grafico/moz-meat/moz-meat-design-grafico-1.jpg, },
+      { "corPlaceholder": null, "imagem": assets/images/portfolio/design-grafico/moz-meat/moz-meat-design-grafico-2.jpg, },
+      { "corPlaceholder": null, "imagem": assets/images/portfolio/design-grafico/moz-meat/moz-meat-design-grafico-3.jpg, }
+    ]
+  },
+  {
+    "id": "cooperacao-alema",
+    "slug": "cooperacao-alema",
+    "cliente": null,
+    "categoriaLabel": "Design gráfico",
+    "categoriaSlug": "design-grafico",
+    "destaqueHome": true,
+    "corPlaceholder": null,
+    "imagem": assets/images/portfolio/design-grafico/cooperacao-alema/cooperacao-alema.jpg,
+    "temVideo": false,
+    "youtubeId": null,
+    "descricao: "Design e produção de materiais de comunicação para a Cooperação Alemã em Moçambique em parceria com a KfW, no âmbito da realização da 60ª edição da Feira Internacional de Maputo - FACIM.",
+    "galeria": [
+      { "corPlaceholder": null, "imagem": assets/images/portfolio/design-grafico/cooperacao-alema/cooperacao-alema-1.jpg, },
+      { "corPlaceholder": null, "imagem": assets/images/portfolio/design-grafico/cooperacao-alema/cooperacao-alema-2.jpg, },
+      { "corPlaceholder": null, "imagem": assets/images/portfolio/design-grafico/cooperacao-alema/cooperacao-alema-3.jpg, }
+    ]
+  },
+    {
+    "id": "mr-huolang",
+    "slug": "mr-huolang",
+    "cliente": null,
+    "categoriaLabel": "Design gráfico",
+    "categoriaSlug": "design-grafico",
+    "destaqueHome": true,
+    "corPlaceholder": null,
+    "imagem": assets/images/portfolio/design-grafico/mr-huolang/mr-huolang-design-grafico.jpg,
+    "temVideo": false,
+    "youtubeId": null,
+    "descricao: "Design e produção de materiais de comunicação para a Mr Huolang, incluindo gestão de redes sociais e criação de estratégias de marketing digital.",
+    "galeria": [
+      { "corPlaceholder": null, "imagem": assets/images/portfolio/design-grafico/mr-huolang/mr-huolang-design-grafico-1.jpg, },
+      { "corPlaceholder": null, "imagem": assets/images/portfolio/design-grafico/mr-huolang/mr-huolang-design-grafico-2.jpg, },
+      { "corPlaceholder": null, "imagem": assets/images/portfolio/design-grafico/mr-huolang/mr-huolang-design-grafico-3.jpg, }
+    ]
+  },
+  {
+    "id": "instituto-de-amendoas",
+    "slug": "instituto-de-amendoas",
+    "cliente": null,
+    "categoriaLabel": "Design gráfico",
+    "categoriaSlug": "design-grafico",
+    "destaqueHome": true,
+    "corPlaceholder": null,
+    "imagem": assets/images/portfolio/design-grafico/instituto-de-amendoas-design-grafico.jpg,
+    "temVideo": false,
+    "youtubeId": null,
+    "descricao": "Design e produção de materiais de comunicação para o Instituto de Amendoas, incluindo gestão de redes sociais e criação de estratégias de marketing digital.",
+    "galeria": [
+  },
+  {
+    "id": "southern-sun",
+    "slug": "southern-sun",
+    "cliente": null,
+    "categoriaLabel": "Design gráfico",
+    "categoriaSlug": "design-grafico",
+    "destaqueHome": true,
+    "corPlaceholder": null,
+    "imagem": assets/images/portfolio/design-grafico/southern-sun/southern-sun-1.jpg,
+    "temVideo": false,
+    "youtubeId": null,
+    "descricao: "Design e produção de materiais de comunicação para a Southern Sun, incluindo gestão de redes sociais e criação de estratégias de marketing digital.",
+    "galeria": [
+      { "corPlaceholder": null, "imagem": assets/images/portfolio/design-grafico/southern-sun/southern-sun-2.jpg, },
+      { "corPlaceholder": null, "imagem": assets/images/portfolio/design-grafico/southern-sun/southern-sun-3.jpg, }
+    ]
+  },
+  {
+    "id": "moz-bevok",
+    "slug": "moz-bevok",
+    "cliente": null,
+    "categoriaLabel": "Design gráfico",
+    "categoriaSlug": "design-grafico",
+    "destaqueHome": true,
+    "corPlaceholder": null,
+    "imagem": assets/images/portfolio/design-grafico/moz-bevok/moz-bevok-menu.jpg,
+    "temVideo": false,
+    "youtubeId": null,
+    "descricao": "Design e produção de materiais de comunicação para a Moz Bevok, incluindo menu e suporte de acrilico.",
+    "galeria": [
+      { "corPlaceholder": null, "imagem": assets/images/portfolio/design-grafico/moz-bevok/moz-bevok-1.jpg, },
+      { "corPlaceholder": null, "imagem": assets/images/portfolio/design-grafico/moz-bevok/moz-bevok-2.jpg, },
     ]
   },
   {
