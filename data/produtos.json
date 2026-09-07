@@ -152,7 +152,7 @@
     "moeda": "MZN",
     "badge": null,
     "corPlaceholder": null,
-    "imagem": "assets/images/produtos/fisicos/bone-bordado.jpg",
+    "imagem": "assets/images/produtos/fisicos/bone-bordado.jpeg",
     "stock": true
   },
   {
@@ -204,7 +204,7 @@
     "moeda": "MZN",
     "badge": null,
     "corPlaceholder": null,
-    "imagem": "assets/images/produtos/fisicos/camisa.jpg",
+    "imagem": "assets/images/produtos/fisicos/camisa.jpeg",
     "stock": true
   },
   {
@@ -243,7 +243,7 @@
     "moeda": "MZN",
     "badge": null,
     "corPlaceholder": null,
-    "imagem": "assets/images/produtos/fisicos/carimbo.jpg",
+    "imagem": "assets/images/produtos/fisicos/carimbo.jpeg",
     "stock": true
   },
   {
