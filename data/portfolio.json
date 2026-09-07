@@ -1,36 +1,8 @@
 [
   {
-    "id": "ministro-elcidio-manhique",
-    "slug": "ministro-elcidio-manhique",
-    "cliente": null,
-    "categoriaLabel": null,
-    "categoriaSlug": "relacoes-publicas-e-internacionais",
-    "destaqueHome": false,
-    "corPlaceholder": null,
-    "imagem": "assets/images/portfolio/relacoes-publicas-e-internacionais/ministro-elcidio-manhique-rp.jpg",
-    "temVideo": false,
-    "youtubeId": null,
-    "descricao": "Design e produção de materiais de comunicação para o Ministro Elcídio Manhique, incluindo gestão de redes sociais e criação de estratégias de Relações Públicas.",
-    "galeria": [
-      {
-        "corPlaceholder": null,
-        "imagem": "assets/images/portfolio/relacoes-publicas-e-internacionais/ministro-elcidio-manhique-1.jpg"
-      },
-      {
-        "corPlaceholder": null,
-        "imagem": "assets/images/portfolio/relacoes-publicas-e-internacionais/ministro-elcidio-manhique-2.jpg"
-      },
-      {
-        "corPlaceholder": null,
-        "imagem": "assets/images/portfolio/relacoes-publicas-e-internacionais/ministro-elcidio-manhique-3.jpg"
-      }
-    ]
-  },
-  {
     "id": "mozmeat",
     "slug": "mozmeat",
-    "cliente": null,
-    "categoriaLabel": null,
+    "categoriaLabel": "Design Gráfico",
     "categoriaSlug": "design-grafico",
     "destaqueHome": false,
     "corPlaceholder": null,
@@ -56,8 +28,7 @@
   {
     "id": "cooperacao-alema",
     "slug": "cooperacao-alema",
-    "cliente": null,
-    "categoriaLabel": null,
+    "categoriaLabel": "Design Gráfico",
     "categoriaSlug": "design-grafico",
     "destaqueHome": true,
     "corPlaceholder": null,
@@ -83,8 +54,7 @@
   {
     "id": "mr-huolang-design-grafico",
     "slug": "mr-huolang-design-grafico",
-    "cliente": null,
-    "categoriaLabel": null,
+    "categoriaLabel": "Design Gráfico",
     "categoriaSlug": "design-grafico",
     "destaqueHome": true,
     "corPlaceholder": null,
@@ -110,8 +80,7 @@
   {
     "id": "instituto-de-amendoas-design-grafico",
     "slug": "instituto-de-amendoas-design-grafico",
-    "cliente": null,
-    "categoriaLabel": null,
+    "categoriaLabel": "Design Gráfico",
     "categoriaSlug": "design-grafico",
     "destaqueHome": false,
     "corPlaceholder": null,
@@ -147,8 +116,7 @@
   {
     "id": "moz-bevok",
     "slug": "moz-bevok",
-    "cliente": null,
-    "categoriaLabel": null,
+    "categoriaLabel": "Design Gráfico",
     "categoriaSlug": "design-grafico",
     "destaqueHome": false,
     "corPlaceholder": null,
@@ -168,21 +136,20 @@
     ]
   },
   {
-    "id": "alex-pizza-place-marketing-digital",
-    "slug": "alex-pizza-place-marketing-digital",
-    "cliente": null,
-    "categoriaLabel": null,
+    "id": "alex-pizza-place",
+    "slug": "alex-pizza-place",
+    "categoriaLabel": "Marketing Digital",
     "categoriaSlug": "marketing-digital",
     "destaqueHome": false,
     "corPlaceholder": null,
-    "imagem": "assets/images/portfolio/marketing-digital/alex-pizza-place.jpg",
+    "imagem": "assets/images/portfolio/marketing-digital/alex-pizza-place/alex-pizza-place.jpg",
     "temVideo": false,
     "youtubeId": null,
     "descricao": "Design e produção de materiais de comunicação para a Alex Pizza Place, incluindo menu e gestao de redes sociais.",
     "galeria": [
       {
         "corPlaceholder": null,
-        "imagem": "assets/images/portfolio/marketing-digital/alex-pizza-place/alex-pizza-place-1.jpg"
+        "imagem": "assets/images/portfolio/marketing-digital/alex-pizza-place/alex-pizza-place-1.png"
       },
       {
         "corPlaceholder": null,
@@ -193,10 +160,9 @@
   {
     "id": "gold-royal-marketing-digital",
     "slug": "gold-royal-marketing-digital",
-    "cliente": null,
-    "categoriaLabel": null,
+    "categoriaLabel": "Marketing Digital",
     "categoriaSlug": "marketing-digital",
-    "destaqueHome": true,
+    "destaqueHome": false,
     "corPlaceholder": null,
     "imagem": "assets/images/portfolio/marketing-digital/gold-royal/gold-royal-social-media.jpg",
     "temVideo": false,
@@ -216,8 +182,7 @@
   {
     "id": "moz-meat-marketing-digital",
     "slug": "moz-meat-marketing-digital",
-    "cliente": null,
-    "categoriaLabel": null,
+    "categoriaLabel": "Marketing Digital",
     "categoriaSlug": "marketing-digital",
     "destaqueHome": false,
     "corPlaceholder": null,
@@ -243,46 +208,40 @@
   {
     "id": "mr-huolang-marketing-digital",
     "slug": "mr-huolang-marketing-digital",
-    "cliente": null,
-    "categoriaLabel": null,
+    "categoriaLabel": "Marketing Digital",
     "categoriaSlug": "marketing-digital",
     "destaqueHome": true,
     "corPlaceholder": null,
-    "imagem": "assets/images/portfolio/marketing-digital/mr-huolang/mr-huolang-1.jpg",
-    "temVideo": true,
+    "imagem": "assets/images/portfolio/marketing-digital/mr-huolang/mr-huolang-social-media-1.png",
+    "temVideo": false,
     "youtubeId": null,
     "descricao": "Design e produção de materiais de comunicação para a Mr. Huolang, incluindo promoções, campanhas publicitáriasonline no Facebook, Instagram e Tik Tok e gestão de tráfego pago.",
     "galeria": [
       {
         "corPlaceholder": null,
-        "imagem": "assets/images/portfolio/marketing-digital/mr-huolang/mr-huolang-1.jpg"
+        "imagem": "assets/images/portfolio/marketing-digital/mr-huolang/mr-huolang-social-media-2.png"
       },
       {
         "corPlaceholder": null,
-        "imagem": "assets/images/portfolio/marketing-digital/mr-huolang/mr-huolang-2.jpg"
-      },
-      {
-        "corPlaceholder": null,
-        "imagem": "assets/images/portfolio/marketing-digital/mr-huolang/mr-huolang-3.jpg"
+        "imagem": "assets/images/portfolio/marketing-digital/mr-huolang/mr-huolang-social-media-3.jpg"
       }
     ]
   },
   {
     "id": "napee-marketing-digital",
     "slug": "napee-marketing-digital",
-    "cliente": null,
-    "categoriaLabel": null,
+    "categoriaLabel": "Marketing Digital",
     "categoriaSlug": "marketing-digital",
     "destaqueHome": false,
     "corPlaceholder": null,
-    "imagem": "assets/images/portfolio/marketing-digital/napee/napee-social-media.jpg",
+    "imagem": "assets/images/portfolio/marketing-digital/napee/napee-social-media.png",
     "temVideo": false,
     "youtubeId": null,
     "descricao": "Design e produção de materiais de comunicação para a marca Napee da Futai Internacional, incluindo promoções, campanhas publicitáriasonline no Facebook e Instagram e gestao de trafego pago.",
     "galeria": [
       {
         "corPlaceholder": null,
-        "imagem": "assets/images/portfolio/marketing-digital/napee/napee-social-media-1.jpg"
+        "imagem": "assets/images/portfolio/marketing-digital/napee/napee-social-media-1.png"
       },
       {
         "corPlaceholder": null,
@@ -290,29 +249,27 @@
       },
       {
         "corPlaceholder": null,
-        "imagem": "assets/images/portfolio/marketing-digital/napee/napee-social-media-3.jpg"
+        "imagem": "assets/images/portfolio/marketing-digital/napee/napee-social-media-3.png"
       }
     ]
   },
   {
     "id": "wangas-fashion",
     "slug": "wangas-fashion",
-    "cliente": null,
-    "categoriaLabel": null,
+    "categoriaLabel": "Design Gráfico",
     "categoriaSlug": "design-grafico",
     "destaqueHome": false,
     "corPlaceholder": null,
-    "imagem": "assets/images/portfolio/design-grafico/wangas.fashion.jpg",
+    "imagem": "assets/images/portfolio/design-grafico/wangas-fashion.jpg",
     "temVideo": false,
     "youtubeId": null,
     "descricao": "Design e produção de materiais de comunicação para a loja Wangas Fashion.",
-    "galeria": false
+    "galeria": null
   },
   {
     "id": "thingo-mentors",
     "slug": "thingo-mentors",
-    "cliente": null,
-    "categoriaLabel": null,
+    "categoriaLabel": "Branding",
     "categoriaSlug": "branding",
     "destaqueHome": false,
     "corPlaceholder": null,
@@ -325,12 +282,11 @@
   {
     "id": "napee-branding",
     "slug": "napee-branding",
-    "cliente": null,
-    "categoriaLabel": null,
+    "categoriaLabel": "Branding",
     "categoriaSlug": "branding",
     "destaqueHome": false,
     "corPlaceholder": null,
-    "imagem": "assets/images/portfolio/branding/napee/napee-branding-de-viaturas.jpg",
+    "imagem": "assets/images/portfolio/branding/napee/napee-branding-viaturas.jpeg",
     "temVideo": false,
     "youtubeId": null,
     "descricao": "Design e produção de materiais de comunicação para a marca Napee da Futai Internacional, incluindo promoções, campanhas publicitáriasonline no Facebook e Instagram e gestao de trafego pago.",
@@ -341,19 +297,18 @@
       },
       {
         "corPlaceholder": null,
-        "imagem": "assets/images/portfolio/branding/napee/napee-branding-2.jpg"
+        "imagem": "assets/images/portfolio/branding/napee/napee-branding-2.jpeg"
       },
       {
         "corPlaceholder": null,
-        "imagem": "assets/images/portfolio/branding/napee/napee-branding-3.jpg"
+        "imagem": "assets/images/portfolio/branding/napee/napee-branding-3.jpeg"
       }
     ]
   },
   {
     "id": "jabulani-rachel",
     "slug": "jabulani-rachel",
-    "cliente": null,
-    "categoriaLabel": null,
+    "categoriaLabel": "Branding",
     "categoriaSlug": "branding",
     "destaqueHome": false,
     "corPlaceholder": null,
@@ -379,8 +334,7 @@
   {
     "id": "gold-royal-branding",
     "slug": "gold-royal-branding",
-    "cliente": null,
-    "categoriaLabel": null,
+    "categoriaLabel": "Branding",
     "categoriaSlug": "branding",
     "destaqueHome": false,
     "corPlaceholder": null,
@@ -398,8 +352,7 @@
   {
     "id": "alex-pizza-place-branding",
     "slug": "alex-pizza-place-branding",
-    "cliente": null,
-    "categoriaLabel": null,
+    "categoriaLabel": "Branding",
     "categoriaSlug": "branding",
     "destaqueHome": false,
     "corPlaceholder": null,
@@ -417,8 +370,7 @@
   {
     "id": "southern-sun-branding",
     "slug": "southern-sun-branding",
-    "cliente": null,
-    "categoriaLabel": null,
+    "categoriaLabel": "Branding",
     "categoriaSlug": "branding",
     "destaqueHome": true,
     "corPlaceholder": null,
@@ -436,12 +388,11 @@
   {
     "id": "napee-paineis",
     "slug": "napee-paineis",
-    "cliente": null,
-    "categoriaLabel": null,
+    "categoriaLabel": "Branding",
     "categoriaSlug": "paineis",
     "destaqueHome": true,
     "corPlaceholder": null,
-    "imagem": "assets/images/portfolio/paineis/napee/napee-painel-outdoor.jpeg",
+    "imagem": "assets/images/portfolio/paineis/napee/napee-painel-outdoor.jpg",
     "temVideo": false,
     "youtubeId": null,
     "descricao": "Design e produção de materiais de comunicação para a marca Napee da Futai Internacional, incluindo paineis outdor de diferentes tamanhos.",
@@ -463,49 +414,72 @@
   {
     "id": "sunrise-view",
     "slug": "sunrise-view",
-    "cliente": null,
-    "categoriaLabel": null,
+    "categoriaLabel": "Painéis",
     "categoriaSlug": "paineis",
     "destaqueHome": false,
     "corPlaceholder": null,
-    "imagem": "assets/images/portfolio/paineis/sunrise-view-paineis.jpeg",
+    "imagem": "assets/images/portfolio/paineis/sunrise-view-paineis.jpg",
     "temVideo": false,
     "youtubeId": null,
     "descricao": "Design e produção de uma placa de sinalização para a Sunrise View Guest House.",
     "galeria": null
   },
   {
+    "id": "ministro-elcidio-manhique",
+    "slug": "ministro-elcidio-manhique",
+    "categoriaLabel": "Relações Públicas e Internacionais",
+    "categoriaSlug": "relacoes-publicas-e-internacionais",
+    "destaqueHome": false,
+    "corPlaceholder": null,
+    "imagem": "assets/images/portfolio/relacoes-publicas-e-internacionais/ministro-elcidio-manhique-rp.jpg",
+    "temVideo": false,
+    "youtubeId": null,
+    "descricao": "Design e produção de materiais de comunicação para o Ministro Elcídio Manhique, incluindo gestão de redes sociais e criação de estratégias de Relações Públicas.",
+    "galeria": [
+      {
+        "corPlaceholder": null,
+        "imagem": "assets/images/portfolio/relacoes-publicas-e-internacionais/ministro-elcidio-manhique-1.jpg"
+      },
+      {
+        "corPlaceholder": null,
+        "imagem": "assets/images/portfolio/relacoes-publicas-e-internacionais/ministro-elcidio-manhique-2.jpg"
+      },
+      {
+        "corPlaceholder": null,
+        "imagem": "assets/images/portfolio/relacoes-publicas-e-internacionais/ministro-elcidio-manhique-3.jpg"
+      }
+    ]
+  },
+  {
     "id": "super-louca",
     "slug": "super-louca",
-    "cliente": null,
-    "categoriaLabel": null,
+    "categoriaLabel": "Painéis",
     "categoriaSlug": "paineis",
     "destaqueHome": true,
     "corPlaceholder": null,
-    "imagem": "assets/images/portfolio/paineis/super-louca/super-louca-contravision.jpg",
+    "imagem": "assets/images/portfolio/paineis/superlouca/super-louca-contravision.jpg",
     "temVideo": false,
     "youtubeId": null,
     "descricao": "Design e montagem de painéis e banners-contravision para o supermercado Super Louça localizado no bairro de Museu em Maputos.",
     "galeria": [
       {
         "corPlaceholder": null,
-        "imagem": "assets/images/portfolio/paineis/super-louca/super-louca-contravision-1.jpg"
+        "imagem": "assets/images/portfolio/paineis/superlouca/super-louca-contravision-1.jpg"
       },
       {
         "corPlaceholder": null,
-        "imagem": "assets/images/portfolio/paineis/super-louca/super-louca-contravision-2.jpg"
+        "imagem": "assets/images/portfolio/paineis/superlouca/super-louca-contravision-2.jpg"
       },
       {
         "corPlaceholder": null,
-        "imagem": "assets/images/portfolio/paineis/super-louca/super-louca-paineis.jpg"
+        "imagem": "assets/images/portfolio/paineis/superlouca/super-louca-paineis.jpg"
       }
     ]
   },
   {
     "id": "mr-huolang-paineis",
     "slug": "mr-huolang-paineis",
-    "cliente": null,
-    "categoriaLabel": null,
+    "categoriaLabel": "Painéis",
     "categoriaSlug": "paineis",
     "destaqueHome": true,
     "corPlaceholder": null,
@@ -518,8 +492,7 @@
   {
     "id": "moz-meat-paineis-luminoso",
     "slug": "moz-meat-paineis-luminoso",
-    "cliente": null,
-    "categoriaLabel": null,
+    "categoriaLabel": "Painéis",
     "categoriaSlug": "paineis",
     "destaqueHome": true,
     "corPlaceholder": null,
@@ -541,8 +514,7 @@
   {
     "id": "moz-meat-paineis-reclames",
     "slug": "moz-meat-paineis-reclames",
-    "cliente": null,
-    "categoriaLabel": null,
+    "categoriaLabel": "Painéis",
     "categoriaSlug": "paineis",
     "destaqueHome": false,
     "corPlaceholder": null,
@@ -568,8 +540,7 @@
   {
     "id": "instituto-de-amendoas-paineis",
     "slug": "instituto-de-amendoas-paineis",
-    "cliente": null,
-    "categoriaLabel": null,
+    "categoriaLabel": "Painéis",
     "categoriaSlug": "paineis",
     "destaqueHome": true,
     "corPlaceholder": null,
@@ -587,8 +558,7 @@
   {
     "id": "bazaruto-brewing",
     "slug": "bazaruto-brewing",
-    "cliente": null,
-    "categoriaLabel": null,
+    "categoriaLabel": "Painéis",
     "categoriaSlug": "paineis",
     "destaqueHome": true,
     "corPlaceholder": null,
@@ -606,12 +576,11 @@
   {
     "id": "global-shield",
     "slug": "global-shield",
-    "cliente": null,
-    "categoriaLabel": null,
+    "categoriaLabel": "Painéis",
     "categoriaSlug": "paineis",
     "destaqueHome": false,
     "corPlaceholder": null,
-    "imagem": "assets/images/portfolio/paineis/global-shield-paineis.jpg",
+    "imagem": "assets/images/portfolio/paineis/global-shield/global-shield-paineis.jpg",
     "temVideo": false,
     "youtubeId": null,
     "descricao": "Design e montagem de reclames e placas sinalizadoras e promocionais para a empresa Global Shield na Cidade da Matola.",
