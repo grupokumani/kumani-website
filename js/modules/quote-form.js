@@ -45,16 +45,27 @@ async function preencherDetalheServico() {
   }
 }
 
+const NUMERO_WHATSAPP = '258877335506';
+
+function montarMensagemCotacao(dados) {
+  return (
+    `Olá! Gostaria de pedir uma cotação à KUMANI:\n\n` +
+    `Nome: ${dados.nome}\n` +
+    `Empresa: ${dados.empresa || '(não indicado)'}\n` +
+    `Email: ${dados.email}\n` +
+    `Telefone: ${dados.telefone}\n` +
+    `Serviço/Necessidade: ${dados.tipoNecessidade}\n` +
+    `Orçamento indicativo: ${dados.orcamento || '(não indicado)'}\n\n` +
+    `Mensagem:\n${dados.mensagem}`
+  );
+}
+
 function initFormularioSubmissao() {
   const form = qs('[data-quote-form]');
   if (!form) return;
 
-  const submitBtn = qs('[data-quote-submit]', form);
-  const messageEl = qs('[data-quote-message]', form);
-
-  form.addEventListener('submit', async (event) => {
+  form.addEventListener('submit', (event) => {
     event.preventDefault();
-    messageEl.innerHTML = '';
 
     const dados = {
       nome: qs('[name="nome"]', form).value.trim(),
@@ -67,44 +78,16 @@ function initFormularioSubmissao() {
       consentimento: qs('[name="consentimento"]', form).checked,
     };
 
-    submitBtn.setAttribute('data-loading', 'true');
-    submitBtn.disabled = true;
-
-    try {
-      const response = await fetch('/api/enviar-cotacao', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(dados),
-      });
-
-      const resultado = await response.json();
-
-      if (!response.ok || !resultado.sucesso) {
-        mostrarMensagem(
-          messageEl,
-          'error',
-          resultado.erro || 'Não foi possível enviar o pedido. Tente novamente.'
-        );
-        return;
-      }
-
-      mostrarMensagem(
-        messageEl,
-        'success',
-        'Pedido enviado com sucesso! A nossa equipa entra em contacto brevemente.'
-      );
-      form.reset();
-    } catch (error) {
-      console.error('Erro ao submeter formulário de cotação', error);
-      mostrarMensagem(
-        messageEl,
-        'error',
-        'Erro de ligação. Verifique a sua internet e tente novamente.'
-      );
-    } finally {
-      submitBtn.removeAttribute('data-loading');
-      submitBtn.disabled = false;
+    if (!dados.nome || !dados.email || !dados.telefone || !dados.mensagem || !dados.consentimento) {
+      const messageEl = qs('[data-quote-message]', form);
+      messageEl.setAttribute('aria-live', 'polite');
+      messageEl.innerHTML = '<div class="form-message form-message--error">Preencha todos os campos obrigatórios e aceite o uso dos dados.</div>';
+      return;
     }
+
+    const mensagem = montarMensagemCotacao(dados);
+    const linkWhatsapp = `https://wa.me/${NUMERO_WHATSAPP}?text=${encodeURIComponent(mensagem)}`;
+    window.open(linkWhatsapp, '_blank', 'noopener');
   });
 }
 

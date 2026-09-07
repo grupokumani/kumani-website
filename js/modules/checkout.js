@@ -1,11 +1,15 @@
 /**
  * KUMANI — Página /checkout
- * Recolhe dados de entrega/facturação, chama /api/criar-pagamento
- * e redirecciona o cliente para o checkout hospedado da PaySuite.
+ * Recolhe dados de entrega e envia o pedido via WhatsApp.
+ * A integração PaySuite (M-Pesa/e-Mola/cartão) fica pronta em
+ * functions/api/criar-pagamento.js para ser reactivada no futuro —
+ * este ficheiro, por agora, não a chama.
  */
 
 import { qs } from '../utils/dom.js';
-import { obterItens, calcularTotal } from './cart.js';
+import { obterItens, calcularTotal, limparCarrinho } from './cart.js';
+
+const NUMERO_WHATSAPP = '258877335506';
 
 function formatPrice(value) {
   return `${value.toLocaleString('pt-PT')} MZN`;
@@ -36,6 +40,23 @@ function mostrarErro(mensagem) {
   el.style.display = 'block';
 }
 
+function montarMensagemPedido(cliente, itens, total) {
+  const linhas = itens
+    .map((item) => `- ${item.nome} x${item.quantidade} (${formatPrice(item.preco * item.quantidade)})`)
+    .join('\n');
+
+  return (
+    `Olá! Gostaria de finalizar este pedido na Loja KUMANI:\n\n` +
+    `${linhas}\n\n` +
+    `Total: ${formatPrice(total)}\n\n` +
+    `Dados de entrega:\n` +
+    `Nome: ${cliente.nome}\n` +
+    `Telefone: ${cliente.telefone}\n` +
+    `Email: ${cliente.email}\n` +
+    `Morada: ${cliente.morada}`
+  );
+}
+
 export function initCheckout() {
   const form = qs('[data-checkout-form]');
   if (!form) return;
@@ -50,11 +71,9 @@ export function initCheckout() {
 
   const submitBtn = qs('[data-checkout-submit]', form);
 
-  form.addEventListener('submit', async (event) => {
+  form.addEventListener('submit', (event) => {
     event.preventDefault();
     qs('[data-checkout-error]').style.display = 'none';
-    submitBtn.setAttribute('data-loading', 'true');
-    submitBtn.disabled = true;
 
     const dadosCliente = {
       nome: qs('[name="nome"]', form).value.trim(),
@@ -63,33 +82,21 @@ export function initCheckout() {
       morada: qs('[name="morada"]', form).value.trim(),
     };
 
-    try {
-      const response = await fetch('/api/criar-pagamento', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ cliente: dadosCliente, itens: obterItens() }),
-      });
-
-      const resultado = await response.json();
-
-      if (!response.ok || !resultado.checkoutUrl) {
-        mostrarErro(
-          resultado.erro || 'Não foi possível iniciar o pagamento. Tente novamente.'
-        );
-        return;
-      }
-
-      // O carrinho só é limpo depois de sabermos que o pagamento foi
-      // confirmado (na página de encomenda-confirmada.html), nunca aqui —
-      // se o cliente cancelar na PaySuite e voltar atrás, o carrinho
-      // continua intacto.
-      window.location.href = resultado.checkoutUrl;
-    } catch (error) {
-      console.error('Erro ao criar pagamento', error);
-      mostrarErro('Erro de ligação. Verifique a sua internet e tente novamente.');
-    } finally {
-      submitBtn.removeAttribute('data-loading');
-      submitBtn.disabled = false;
+    if (!dadosCliente.nome || !dadosCliente.telefone || !dadosCliente.morada) {
+      mostrarErro('Preencha nome, telefone e morada de entrega.');
+      return;
     }
+
+    const itensAtuais = obterItens();
+    const total = calcularTotal();
+    const mensagem = montarMensagemPedido(dadosCliente, itensAtuais, total);
+    const linkWhatsapp = `https://wa.me/${NUMERO_WHATSAPP}?text=${encodeURIComponent(mensagem)}`;
+
+    // O carrinho só é limpo depois de o link do WhatsApp estar montado
+    // e prestes a abrir — a encomenda passa a ser confirmada
+    // manualmente pela equipa KUMANI na conversa do WhatsApp.
+    limparCarrinho();
+    window.open(linkWhatsapp, '_blank', 'noopener');
+    window.location.href = '/encomenda-confirmada.html';
   });
 }
