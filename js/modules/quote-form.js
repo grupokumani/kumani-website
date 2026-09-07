@@ -7,6 +7,7 @@
  */
 
 import { qs } from '../utils/dom.js';
+import { mostrarMensagem } from '../utils/form-feedback.js';
 
 function getSlugFromURL() {
   return new URLSearchParams(window.location.search).get('slug');
@@ -42,10 +43,6 @@ async function preencherDetalheServico() {
     console.error('Falha ao carregar servicos.json', error);
     return null;
   }
-}
-
-function mostrarMensagem(container, tipo, texto) {
-  container.innerHTML = `<div class="form-message form-message--${tipo}">${texto}</div>`;
 }
 
 function initFormularioSubmissao() {

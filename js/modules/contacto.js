@@ -6,10 +6,7 @@
  */
 
 import { qs } from '../utils/dom.js';
-
-function mostrarMensagem(container, tipo, texto) {
-  container.innerHTML = `<div class="form-message form-message--${tipo}">${texto}</div>`;
-}
+import { mostrarMensagem } from '../utils/form-feedback.js';
 
 export function initContacto() {
   const form = qs('[data-contact-form]');
