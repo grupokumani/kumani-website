@@ -12,9 +12,18 @@
     "youtubeId": null,
     "descricao": "Design e produção de materiais de comunicação para o Ministro Elcídio Manhique, incluindo gestão de redes sociais e criação de estratégias de Relações Públicas.",
     "galeria": [
-      { "corPlaceholder": null, "imagem": "assets/images/portfolio/relacoes-publicas-e-internacionais/ministro-elcidio-manhique-1.jpg" },
-      { "corPlaceholder": null, "imagem": "assets/images/portfolio/relacoes-publicas-e-internacionais/ministro-elcidio-manhique-2.jpg" },
-      { "corPlaceholder": null, "imagem": "assets/images/portfolio/relacoes-publicas-e-internacionais/ministro-elcidio-manhique-3.jpg" }
+      {
+        "corPlaceholder": null,
+        "imagem": "assets/images/portfolio/relacoes-publicas-e-internacionais/ministro-elcidio-manhique-1.jpg"
+      },
+      {
+        "corPlaceholder": null,
+        "imagem": "assets/images/portfolio/relacoes-publicas-e-internacionais/ministro-elcidio-manhique-2.jpg"
+      },
+      {
+        "corPlaceholder": null,
+        "imagem": "assets/images/portfolio/relacoes-publicas-e-internacionais/ministro-elcidio-manhique-3.jpg"
+      }
     ]
   },
   {
@@ -30,9 +39,18 @@
     "youtubeId": null,
     "descricao": "Design e produção de materiais de comunicação para a Moz Meat, incluindo gestão de redes sociais e criação de estratégias de marketing digital.",
     "galeria": [
-      { "corPlaceholder": null, "imagem": "assets/images/portfolio/design-grafico/moz-meat/moz-meat-design-grafico-1.jpg" },
-      { "corPlaceholder": null, "imagem": "assets/images/portfolio/design-grafico/moz-meat/moz-meat-design-grafico-2.jpg" },
-      { "corPlaceholder": null, "imagem": "assets/images/portfolio/design-grafico/moz-meat/moz-meat-design-grafico-3.jpg" }
+      {
+        "corPlaceholder": null,
+        "imagem": "assets/images/portfolio/design-grafico/moz-meat/moz-meat-design-grafico-1.jpg"
+      },
+      {
+        "corPlaceholder": null,
+        "imagem": "assets/images/portfolio/design-grafico/moz-meat/moz-meat-design-grafico-2.jpg"
+      },
+      {
+        "corPlaceholder": null,
+        "imagem": "assets/images/portfolio/design-grafico/moz-meat/moz-meat-design-grafico-3.jpg"
+      }
     ]
   },
   {
@@ -48,14 +66,23 @@
     "youtubeId": null,
     "descricao": "Design e produção de materiais de comunicação para a Cooperação Alemã em Moçambique em parceria com a KfW, no âmbito da realização da 60ª edição da Feira Internacional de Maputo - FACIM.",
     "galeria": [
-      { "corPlaceholder": null, "imagem": "assets/images/portfolio/design-grafico/cooperacao-alema/cooperacao-alema-1.jpg" },
-      { "corPlaceholder": null, "imagem": "assets/images/portfolio/design-grafico/cooperacao-alema/cooperacao-alema-2.jpg" },
-      { "corPlaceholder": null, "imagem": "assets/images/portfolio/design-grafico/cooperacao-alema/cooperacao-alema-3.jpg" }
+      {
+        "corPlaceholder": null,
+        "imagem": "assets/images/portfolio/design-grafico/cooperacao-alema/cooperacao-alema-1.jpg"
+      },
+      {
+        "corPlaceholder": null,
+        "imagem": "assets/images/portfolio/design-grafico/cooperacao-alema/cooperacao-alema-2.jpg"
+      },
+      {
+        "corPlaceholder": null,
+        "imagem": "assets/images/portfolio/design-grafico/cooperacao-alema/cooperacao-alema-3.jpg"
+      }
     ]
   },
   {
-    "id": "mr-huolang",
-    "slug": "mr-huolang",
+    "id": "mr-huolang-design-grafico",
+    "slug": "mr-huolang-design-grafico",
     "cliente": null,
     "categoriaLabel": null,
     "categoriaSlug": "design-grafico",
@@ -66,14 +93,23 @@
     "youtubeId": null,
     "descricao": "Design e produção de materiais de comunicação para a Mr Huolang, incluindo gestão de redes sociais e criação de estratégias de marketing digital.",
     "galeria": [
-      { "corPlaceholder": null, "imagem": "assets/images/portfolio/design-grafico/mr-huolang/mr-huolang-design-grafico-1.jpg" },
-      { "corPlaceholder": null, "imagem": "assets/images/portfolio/design-grafico/mr-huolang/mr-huolang-design-grafico-2.jpg" },
-      { "corPlaceholder": null, "imagem": "assets/images/portfolio/design-grafico/mr-huolang/mr-huolang-design-grafico-3.jpg" }
+      {
+        "corPlaceholder": null,
+        "imagem": "assets/images/portfolio/design-grafico/mr-huolang/mr-huolang-design-grafico-1.jpg"
+      },
+      {
+        "corPlaceholder": null,
+        "imagem": "assets/images/portfolio/design-grafico/mr-huolang/mr-huolang-design-grafico-2.jpg"
+      },
+      {
+        "corPlaceholder": null,
+        "imagem": "assets/images/portfolio/design-grafico/mr-huolang/mr-huolang-design-grafico-3.jpg"
+      }
     ]
   },
   {
-    "id": "instituto-de-amendoas",
-    "slug": "instituto-de-amendoas",
+    "id": "instituto-de-amendoas-design-grafico",
+    "slug": "instituto-de-amendoas-design-grafico",
     "cliente": null,
     "categoriaLabel": null,
     "categoriaSlug": "design-grafico",
@@ -86,8 +122,8 @@
     "galeria": []
   },
   {
-    "id": "southern-sun",
-    "slug": "southern-sun",
+    "id": "southern-sun-design-grafico",
+    "slug": "southern-sun-design-grafico",
     "cliente": null,
     "categoriaLabel": null,
     "categoriaSlug": "design-grafico",
@@ -98,8 +134,14 @@
     "youtubeId": null,
     "descricao": "Design e produção de materiais de comunicação para a Southern Sun, incluindo gestão de redes sociais e criação de estratégias de marketing digital.",
     "galeria": [
-      { "corPlaceholder": null, "imagem": "assets/images/portfolio/design-grafico/southern-sun/southern-sun-2.jpg" },
-      { "corPlaceholder": null, "imagem": "assets/images/portfolio/design-grafico/southern-sun/southern-sun-3.jpg" }
+      {
+        "corPlaceholder": null,
+        "imagem": "assets/images/portfolio/design-grafico/southern-sun/southern-sun-2.jpg"
+      },
+      {
+        "corPlaceholder": null,
+        "imagem": "assets/images/portfolio/design-grafico/southern-sun/southern-sun-3.jpg"
+      }
     ]
   },
   {
@@ -115,13 +157,19 @@
     "youtubeId": null,
     "descricao": "Design e produção de materiais de comunicação para a Moz Bevok, incluindo menu e suporte de acrilico.",
     "galeria": [
-      { "corPlaceholder": null, "imagem": "assets/images/portfolio/design-grafico/moz-bevok/moz-bevok-1.jpg" },
-      { "corPlaceholder": null, "imagem": "assets/images/portfolio/design-grafico/moz-bevok/moz-bevok-2.jpg" }
+      {
+        "corPlaceholder": null,
+        "imagem": "assets/images/portfolio/design-grafico/moz-bevok/moz-bevok-1.jpg"
+      },
+      {
+        "corPlaceholder": null,
+        "imagem": "assets/images/portfolio/design-grafico/moz-bevok/moz-bevok-2.jpg"
+      }
     ]
   },
-    {
-    "id": "alex-pizza-place",
-    "slug": "alex-pizza-place",
+  {
+    "id": "alex-pizza-place-marketing-digital",
+    "slug": "alex-pizza-place-marketing-digital",
     "cliente": null,
     "categoriaLabel": null,
     "categoriaSlug": "marketing-digital",
@@ -132,13 +180,19 @@
     "youtubeId": null,
     "descricao": "Design e produção de materiais de comunicação para a Alex Pizza Place, incluindo menu e gestao de redes sociais.",
     "galeria": [
-      { "corPlaceholder": null, "imagem": "assets/images/portfolio/marketing-digital/alex-pizza-place/alex-pizza-place-1.jpg" },
-      { "corPlaceholder": null, "imagem": "assets/images/portfolio/marketing-digital/alex-pizza-place/alex-pizza-place-2.jpg" }
+      {
+        "corPlaceholder": null,
+        "imagem": "assets/images/portfolio/marketing-digital/alex-pizza-place/alex-pizza-place-1.jpg"
+      },
+      {
+        "corPlaceholder": null,
+        "imagem": "assets/images/portfolio/marketing-digital/alex-pizza-place/alex-pizza-place-2.jpg"
+      }
     ]
   },
   {
-    "id": "gold-royal",
-    "slug": "gold-royal",
+    "id": "gold-royal-marketing-digital",
+    "slug": "gold-royal-marketing-digital",
     "cliente": null,
     "categoriaLabel": null,
     "categoriaSlug": "marketing-digital",
@@ -149,13 +203,19 @@
     "youtubeId": null,
     "descricao": "Design e produção de materiais de comunicação para a Gold Royal, incluindo menu e suporte de acrilico.",
     "galeria": [
-      { "corPlaceholder": null, "imagem": "assets/images/portfolio/marketing-digital/gold-royal/gold-royal-1.jpg" },
-      { "corPlaceholder": null, "imagem": "assets/images/portfolio/marketing-digital/gold-royal/gold-royal-2.jpg" }
+      {
+        "corPlaceholder": null,
+        "imagem": "assets/images/portfolio/marketing-digital/gold-royal/gold-royal-1.jpg"
+      },
+      {
+        "corPlaceholder": null,
+        "imagem": "assets/images/portfolio/marketing-digital/gold-royal/gold-royal-2.jpg"
+      }
     ]
   },
-    {
-    "id": "moz-meat",
-    "slug": "moz-meat",
+  {
+    "id": "moz-meat-marketing-digital",
+    "slug": "moz-meat-marketing-digital",
     "cliente": null,
     "categoriaLabel": null,
     "categoriaSlug": "marketing-digital",
@@ -166,45 +226,72 @@
     "youtubeId": null,
     "descricao": "Design e produção de materiais de comunicação para a Moz Meat, incluindo promoções, campanhas publicitáriasonline no Facebook e Instagram e gestao de trafego pago.",
     "galeria": [
-      { "corPlaceholder": null, "imagem": "assets/images/portfolio/marketing-digital/moz-meat/moz-meat-1.jpg" },
-      { "corPlaceholder": null, "imagem": "assets/images/portfolio/marketing-digital/moz-meat/moz-meat-2.jpg" }
-      { "corPlaceholder": null, "imagem": "assets/images/portfolio/marketing-digital/moz-meat/moz-meat-3.jpg" }
+      {
+        "corPlaceholder": null,
+        "imagem": "assets/images/portfolio/marketing-digital/moz-meat/moz-meat-1.jpg"
+      },
+      {
+        "corPlaceholder": null,
+        "imagem": "assets/images/portfolio/marketing-digital/moz-meat/moz-meat-2.jpg"
+      },
+      {
+        "corPlaceholder": null,
+        "imagem": "assets/images/portfolio/marketing-digital/moz-meat/moz-meat-3.jpg"
+      }
     ]
   },
-      {
-    "id": "mr-huolang",
-    "slug": "mr-huolang",
+  {
+    "id": "mr-huolang-marketing-digital",
+    "slug": "mr-huolang-marketing-digital",
     "cliente": null,
     "categoriaLabel": null,
     "categoriaSlug": "marketing-digital",
     "destaqueHome": true,
     "corPlaceholder": null,
-    "imagem": false,
-    "temVideo": "assets/videos/portfolio/mr-huolang-social-media.mov",
+    "imagem": "assets/images/portfolio/marketing-digital/mr-huolang/mr-huolang-1.jpg",
+    "temVideo": true,
     "youtubeId": null,
     "descricao": "Design e produção de materiais de comunicação para a Mr. Huolang, incluindo promoções, campanhas publicitáriasonline no Facebook, Instagram e Tik Tok e gestão de tráfego pago.",
     "galeria": [
-      { "corPlaceholder": null, "imagem": "assets/images/portfolio/marketing-digital/mr-huolang/mr-huolang-1.jpg" },
-      { "corPlaceholder": null, "imagem": "assets/images/portfolio/marketing-digital/mr-huolang/mr-huolang-2.jpg" },
-      { "corPlaceholder": null, "imagem": "assets/images/portfolio/marketing-digital/mr-huolang/mr-huolang-3.jpg" }
+      {
+        "corPlaceholder": null,
+        "imagem": "assets/images/portfolio/marketing-digital/mr-huolang/mr-huolang-1.jpg"
+      },
+      {
+        "corPlaceholder": null,
+        "imagem": "assets/images/portfolio/marketing-digital/mr-huolang/mr-huolang-2.jpg"
+      },
+      {
+        "corPlaceholder": null,
+        "imagem": "assets/images/portfolio/marketing-digital/mr-huolang/mr-huolang-3.jpg"
+      }
     ]
   },
   {
-    "id": "napee",
-    "slug": "napee",
+    "id": "napee-marketing-digital",
+    "slug": "napee-marketing-digital",
     "cliente": null,
     "categoriaLabel": null,
     "categoriaSlug": "marketing-digital",
     "destaqueHome": false,
     "corPlaceholder": null,
-    "imagem": false,
-    "temVideo": "assets/images/portfolio/marketing-digital/napee/napee-social-media.jpg",
+    "imagem": "assets/images/portfolio/marketing-digital/napee/napee-social-media.jpg",
+    "temVideo": false,
     "youtubeId": null,
     "descricao": "Design e produção de materiais de comunicação para a marca Napee da Futai Internacional, incluindo promoções, campanhas publicitáriasonline no Facebook e Instagram e gestao de trafego pago.",
     "galeria": [
-      { "corPlaceholder": null, "imagem": "assets/images/portfolio/marketing-digital/napee/napee-social-media-1.jpg" },
-      { "corPlaceholder": null, "imagem": "assets/images/portfolio/marketing-digital/napee/napee-social-media-2.jpg" },
-      { "corPlaceholder": null, "imagem": "assets/images/portfolio/marketing-digital/napee/napee-social-media-3.jpg" }
+      {
+        "corPlaceholder": null,
+        "imagem": "assets/images/portfolio/marketing-digital/napee/napee-social-media-1.jpg"
+      },
+      {
+        "corPlaceholder": null,
+        "imagem": "assets/images/portfolio/marketing-digital/napee/napee-social-media-2.jpg"
+      },
+      {
+        "corPlaceholder": null,
+        "imagem": "assets/images/portfolio/marketing-digital/napee/napee-social-media-3.jpg"
+      }
     ]
   },
   {
@@ -236,8 +323,8 @@
     "galeria": false
   },
   {
-    "id": "napee",
-    "slug": "napee",
+    "id": "napee-branding",
+    "slug": "napee-branding",
     "cliente": null,
     "categoriaLabel": null,
     "categoriaSlug": "branding",
@@ -248,9 +335,18 @@
     "youtubeId": null,
     "descricao": "Design e produção de materiais de comunicação para a marca Napee da Futai Internacional, incluindo promoções, campanhas publicitáriasonline no Facebook e Instagram e gestao de trafego pago.",
     "galeria": [
-      { "corPlaceholder": null, "imagem": "assets/images/portfolio/branding/napee/napee-branding-1.jpg" },
-      { "corPlaceholder": null, "imagem": "assets/images/portfolio/branding/napee/napee-branding-2.jpg" },
-      { "corPlaceholder": null, "imagem": "assets/images/portfolio/branding/napee/napee-branding-3.jpg" }
+      {
+        "corPlaceholder": null,
+        "imagem": "assets/images/portfolio/branding/napee/napee-branding-1.jpg"
+      },
+      {
+        "corPlaceholder": null,
+        "imagem": "assets/images/portfolio/branding/napee/napee-branding-2.jpg"
+      },
+      {
+        "corPlaceholder": null,
+        "imagem": "assets/images/portfolio/branding/napee/napee-branding-3.jpg"
+      }
     ]
   },
   {
@@ -266,14 +362,23 @@
     "youtubeId": null,
     "descricao": "Design e produção de materiais de brandimg para a Jabulani Rachel, incluindo montagem de vinil, embalagem e rótulo.",
     "galeria": [
-      { "corPlaceholder": null, "imagem": "assets/images/portfolio/branding/jabulani-rachel/jabulani-rachel-branding-1.jpg" },
-      { "corPlaceholder": null, "imagem": "assets/images/portfolio/branding/jabulani-rachel/jabulani-rachel-branding-2.jpg" },
-      { "corPlaceholder": null, "imagem": "assets/images/portfolio/branding/jabulani-rachel/jabulani-rachel-branding-3.jpg" }
+      {
+        "corPlaceholder": null,
+        "imagem": "assets/images/portfolio/branding/jabulani-rachel/jabulani-rachel-branding-1.jpg"
+      },
+      {
+        "corPlaceholder": null,
+        "imagem": "assets/images/portfolio/branding/jabulani-rachel/jabulani-rachel-branding-2.jpg"
+      },
+      {
+        "corPlaceholder": null,
+        "imagem": "assets/images/portfolio/branding/jabulani-rachel/jabulani-rachel-branding-3.jpg"
+      }
     ]
   },
   {
-    "id": "gold-royal",
-    "slug": "gold-royal",
+    "id": "gold-royal-branding",
+    "slug": "gold-royal-branding",
     "cliente": null,
     "categoriaLabel": null,
     "categoriaSlug": "branding",
@@ -284,12 +389,15 @@
     "youtubeId": null,
     "descricao": "Design e produção de materiais de branding para a marca Gold Royal da Futai Internacional, sacolas, empalagens, rotulos, camisetes, placas, entre outros.",
     "galeria": [
-      { "corPlaceholder": null, "imagem": "assets/images/portfolio/branding/gold-royal/gold-royal-branding-1.jpg" }
+      {
+        "corPlaceholder": null,
+        "imagem": "assets/images/portfolio/branding/gold-royal/gold-royal-branding-1.jpg"
+      }
     ]
   },
   {
-    "id": "alex-pizza-place",
-    "slug": "alex-pizza-place",
+    "id": "alex-pizza-place-branding",
+    "slug": "alex-pizza-place-branding",
     "cliente": null,
     "categoriaLabel": null,
     "categoriaSlug": "branding",
@@ -300,12 +408,15 @@
     "youtubeId": null,
     "descricao": "Design e produção de menus rusticos para a Pizzaria e Restaurante Alex Pizza Place, localizado na Ponta do Ouro e Ponta Malongane.",
     "galeria": [
-      { "corPlaceholder": null, "imagem": "assets/images/portfolio/branding/alex-pizza-place/alex-pizza-place-menu-rustico.jpg" }
+      {
+        "corPlaceholder": null,
+        "imagem": "assets/images/portfolio/branding/alex-pizza-place/alex-pizza-place-menu-rustico.jpg"
+      }
     ]
   },
   {
-    "id": "southern-sun",
-    "slug": "southern-sun",
+    "id": "southern-sun-branding",
+    "slug": "southern-sun-branding",
     "cliente": null,
     "categoriaLabel": null,
     "categoriaSlug": "branding",
@@ -316,12 +427,15 @@
     "youtubeId": null,
     "descricao": "Design e produção de materiais de comunicação para a marca Napee da Futai Internacional, incluindo promoções, campanhas publicitáriasonline no Facebook e Instagram e gestao de trafego pago.",
     "galeria": [
-      { "corPlaceholder": null, "imagem": "assets/images/portfolio/branding/southern-sun/southern-sun-stand-acrilico-2.jpg" }
+      {
+        "corPlaceholder": null,
+        "imagem": "assets/images/portfolio/branding/southern-sun/southern-sun-stand-acrilico-2.jpg"
+      }
     ]
   },
   {
-    "id": "napee",
-    "slug": "napee",
+    "id": "napee-paineis",
+    "slug": "napee-paineis",
     "cliente": null,
     "categoriaLabel": null,
     "categoriaSlug": "paineis",
@@ -332,9 +446,18 @@
     "youtubeId": null,
     "descricao": "Design e produção de materiais de comunicação para a marca Napee da Futai Internacional, incluindo paineis outdor de diferentes tamanhos.",
     "galeria": [
-      { "corPlaceholder": null, "imagem": "assets/images/portfolio/branding/napee/napee-painel-outdoor-mini-1.jpeg" },
-      { "corPlaceholder": null, "imagem": "assets/images/portfolio/branding/napee/napee-painel-outdoor-mini.jpeg" },
-      { "corPlaceholder": null, "imagem": "assets/images/portfolio/branding/napee/napee-painel.jpg" }
+      {
+        "corPlaceholder": null,
+        "imagem": "assets/images/portfolio/branding/napee/napee-painel-outdoor-mini-1.jpeg"
+      },
+      {
+        "corPlaceholder": null,
+        "imagem": "assets/images/portfolio/branding/napee/napee-painel-outdoor-mini.jpeg"
+      },
+      {
+        "corPlaceholder": null,
+        "imagem": "assets/images/portfolio/branding/napee/napee-painel.jpg"
+      }
     ]
   },
   {
@@ -364,14 +487,23 @@
     "youtubeId": null,
     "descricao": "Design e montagem de painéis e banners-contravision para o supermercado Super Louça localizado no bairro de Museu em Maputos.",
     "galeria": [
-      { "corPlaceholder": null, "imagem": "assets/images/portfolio/paineis/super-louca/super-louca-contravision-1.jpg" },
-      { "corPlaceholder": null, "imagem": "assets/images/portfolio/paineis/super-louca/super-louca-contravision-2.jpg" },
-      { "corPlaceholder": null, "imagem": "assets/images/portfolio/paineis/super-louca/super-louca-paineis.jpg" }
+      {
+        "corPlaceholder": null,
+        "imagem": "assets/images/portfolio/paineis/super-louca/super-louca-contravision-1.jpg"
+      },
+      {
+        "corPlaceholder": null,
+        "imagem": "assets/images/portfolio/paineis/super-louca/super-louca-contravision-2.jpg"
+      },
+      {
+        "corPlaceholder": null,
+        "imagem": "assets/images/portfolio/paineis/super-louca/super-louca-paineis.jpg"
+      }
     ]
   },
   {
-    "id": "mr-huolang",
-    "slug": "mr-huolang",
+    "id": "mr-huolang-paineis",
+    "slug": "mr-huolang-paineis",
     "cliente": null,
     "categoriaLabel": null,
     "categoriaSlug": "paineis",
@@ -384,8 +516,8 @@
     "galeria": null
   },
   {
-    "id": "moz-meat",
-    "slug": "moz-meat",
+    "id": "moz-meat-paineis-luminoso",
+    "slug": "moz-meat-paineis-luminoso",
     "cliente": null,
     "categoriaLabel": null,
     "categoriaSlug": "paineis",
@@ -396,13 +528,19 @@
     "youtubeId": null,
     "descricao": "Design e montagem de painéis luminosos para a Moz Meat na Cidade da Matola.",
     "galeria": [
-      { "corPlaceholder": null, "imagem": "assets/images/portfolio/paineis/moz-meat/moz-meat-painel-luminoso-1.jpg" },
-      { "corPlaceholder": null, "imagem": "assets/images/portfolio/paineis/moz-meat/moz-meat-painel-luminoso-2.jpg" }
+      {
+        "corPlaceholder": null,
+        "imagem": "assets/images/portfolio/paineis/moz-meat/moz-meat-painel-luminoso-1.jpg"
+      },
+      {
+        "corPlaceholder": null,
+        "imagem": "assets/images/portfolio/paineis/moz-meat/moz-meat-painel-luminoso-2.jpg"
+      }
     ]
   },
   {
-    "id": "moz-meat",
-    "slug": "moz-meat",
+    "id": "moz-meat-paineis-reclames",
+    "slug": "moz-meat-paineis-reclames",
     "cliente": null,
     "categoriaLabel": null,
     "categoriaSlug": "paineis",
@@ -413,14 +551,23 @@
     "youtubeId": null,
     "descricao": "Design e montagem de reclames e placas sinalizadoras e promocionais, incluindo vinil e contravision para a Moz Meat na Cidade da Matola.",
     "galeria": [
-      { "corPlaceholder": null, "imagem": "assets/images/portfolio/paineis/moz-meat/moz-meat-banner-contravision.jpg" },
-      { "corPlaceholder": null, "imagem": "assets/images/portfolio/paineis/moz-meat/moz-meat-placas.jpg" },
-      { "corPlaceholder": null, "imagem": "assets/images/portfolio/paineis/moz-meat/moz-meat-banner.jpg" }
+      {
+        "corPlaceholder": null,
+        "imagem": "assets/images/portfolio/paineis/moz-meat/moz-meat-banner-contravision.jpg"
+      },
+      {
+        "corPlaceholder": null,
+        "imagem": "assets/images/portfolio/paineis/moz-meat/moz-meat-placas.jpg"
+      },
+      {
+        "corPlaceholder": null,
+        "imagem": "assets/images/portfolio/paineis/moz-meat/moz-meat-banner.jpg"
+      }
     ]
   },
   {
-    "id": "institudo-de-amendoas",
-    "slug": "instituto-de-amendoas",
+    "id": "instituto-de-amendoas-paineis",
+    "slug": "instituto-de-amendoas-paineis",
     "cliente": null,
     "categoriaLabel": null,
     "categoriaSlug": "paineis",
@@ -431,7 +578,10 @@
     "youtubeId": null,
     "descricao": "Design e montagem de reclames e placas sinalizadoras para o Instituto de Amendoas de Moçambique localizado no distrito de Marracuene.",
     "galeria": [
-      { "corPlaceholder": null, "imagem": "assets/images/portfolio/paineis/instituto-de-amendoas-paineis-1.jpg" }
+      {
+        "corPlaceholder": null,
+        "imagem": "assets/images/portfolio/paineis/instituto-de-amendoas-paineis-1.jpg"
+      }
     ]
   },
   {
@@ -447,7 +597,10 @@
     "youtubeId": null,
     "descricao": "Design e montagem de painél luminoso para a marca Bazaruto Brewing Company em um restaurante localizado na Ponta do Ouro, Maputo.",
     "galeria": [
-      { "corPlaceholder": null, "imagem": "assets/images/portfolio/paineis/bazaruto-brewing/bazaruto-brewing-paineis-1.jpg" }
+      {
+        "corPlaceholder": null,
+        "imagem": "assets/images/portfolio/paineis/bazaruto-brewing/bazaruto-brewing-paineis-1.jpg"
+      }
     ]
   },
   {

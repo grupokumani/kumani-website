@@ -1,7 +1,7 @@
 [
   {
-    "id": "cartoes-visita - 350gsm",
-    "slug": "cartoes-visita",
+    "id": "cartoes-visita-standard",
+    "slug": "cartoes-visita-standard",
     "destaqueHome": true,
     "nome": "Cartões de visita",
     "descricao": "Cartões de visita, a partir de 100 unidades.",
@@ -13,8 +13,8 @@
     "stock": true
   },
   {
-    "id": "cartoes-visita",
-    "slug": "cartoes-visita",
+    "id": "cartoes-visita-350gsm",
+    "slug": "cartoes-visita-350gsm",
     "destaqueHome": false,
     "nome": "Cartões de visita - 350gsm",
     "descricao": "Cartões de visita laminados, a partir de 50 unidades.",
@@ -26,8 +26,8 @@
     "stock": true
   },
   {
-    "id": "cartoes-visita",
-    "slug": "cartoes-visita",
+    "id": "cartoes-visita-250gsm",
+    "slug": "cartoes-visita-250gsm",
     "destaqueHome": true,
     "nome": "Cartões de visita - 250gsm",
     "descricao": "Cartões de visita, a partir de 50 unidades.",
@@ -60,7 +60,7 @@
     "preco": 8500,
     "moeda": "MZN",
     "badge": "Novo",
-    "corPlaceholder":null,
+    "corPlaceholder": null,
     "imagem": "assets/images/produtos/fisicos/roll-up.jpg",
     "stock": true
   },
@@ -78,8 +78,8 @@
     "stock": true
   },
   {
-    "id": "envelope-personalizado",
-    "slug": "envelope-personalizado",
+    "id": "envelope-personalizado-100un",
+    "slug": "envelope-personalizado-100un",
     "destaqueHome": true,
     "nome": "Envelope Personalizado",
     "descricao": "Envelopes personalizados, ideais para correspondência profissional, a partir de 100 unidades.",
@@ -312,8 +312,8 @@
     "stock": true
   },
   {
-    "id": "envelope-personalizado",
-    "slug": "envelope-personalizado",
+    "id": "envelope-personalizado-10un",
+    "slug": "envelope-personalizado-10un",
     "destaqueHome": false,
     "nome": "Envelope Personalizado",
     "descricao": "Envelope personalizado com o seu logótipo ou design, a partir de 10 unidades.",
@@ -414,7 +414,8 @@
     "corPlaceholder": null,
     "imagem": "assets/images/produtos/fisicos/moletom.jpeg",
     "stock": true
-  },{
+  },
+  {
     "id": "mouse-pad",
     "slug": "mouse-pad",
     "destaqueHome": false,
@@ -441,8 +442,8 @@
     "stock": true
   },
   {
-    "id": "pin-kumani",
-    "slug": "pin-kumani",
+    "id": "pin-kumani-doming",
+    "slug": "pin-kumani-doming",
     "destaqueHome": false,
     "nome": "Pin em Doming",
     "descricao": "Pin Sublimação personalizado com o seu logótipo, ideal para presentes.",
@@ -454,8 +455,8 @@
     "stock": true
   },
   {
-    "id": "pin-kumani",
-    "slug": "pin-kumani",
+    "id": "pin-kumani-sublimacao",
+    "slug": "pin-kumani-sublimacao",
     "destaqueHome": false,
     "nome": "Pin Sublimação",
     "descricao": "Pin Sublimação personalizado com o seu logótipo, ideal para presentes.",
@@ -530,5 +531,5 @@
     "corPlaceholder": null,
     "imagem": "assets/images/produtos/fisicos/teardrop.jpg",
     "stock": true
-  },
+  }
 ]
