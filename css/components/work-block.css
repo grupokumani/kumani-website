@@ -104,45 +104,30 @@
   margin-top: var(--space-1);
 }
 
-/* --- Grelha edge-to-edge (sem margens, sem gap grande, sem cantos arredondados) --- */
+/* --- Grelha em colunas: mesmo tratamento do /portfolio.html, imagens em tamanho real --- */
 .work-grid--bleed {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2px;
+  column-count: 3;
+  column-gap: 2px;
 }
 
 .work-grid--bleed .work-block {
-  aspect-ratio: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  break-inside: avoid;
+  margin-bottom: 2px;
   border-radius: 0;
-}
-
-/* Nesta grelha densa, a legenda fica discreta — só a base da imagem,
-   não a meio ecrã como antes — para não competir com a própria foto */
-.work-grid--bleed .work-block__overlay {
-  background: linear-gradient(
-    180deg,
-    rgba(var(--color-brand-black-rgb), 0) 65%,
-    rgba(var(--color-brand-black-rgb), 0.75) 100%
-  );
-}
-
-.work-grid--bleed .work-block__client {
-  font-size: var(--fs-sm);
-}
-
-.work-grid--bleed .work-block__category {
-  font-size: 10px;
 }
 
 @media (max-width: 1023px) {
   .work-grid--bleed {
-    grid-template-columns: repeat(2, 1fr);
+    column-count: 2;
   }
 }
 
 @media (max-width: 480px) {
   .work-grid--bleed {
-    grid-template-columns: 1fr;
+    column-count: 1;
   }
 }
 

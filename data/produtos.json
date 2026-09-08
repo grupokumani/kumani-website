@@ -13,32 +13,6 @@
     "stock": true
   },
   {
-    "id": "cartoes-visita-350gsm",
-    "slug": "cartoes-visita-350gsm",
-    "destaqueHome": false,
-    "nome": "Cartões de visita - 350gsm",
-    "descricao": "Cartões de visita laminados, a partir de 50 unidades.",
-    "preco": 25,
-    "moeda": "MZN",
-    "badge": null,
-    "corPlaceholder": null,
-    "imagem": "assets/images/produtos/fisicos/cartao-de-visita.jpg",
-    "stock": true
-  },
-  {
-    "id": "cartoes-visita-250gsm",
-    "slug": "cartoes-visita-250gsm",
-    "destaqueHome": true,
-    "nome": "Cartões de visita - 250gsm",
-    "descricao": "Cartões de visita, a partir de 50 unidades.",
-    "preco": 10,
-    "moeda": "MZN",
-    "badge": null,
-    "corPlaceholder": null,
-    "imagem": "assets/images/produtos/fisicos/cartao-de-visita.jpg",
-    "stock": true
-  },
-  {
     "id": "papel-timbrado",
     "slug": "papel-timbrado",
     "destaqueHome": true,
@@ -67,7 +41,7 @@
   {
     "id": "revista",
     "slug": "revista",
-    "destaqueHome": true,
+    "destaqueHome": false,
     "nome": "Revista Persoonalizada",
     "descricao": "Revista personalizada com o seu conteúdo, ideal para marketing e comunicação.",
     "preco": 3550,
@@ -106,7 +80,7 @@
   {
     "id": "backdrop",
     "slug": "backdrop",
-    "destaqueHome": false,
+    "destaqueHome": true,
     "nome": "Backdrop",
     "descricao": "Backdrop para exposições e eventos.",
     "preco": 25000,
@@ -140,6 +114,32 @@
     "badge": null,
     "corPlaceholder": null,
     "imagem": "assets/images/produtos/fisicos/base-de-copo.jpg",
+    "stock": true
+  },
+  {
+    "id": "cartoes-visita-350gsm",
+    "slug": "cartoes-visita-350gsm",
+    "destaqueHome": false,
+    "nome": "Cartões de visita - 350gsm",
+    "descricao": "Cartões de visita laminados, a partir de 50 unidades.",
+    "preco": 25,
+    "moeda": "MZN",
+    "badge": null,
+    "corPlaceholder": null,
+    "imagem": "assets/images/produtos/fisicos/cartao-de-visita.jpg",
+    "stock": true
+  },
+  {
+    "id": "cartoes-visita-250gsm",
+    "slug": "cartoes-visita-250gsm",
+    "destaqueHome": false,
+    "nome": "Cartões de visita - 250gsm",
+    "descricao": "Cartões de visita, a partir de 50 unidades.",
+    "preco": 10,
+    "moeda": "MZN",
+    "badge": null,
+    "corPlaceholder": null,
+    "imagem": "assets/images/produtos/fisicos/cartao-de-visita.jpg",
     "stock": true
   },
   {
@@ -223,7 +223,7 @@
   {
     "id": "camiseta-polo-estampada",
     "slug": "camiseta-polo-estampada",
-    "destaqueHome": false,
+    "destaqueHome": true,
     "nome": "Camiseta Polo Estampada",
     "descricao": "Camiseta polo estampada com o seu logótipo ou design.",
     "preco": 800,
@@ -239,7 +239,7 @@
     "destaqueHome": false,
     "nome": "Carimbo",
     "descricao": "Carimbo personalizado com o seu logótipo ou design.",
-    "preco": 950,
+    "preco": 1500,
     "moeda": "MZN",
     "badge": null,
     "corPlaceholder": null,

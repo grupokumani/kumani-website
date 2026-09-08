@@ -20,9 +20,9 @@ async function fetchJSON(path) {
 }
 
 function renderWorkBlock(item) {
-  const mediaStyle = item.imagem
-    ? `background-image:url('${item.imagem}');background-size:cover;background-position:center;`
-    : `background-color:${item.corPlaceholder};`;
+  const media = item.imagem
+    ? `<img class="work-block__media" src="${item.imagem}" alt="${item.categoriaLabel || 'Trabalho KUMANI'}" loading="lazy">`
+    : `<div class="work-block__media work-block__media--placeholder" style="background-color:${item.corPlaceholder || 'var(--color-neutral-800)'};"></div>`;
 
   const playIcon = item.temVideo
     ? `<div class="work-block__play" aria-hidden="true">
@@ -31,14 +31,9 @@ function renderWorkBlock(item) {
     : '';
 
   return `
-    <a href="/projectos/projecto.html?slug=${item.slug}" class="work-block" data-reveal aria-label="Ver case study: ${item.cliente}">
-      <div class="work-block__media" style="${mediaStyle}"></div>
-      <div class="work-block__overlay"></div>
+    <a href="/projectos/projecto.html?slug=${item.slug}" class="work-block" data-reveal aria-label="Ver case study: ${item.categoriaLabel || 'projecto KUMANI'}">
+      ${media}
       ${playIcon}
-      <div class="work-block__caption">
-        <div class="work-block__client">${item.cliente}</div>
-        <div class="work-block__category">${item.categoriaLabel}</div>
-      </div>
     </a>
   `;
 }
@@ -83,8 +78,8 @@ function renderProductCard(item) {
 function renderClientLogo(item) {
   const label = item.nome || 'Cliente';
   const content = item.logo
-    ? `<img src="${item.logo}" alt="${label}" loading="lazy">`
-    : `<span class="clients-grid__name">${label}</span>`;
+    ? `<img src="${item.logo}" alt="${label}" loading="lazy" onerror="this.style.display='none'">`
+    : '';
 
   return `<div class="clients-grid__logo" aria-label="${label}">${content}</div>`;
 }
@@ -100,7 +95,7 @@ export async function initHomepage() {
    workGridEl.innerHTML = renderWorkGrid(destaques);
   }
 
-    if (productGridEl) {
+  if (productGridEl) {
     const produtos = await fetchJSON('data/produtos.json');
     const destaques = produtos.filter((item) => item.destaqueHome).slice(0, 6);
     productGridEl.innerHTML = destaques.map(renderProductCard).join('');
