@@ -113,3 +113,13 @@
   justify-content: center;
   flex-wrap: wrap;
 }
+
+.case-cta .btn--secondary {
+  color: var(--color-neutral-0);
+  border-color: var(--color-neutral-0);
+}
+
+.case-cta .btn--secondary:hover {
+  background: var(--color-neutral-0);
+  color: var(--color-text-primary);
+}

@@ -100,9 +100,10 @@ export async function initHomepage() {
    workGridEl.innerHTML = renderWorkGrid(destaques);
   }
 
-  if (productGridEl) {
+    if (productGridEl) {
     const produtos = await fetchJSON('data/produtos.json');
-    productGridEl.innerHTML = produtos.map(renderProductCard).join('');
+    const destaques = produtos.filter((item) => item.destaqueHome).slice(0, 6);
+    productGridEl.innerHTML = destaques.map(renderProductCard).join('');
   }
 
   if (clientsGridEl) {

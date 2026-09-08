@@ -8,20 +8,19 @@
 import { qs, qsa, on } from '../utils/dom.js';
 
 function renderCard(item) {
-  const mediaStyle = item.imagem
-    ? `background-image:url('${item.imagem}');background-size:cover;background-position:center;`
-    : `background-color:${item.corPlaceholder};`;
+  const media = item.imagem
+    ? `<img class="work-block__media" src="${item.imagem}" alt="${item.categoriaLabel}" loading="lazy">`
+    : `<div class="work-block__media work-block__media--placeholder" style="background-color:${item.corPlaceholder || 'var(--color-neutral-800)'};"></div>`;
 
   return `
     <a href="/projectos/projecto.html?slug=${item.slug}"
        class="work-block"
        data-reveal
        data-categoria="${item.categoriaSlug}"
-       aria-label="Ver case study: ${item.cliente}">
-      <div class="work-block__media" style="${mediaStyle}"></div>
+       aria-label="Ver case study: ${item.categoriaLabel}">
+      ${media}
       <div class="work-block__overlay"></div>
       <div class="work-block__caption">
-        <div class="work-block__client">${item.cliente}</div>
         <div class="work-block__category">${item.categoriaLabel}</div>
       </div>
     </a>

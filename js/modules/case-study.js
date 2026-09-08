@@ -43,23 +43,29 @@ export async function initCaseStudy() {
     return;
   }
 
-  document.title = `${projeto.cliente} — Case Study — KUMANI`;
+    // Título legível: usa "nome"/"cliente" se existir nos dados;
+  // senão, deriva do slug (ex: "cooperacao-alema" → "Cooperacao Alema").
+  const titulo =
+    projeto.nome ||
+    projeto.cliente ||
+    projeto.slug
+      .split('-')
+      .map((palavra) => palavra.charAt(0).toUpperCase() + palavra.slice(1))
+      .join(' ');
 
-  qs('[data-case-category]').textContent = projeto.categoriaLabel;
-  qs('[data-case-client]').textContent = projeto.cliente;
+  document.title = `${titulo} — Case Study — KUMANI`;
+
+  qs('[data-case-category]').textContent = projeto.categoriaLabel || '';
+  qs('[data-case-client]').textContent = titulo;
 
   const heroMedia = qs('[data-case-hero-media]');
   heroMedia.style.cssText = projeto.imagem
     ? `background-image:url('${projeto.imagem}');background-size:cover;background-position:center;`
-    : `background-color:${projeto.corPlaceholder};`;
+    : `background-color:${projeto.corPlaceholder || 'var(--color-neutral-800)'};`;
 
-  qs('[data-case-problema]').textContent = projeto.problema;
-  qs('[data-case-objectivo]').textContent = projeto.objectivo;
-  qs('[data-case-estrategia]').textContent = projeto.estrategia;
-  qs('[data-case-execucao]').textContent = projeto.execucao;
-  qs('[data-case-resultado]').textContent = projeto.resultado;
+  qs('[data-case-descricao]').textContent = projeto.descricao || '';
 
-  qs('[data-case-gallery]').innerHTML = projeto.galeria
-    .map(renderGalleryItem)
-    .join('');
+  // Alguns projectos têm "galeria": null ou false — trata como lista vazia.
+  const galeria = Array.isArray(projeto.galeria) ? projeto.galeria : [];
+  qs('[data-case-gallery]').innerHTML = galeria.map(renderGalleryItem).join('');
 }

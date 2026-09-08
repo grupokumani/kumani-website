@@ -91,29 +91,6 @@
     "galeria": []
   },
   {
-    "id": "southern-sun-design-grafico",
-    "slug": "southern-sun-design-grafico",
-    "cliente": null,
-    "categoriaLabel": null,
-    "categoriaSlug": "design-grafico",
-    "destaqueHome": false,
-    "corPlaceholder": null,
-    "imagem": "assets/images/portfolio/design-grafico/southern-sun/southern-sun-1.jpg",
-    "temVideo": false,
-    "youtubeId": null,
-    "descricao": "Design e produção de materiais de comunicação para a Southern Sun, incluindo gestão de redes sociais e criação de estratégias de marketing digital.",
-    "galeria": [
-      {
-        "corPlaceholder": null,
-        "imagem": "assets/images/portfolio/design-grafico/southern-sun/southern-sun-2.jpg"
-      },
-      {
-        "corPlaceholder": null,
-        "imagem": "assets/images/portfolio/design-grafico/southern-sun/southern-sun-3.jpg"
-      }
-    ]
-  },
-  {
     "id": "moz-bevok",
     "slug": "moz-bevok",
     "categoriaLabel": "Design Gráfico",
@@ -210,7 +187,7 @@
     "slug": "mr-huolang-marketing-digital",
     "categoriaLabel": "Marketing Digital",
     "categoriaSlug": "marketing-digital",
-    "destaqueHome": true,
+    "destaqueHome": false,
     "corPlaceholder": null,
     "imagem": "assets/images/portfolio/marketing-digital/mr-huolang/mr-huolang-social-media-1.png",
     "temVideo": false,
@@ -224,6 +201,29 @@
       {
         "corPlaceholder": null,
         "imagem": "assets/images/portfolio/marketing-digital/mr-huolang/mr-huolang-social-media-3.jpg"
+      }
+    ]
+  },
+  {
+    "id": "southern-sun-design-grafico",
+    "slug": "southern-sun-design-grafico",
+    "cliente": null,
+    "categoriaLabel": null,
+    "categoriaSlug": "design-grafico",
+    "destaqueHome": false,
+    "corPlaceholder": null,
+    "imagem": "assets/images/portfolio/design-grafico/southern-sun/southern-sun-1.jpg",
+    "temVideo": false,
+    "youtubeId": null,
+    "descricao": "Design e produção de materiais de comunicação para a Southern Sun, incluindo gestão de redes sociais e criação de estratégias de marketing digital.",
+    "galeria": [
+      {
+        "corPlaceholder": null,
+        "imagem": "assets/images/portfolio/design-grafico/southern-sun/southern-sun-2.jpg"
+      },
+      {
+        "corPlaceholder": null,
+        "imagem": "assets/images/portfolio/design-grafico/southern-sun/southern-sun-3.jpg"
       }
     ]
   },
