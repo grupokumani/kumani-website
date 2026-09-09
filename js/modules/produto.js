@@ -2,7 +2,7 @@
  * KUMANI — Página /produto/produto.html
  */
 
-import { qs, on } from '../utils/dom.js';
+import { qs, on, resolveAssetPath } from '../utils/dom.js';
 import { adicionarItem } from './cart.js';
 
 function getSlugFromURL() {
@@ -42,7 +42,7 @@ export async function initProdutoDetalhe() {
 
   const mediaEl = qs('[data-product-media]');
   mediaEl.style.cssText = produto.imagem
-    ? `background-image:url('${produto.imagem}');background-size:cover;background-position:center;`
+    ? `background-image:url('${resolveAssetPath(produto.imagem)}');background-size:cover;background-position:center;`
     : `background-color:${produto.corPlaceholder};`;
 
   if (produto.badge) {

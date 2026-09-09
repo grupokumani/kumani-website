@@ -1,0 +1,99 @@
+/* ============================================
+   KUMANI — PÁGINA: SOBRE
+   ============================================ */
+
+.sobre-hero {
+  padding: var(--space-11) var(--space-container-x) var(--space-9);
+  max-width: 720px;
+}
+
+.sobre-hero__eyebrow {
+  font-size: 11px;
+  font-weight: var(--fw-bold);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-widest);
+  color: var(--color-brand-primary-text);
+  margin-bottom: var(--space-4);
+}
+
+.sobre-hero__title {
+  font-size: clamp(1.75rem, 6vw, var(--fs-3xl));
+  font-weight: var(--fw-bold);
+  text-transform: uppercase;
+  line-height: 1.05;
+  margin-bottom: var(--space-5);
+  overflow-wrap: break-word;
+}
+
+.sobre-hero__intro {
+  font-size: var(--fs-lg);
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+.sobre-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-4);
+  padding: 0 var(--space-container-x) var(--space-11);
+  max-width: 960px;
+}
+
+.sobre-stats__item {
+  border-top: 3px solid var(--color-brand-primary);
+  padding: var(--space-5) 0;
+}
+
+.sobre-stats__value {
+  font-size: var(--fs-2xl);
+  font-weight: var(--fw-bold);
+}
+
+.sobre-stats__label {
+  font-size: var(--fs-sm);
+  color: var(--color-text-secondary);
+  margin-top: var(--space-1);
+}
+
+.sobre-mission {
+  background: var(--color-bg-subtle);
+  padding: var(--space-9) var(--space-container-x);
+}
+
+.sobre-mission__inner {
+  max-width: 720px;
+}
+
+.sobre-mission__title {
+  font-size: var(--fs-2xl);
+  font-weight: var(--fw-bold);
+  text-transform: uppercase;
+  margin-bottom: var(--space-4);
+}
+
+.sobre-mission__text {
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+}
+
+.sobre-cta {
+  padding: var(--space-9) var(--space-container-x);
+  text-align: center;
+}
+
+.sobre-cta__title {
+  font-size: var(--fs-2xl);
+  font-weight: var(--fw-bold);
+  text-transform: uppercase;
+  margin-bottom: var(--space-5);
+}
+
+@media (max-width: 767px) {
+  .sobre-stats {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-3);
+  }
+  .sobre-stats__value {
+    font-size: var(--fs-xl);
+  }
+}

@@ -5,7 +5,7 @@
  * redirecciona para /portfolio.html em vez de mostrar uma página vazia.
  */
 
-import { qs } from '../utils/dom.js';
+import { qs, resolveAssetPath } from '../utils/dom.js';
 
 function getSlugFromURL() {
   return new URLSearchParams(window.location.search).get('slug');
@@ -13,7 +13,7 @@ function getSlugFromURL() {
 
 function renderGalleryItem(item) {
   const style = item.imagem
-    ? `background-image:url('${item.imagem}');background-size:cover;background-position:center;`
+    ? `background-image:url('${resolveAssetPath(item.imagem)}');background-size:cover;background-position:center;`
     : `background-color:${item.corPlaceholder};`;
   return `<div class="case-gallery__item" style="${style}"></div>`;
 }
@@ -60,7 +60,7 @@ export async function initCaseStudy() {
 
   const heroMedia = qs('[data-case-hero-media]');
   heroMedia.style.cssText = projeto.imagem
-    ? `background-image:url('${projeto.imagem}');background-size:cover;background-position:center;`
+    ? `background-image:url('${resolveAssetPath(projeto.imagem)}');background-size:cover;background-position:center;`
     : `background-color:${projeto.corPlaceholder || 'var(--color-neutral-800)'};`;
 
   qs('[data-case-descricao]').textContent = projeto.descricao || '';

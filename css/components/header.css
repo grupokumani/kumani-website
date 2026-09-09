@@ -186,20 +186,30 @@
 /* --- Painel mobile full-screen --- */
 .header__mobile-panel {
   position: fixed;
-  inset: 0;
   top: 72px;
+  right: var(--space-4);
+  width: min(300px, calc(100vw - var(--space-8)));
+  max-height: calc(100vh - 96px);
+  overflow-y: auto;
   background: var(--color-bg);
-  padding: var(--space-8) var(--space-container-x);
+  border-radius: var(--radius-card);
+  box-shadow: 0 16px 40px rgba(var(--color-brand-black-rgb), 0.2);
+  padding: var(--space-6);
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  transform: translateX(100%);
-  transition: transform var(--duration-base) var(--ease-emphasized);
+  gap: var(--space-6);
+  transform: translateY(-12px) scale(0.98);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform var(--duration-base) var(--ease-emphasized),
+              opacity var(--duration-base) var(--ease-emphasized);
   z-index: 99;
 }
 
 .header__mobile-panel.is-open {
-  transform: translateX(0);
+  transform: translateY(0) scale(1);
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .header__mobile-list {
