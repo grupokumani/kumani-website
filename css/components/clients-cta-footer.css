@@ -49,11 +49,11 @@
 .clients-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: var(--space-5);
+  gap: var(--space-2) var(--space-4);
 }
 
 .clients-grid__logo {
-  height: 96px;
+  height: 130px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -61,8 +61,8 @@
 }
 
 .clients-grid__logo img {
-  max-height: 80%;
-  max-width: 85%;
+  max-height: 92%;
+  max-width: 92%;
 }
 
 .clients-grid__name {

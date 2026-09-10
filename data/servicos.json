@@ -70,17 +70,17 @@
     ]
   },
   {
-    "id": "moveis-decoracao",
-    "slug": "moveis-decoracao",
-    "nome": "Móveis e Decoração",
-    "resumo": "Espaços residenciais e comerciais, do mobiliário à pavimentação.",
-    "corPlaceholder": "#75756B",
-    "paraQuem": "Proprietários, arrendatários e promotores imobiliários que precisam de mobilar ou decorar um espaço.",
+    "id": "relacoes-publicas-e-internacionais",
+    "slug": "relacoes-publicas-e-internacionais",
+    "nome": "Relações Públicas e Internacionais",
+    "resumo": "Comunicação estratégica com stakeholders e parceiros internacionais.",
+    "corPlaceholder": "#8B4513",
+    "paraQuem": "Organizações que precisam de uma presença forte em ambientes internacionais e de gerir relações com diferentes partes interessadas.",
     "inclui": [
-      "Móveis sob medida e/ou catálogo",
-      "Decoração de interiores e exteriores",
-      "Pavimentação em pedras decorativas",
-      "Projectos chave-na-mão"
+      "Gestão de comunicação",
+      "Relações com a imprensa",
+      "Eventos e apresentações",
+      "Cooperação internacional"
     ]
   }
 ]

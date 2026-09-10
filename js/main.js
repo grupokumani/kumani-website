@@ -17,6 +17,7 @@ import { initCheckout } from './modules/checkout.js';
 import { initConfirmacao } from './modules/confirmacao.js';
 import { initContacto } from './modules/contacto.js';
 import { initClientesPage } from './modules/clientes.js';
+import { initEquipa } from './modules/equipa.js';
 import { initSearch } from './modules/search.js';
 import { initWhatsappFloat } from './modules/whatsapp-float.js';
 import { initRevealOnScroll } from './utils/reveal-on-scroll.js';
@@ -44,6 +45,7 @@ async function bootstrap() {
   if (page === 'confirmacao') await initConfirmacao();
   if (page === 'contacto') initContacto();
   if (page === 'clientes') await initClientesPage();
+  if (page === 'sobre') await initEquipa();
 
   initRevealOnScroll();
 }

@@ -1,4 +1,22 @@
 [
+    {
+    "id": "bazaruto-brewing",
+    "slug": "bazaruto-brewing",
+    "categoriaLabel": "Painéis",
+    "categoriaSlug": "paineis",
+    "destaqueHome": true,
+    "corPlaceholder": null,
+    "imagem": "assets/images/portfolio/paineis/bazaruto-brewing/bazaruto-brewing-paineis.jpg",
+    "temVideo": false,
+    "youtubeId": null,
+    "descricao": "Design e montagem de painél luminoso para a marca Bazaruto Brewing Company em um restaurante localizado na Ponta do Ouro, Maputo.",
+    "galeria": [
+      {
+        "corPlaceholder": null,
+        "imagem": "assets/images/portfolio/paineis/bazaruto-brewing/bazaruto-brewing-paineis-1.jpg"
+      }
+    ]
+  },
   {
     "id": "mozmeat",
     "slug": "mozmeat",
@@ -22,6 +40,72 @@
       {
         "corPlaceholder": null,
         "imagem": "assets/images/portfolio/design-grafico/moz-meat/moz-meat-design-grafico-3.jpg"
+      }
+    ]
+  },
+  {
+    "id": "moz-meat-paineis-luminoso",
+    "slug": "moz-meat-paineis-luminoso",
+    "categoriaLabel": "Painéis",
+    "categoriaSlug": "paineis",
+    "destaqueHome": true,
+    "corPlaceholder": null,
+    "imagem": "assets/images/portfolio/paineis/moz-meat/moz-meat-painel-luminoso.jpg",
+    "temVideo": false,
+    "youtubeId": null,
+    "descricao": "Design e montagem de painéis luminosos para a Moz Meat na Cidade da Matola.",
+    "galeria": [
+      {
+        "corPlaceholder": null,
+        "imagem": "assets/images/portfolio/paineis/moz-meat/moz-meat-painel-luminoso-1.jpg"
+      },
+      {
+        "corPlaceholder": null,
+        "imagem": "assets/images/portfolio/paineis/moz-meat/moz-meat-painel-luminoso-2.jpg"
+      }
+    ]
+  },
+  {
+    "id": "moz-meat-paineis-reclames",
+    "slug": "moz-meat-paineis-reclames",
+    "categoriaLabel": "Painéis",
+    "categoriaSlug": "paineis",
+    "destaqueHome": true,
+    "corPlaceholder": null,
+    "imagem": "assets/images/portfolio/paineis/moz-meat/moz-meat-reclames.jpg",
+    "temVideo": false,
+    "youtubeId": null,
+    "descricao": "Design e montagem de reclames e placas sinalizadoras e promocionais, incluindo vinil e contravision para a Moz Meat na Cidade da Matola.",
+    "galeria": [
+      {
+        "corPlaceholder": null,
+        "imagem": "assets/images/portfolio/paineis/moz-meat/moz-meat-banner-contravision.jpg"
+      },
+      {
+        "corPlaceholder": null,
+        "imagem": "assets/images/portfolio/paineis/moz-meat/moz-meat-placas.jpg"
+      },
+      {
+        "corPlaceholder": null,
+        "imagem": "assets/images/portfolio/paineis/moz-meat/moz-meat-banner.jpg"
+      }
+    ]
+  },
+  {
+    "id": "instituto-de-amendoas-paineis",
+    "slug": "instituto-de-amendoas-paineis",
+    "categoriaLabel": "Painéis",
+    "categoriaSlug": "paineis",
+    "destaqueHome": true,
+    "corPlaceholder": null,
+    "imagem": "assets/images/portfolio/paineis/instituto-de-amendoas/instituto-de-amendoas-paineis-2.jpg",
+    "temVideo": false,
+    "youtubeId": null,
+    "descricao": "Design e montagem de reclames e placas sinalizadoras para o Instituto de Amendoas de Moçambique localizado no distrito de Marracuene.",
+    "galeria": [
+      {
+        "corPlaceholder": null,
+        "imagem": "assets/images/portfolio/paineis/instituto-de-amendoas-paineis-1.jpg"
       }
     ]
   },
@@ -306,6 +390,32 @@
     ]
   },
   {
+    "id": "napee-paineis",
+    "slug": "napee-paineis",
+    "categoriaLabel": "Branding",
+    "categoriaSlug": "paineis",
+    "destaqueHome": true,
+    "corPlaceholder": null,
+    "imagem": "assets/images/portfolio/paineis/napee/napee-painel-outdoor.jpg",
+    "temVideo": false,
+    "youtubeId": null,
+    "descricao": "Design e produção de materiais de comunicação para a marca Napee da Futai Internacional, incluindo paineis outdor de diferentes tamanhos.",
+    "galeria": [
+      {
+        "corPlaceholder": null,
+        "imagem": "assets/images/portfolio/branding/napee/napee-painel-outdoor-mini-1.jpeg"
+      },
+      {
+        "corPlaceholder": null,
+        "imagem": "assets/images/portfolio/branding/napee/napee-painel-outdoor-mini.jpeg"
+      },
+      {
+        "corPlaceholder": null,
+        "imagem": "assets/images/portfolio/branding/napee/napee-painel.jpg"
+      }
+    ]
+  },
+  {
     "id": "jabulani-rachel",
     "slug": "jabulani-rachel",
     "categoriaLabel": "Branding",
@@ -386,32 +496,6 @@
     ]
   },
   {
-    "id": "napee-paineis",
-    "slug": "napee-paineis",
-    "categoriaLabel": "Branding",
-    "categoriaSlug": "paineis",
-    "destaqueHome": true,
-    "corPlaceholder": null,
-    "imagem": "assets/images/portfolio/paineis/napee/napee-painel-outdoor.jpg",
-    "temVideo": false,
-    "youtubeId": null,
-    "descricao": "Design e produção de materiais de comunicação para a marca Napee da Futai Internacional, incluindo paineis outdor de diferentes tamanhos.",
-    "galeria": [
-      {
-        "corPlaceholder": null,
-        "imagem": "assets/images/portfolio/branding/napee/napee-painel-outdoor-mini-1.jpeg"
-      },
-      {
-        "corPlaceholder": null,
-        "imagem": "assets/images/portfolio/branding/napee/napee-painel-outdoor-mini.jpeg"
-      },
-      {
-        "corPlaceholder": null,
-        "imagem": "assets/images/portfolio/branding/napee/napee-painel.jpg"
-      }
-    ]
-  },
-  {
     "id": "sunrise-view",
     "slug": "sunrise-view",
     "categoriaLabel": "Painéis",
@@ -488,90 +572,6 @@
     "youtubeId": null,
     "descricao": "Design e montagem de painéis para o exterior do Mr Huolang Supermercado.",
     "galeria": null
-  },
-  {
-    "id": "moz-meat-paineis-luminoso",
-    "slug": "moz-meat-paineis-luminoso",
-    "categoriaLabel": "Painéis",
-    "categoriaSlug": "paineis",
-    "destaqueHome": true,
-    "corPlaceholder": null,
-    "imagem": "assets/images/portfolio/paineis/moz-meat/moz-meat-painel-luminoso.jpg",
-    "temVideo": false,
-    "youtubeId": null,
-    "descricao": "Design e montagem de painéis luminosos para a Moz Meat na Cidade da Matola.",
-    "galeria": [
-      {
-        "corPlaceholder": null,
-        "imagem": "assets/images/portfolio/paineis/moz-meat/moz-meat-painel-luminoso-1.jpg"
-      },
-      {
-        "corPlaceholder": null,
-        "imagem": "assets/images/portfolio/paineis/moz-meat/moz-meat-painel-luminoso-2.jpg"
-      }
-    ]
-  },
-  {
-    "id": "moz-meat-paineis-reclames",
-    "slug": "moz-meat-paineis-reclames",
-    "categoriaLabel": "Painéis",
-    "categoriaSlug": "paineis",
-    "destaqueHome": true,
-    "corPlaceholder": null,
-    "imagem": "assets/images/portfolio/paineis/moz-meat/moz-meat-reclames.jpg",
-    "temVideo": false,
-    "youtubeId": null,
-    "descricao": "Design e montagem de reclames e placas sinalizadoras e promocionais, incluindo vinil e contravision para a Moz Meat na Cidade da Matola.",
-    "galeria": [
-      {
-        "corPlaceholder": null,
-        "imagem": "assets/images/portfolio/paineis/moz-meat/moz-meat-banner-contravision.jpg"
-      },
-      {
-        "corPlaceholder": null,
-        "imagem": "assets/images/portfolio/paineis/moz-meat/moz-meat-placas.jpg"
-      },
-      {
-        "corPlaceholder": null,
-        "imagem": "assets/images/portfolio/paineis/moz-meat/moz-meat-banner.jpg"
-      }
-    ]
-  },
-  {
-    "id": "instituto-de-amendoas-paineis",
-    "slug": "instituto-de-amendoas-paineis",
-    "categoriaLabel": "Painéis",
-    "categoriaSlug": "paineis",
-    "destaqueHome": true,
-    "corPlaceholder": null,
-    "imagem": "assets/images/portfolio/paineis/instituto-de-amendoas/instituto-de-amendoas-paineis-2.jpg",
-    "temVideo": false,
-    "youtubeId": null,
-    "descricao": "Design e montagem de reclames e placas sinalizadoras para o Instituto de Amendoas de Moçambique localizado no distrito de Marracuene.",
-    "galeria": [
-      {
-        "corPlaceholder": null,
-        "imagem": "assets/images/portfolio/paineis/instituto-de-amendoas-paineis-1.jpg"
-      }
-    ]
-  },
-  {
-    "id": "bazaruto-brewing",
-    "slug": "bazaruto-brewing",
-    "categoriaLabel": "Painéis",
-    "categoriaSlug": "paineis",
-    "destaqueHome": true,
-    "corPlaceholder": null,
-    "imagem": "assets/images/portfolio/paineis/bazaruto-brewing/bazaruto-brewing-paineis.jpg",
-    "temVideo": false,
-    "youtubeId": null,
-    "descricao": "Design e montagem de painél luminoso para a marca Bazaruto Brewing Company em um restaurante localizado na Ponta do Ouro, Maputo.",
-    "galeria": [
-      {
-        "corPlaceholder": null,
-        "imagem": "assets/images/portfolio/paineis/bazaruto-brewing/bazaruto-brewing-paineis-1.jpg"
-      }
-    ]
   },
   {
     "id": "global-shield",

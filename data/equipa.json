@@ -1,0 +1,16 @@
+[
+  {
+    "id": "membro-1",
+    "nome": "Marvin Torres",
+    "cargo": "Director Executivo",
+    "foto": "assets/equipa/membro-1.jpg",
+    "linkedin": "https://www.linkedin.com/in/marvin-torres-99b789b5/"
+  },
+  {
+    "id": "membro-2",
+    "nome": "Saarh Vauquiria Naquira",
+    "cargo": "Directora de Marketing",
+    "foto": "assets/equipa/membro-2.jpg",
+    "linkedin": "https://www.linkedin.com/in/sarah-vauquiria-naquira/"
+  }
+]

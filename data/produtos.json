@@ -15,7 +15,7 @@
   {
     "id": "papel-timbrado",
     "slug": "papel-timbrado",
-    "destaqueHome": true,
+    "destaqueHome": false,
     "nome": "Papel Timbrado",
     "descricao": "Papel timbrado, a partir de 100 folhas.",
     "preco": 30,
@@ -28,7 +28,7 @@
   {
     "id": "roll-up",
     "slug": "roll-up",
-    "destaqueHome": true,
+    "destaqueHome": false,
     "nome": "Roll-up Executivo",
     "descricao": "Roll-up de alta qualidade, ideal para exposições e eventos.",
     "preco": 8500,
@@ -54,7 +54,7 @@
   {
     "id": "envelope-personalizado-100un",
     "slug": "envelope-personalizado-100un",
-    "destaqueHome": true,
+    "destaqueHome": false,
     "nome": "Envelope Personalizado",
     "descricao": "Envelopes personalizados, ideais para correspondência profissional, a partir de 100 unidades.",
     "preco": 90,
@@ -106,7 +106,7 @@
   {
     "id": "base-de-copo",
     "slug": "base-de-copo",
-    "destaqueHome": false,
+    "destaqueHome": true,
     "nome": "Base de Copo",
     "descricao": "Base de copo personalizada com o seu logótipo ou design.",
     "preco": 150,
@@ -198,7 +198,7 @@
     "id": "camisa",
     "slug": "camisa",
     "destaqueHome": false,
-    "nome": "Camisa",
+    "nome": "Camisa bordada",
     "descricao": "Camisa personalizada com o seu logótipo ou design.",
     "preco": 400,
     "moeda": "MZN",
@@ -223,7 +223,7 @@
   {
     "id": "camiseta-polo-estampada",
     "slug": "camiseta-polo-estampada",
-    "destaqueHome": true,
+    "destaqueHome": false,
     "nome": "Camiseta Polo Estampada",
     "descricao": "Camiseta polo estampada com o seu logótipo ou design.",
     "preco": 800,
@@ -340,7 +340,7 @@
   {
     "id": "gazebo",
     "slug": "gazebo",
-    "destaqueHome": false,
+    "destaqueHome": true,
     "nome": "Gazebo",
     "descricao": "Gazebo personalizado com o seu logótipo, design e conteúdo, ideal para eventos executivos.",
     "preco": 4550,
@@ -353,7 +353,7 @@
   {
     "id": "guarda-chuva",
     "slug": "guarda-chuva",
-    "destaqueHome": false,
+    "destaqueHome": true,
     "nome": "Guarda-Chuva",
     "descricao": "Guarda-Chuva personalizado com o seu logótip, a partir de 30 unidades.",
     "preco": 800,
@@ -405,7 +405,7 @@
   {
     "id": "moletom",
     "slug": "moletom",
-    "destaqueHome": false,
+    "destaqueHome": true,
     "nome": "Moletom",
     "descricao": "Moletom personalizado, a partir de 10 unidades.",
     "preco": 2500,

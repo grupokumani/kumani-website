@@ -97,3 +97,103 @@
     font-size: var(--fs-xl);
   }
 }
+
+/* --- Bloco de Equipa --- */
+.sobre-team {
+  padding: var(--space-11) var(--space-container-x);
+  max-width: 1100px;
+}
+
+.sobre-team__eyebrow {
+  font-size: 11px;
+  font-weight: var(--fw-bold);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-widest);
+  color: var(--color-brand-primary-text);
+  margin-bottom: var(--space-3);
+}
+
+.sobre-team__title {
+  font-size: var(--fs-2xl);
+  font-weight: var(--fw-bold);
+  text-transform: uppercase;
+  margin-bottom: var(--space-8);
+}
+
+.sobre-team-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-6);
+}
+
+.sobre-team-card__photo-wrap {
+  position: relative;
+  aspect-ratio: 3 / 4;
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  background: var(--color-neutral-200);
+  margin-bottom: var(--space-4);
+}
+
+.sobre-team-card__photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(100%);
+  transition: filter var(--duration-base) var(--ease-standard),
+              transform var(--duration-slow) var(--ease-standard);
+}
+
+.sobre-team-card:hover .sobre-team-card__photo {
+  filter: grayscale(0%);
+  transform: scale(1.03);
+}
+
+.sobre-team-card__name {
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-bold);
+  text-transform: uppercase;
+  margin-bottom: var(--space-1);
+}
+
+.sobre-team-card__role {
+  font-size: var(--fs-sm);
+  color: var(--color-brand-primary-text);
+  font-weight: var(--fw-bold);
+  margin-bottom: var(--space-2);
+}
+
+.sobre-team-card__linkedin {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid var(--color-neutral-300);
+  color: var(--color-text-secondary);
+  transition: background var(--duration-fast) var(--ease-standard),
+              color var(--duration-fast) var(--ease-standard),
+              border-color var(--duration-fast) var(--ease-standard);
+}
+
+.sobre-team-card__linkedin:hover {
+  background: var(--color-brand-primary);
+  border-color: var(--color-brand-primary);
+  color: var(--color-text-on-brand);
+}
+
+@media (max-width: 1023px) {
+  .sobre-team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .sobre-team-grid {
+    gap: var(--space-4);
+  }
+  .sobre-team-card__name {
+    font-size: var(--fs-base);
+  }
+}
