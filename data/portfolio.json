@@ -66,32 +66,6 @@
     ]
   },
   {
-    "id": "moz-meat-paineis-reclames",
-    "slug": "moz-meat-paineis-reclames",
-    "categoriaLabel": "Painéis",
-    "categoriaSlug": "paineis",
-    "destaqueHome": true,
-    "corPlaceholder": null,
-    "imagem": "assets/images/portfolio/paineis/moz-meat/moz-meat-reclames.jpg",
-    "temVideo": false,
-    "youtubeId": null,
-    "descricao": "Design e montagem de reclames e placas sinalizadoras e promocionais, incluindo vinil e contravision para a Moz Meat na Cidade da Matola.",
-    "galeria": [
-      {
-        "corPlaceholder": null,
-        "imagem": "assets/images/portfolio/paineis/moz-meat/moz-meat-banner-contravision.jpg"
-      },
-      {
-        "corPlaceholder": null,
-        "imagem": "assets/images/portfolio/paineis/moz-meat/moz-meat-placas.jpg"
-      },
-      {
-        "corPlaceholder": null,
-        "imagem": "assets/images/portfolio/paineis/moz-meat/moz-meat-banner.jpg"
-      }
-    ]
-  },
-  {
     "id": "instituto-de-amendoas-paineis",
     "slug": "instituto-de-amendoas-paineis",
     "categoriaLabel": "Painéis",
@@ -396,7 +370,7 @@
     "categoriaSlug": "paineis",
     "destaqueHome": true,
     "corPlaceholder": null,
-    "imagem": "assets/images/portfolio/paineis/napee/napee-painel-outdoor.jpg",
+    "imagem": "assets/images/portfolio/paineis/napee/napee-painel-outdoor.jpeg",
     "temVideo": false,
     "youtubeId": null,
     "descricao": "Design e produção de materiais de comunicação para a marca Napee da Futai Internacional, incluindo paineis outdor de diferentes tamanhos.",
@@ -416,13 +390,39 @@
     ]
   },
   {
+    "id": "moz-meat-paineis-reclames",
+    "slug": "moz-meat-paineis-reclames",
+    "categoriaLabel": "Painéis",
+    "categoriaSlug": "paineis",
+    "destaqueHome": true,
+    "corPlaceholder": null,
+    "imagem": "assets/images/portfolio/paineis/moz-meat/moz-meat-reclames.jpg",
+    "temVideo": false,
+    "youtubeId": null,
+    "descricao": "Design e montagem de reclames e placas sinalizadoras e promocionais, incluindo vinil e contravision para a Moz Meat na Cidade da Matola.",
+    "galeria": [
+      {
+        "corPlaceholder": null,
+        "imagem": "assets/images/portfolio/paineis/moz-meat/moz-meat-banner-contravision.jpg"
+      },
+      {
+        "corPlaceholder": null,
+        "imagem": "assets/images/portfolio/paineis/moz-meat/moz-meat-placas.jpg"
+      },
+      {
+        "corPlaceholder": null,
+        "imagem": "assets/images/portfolio/paineis/moz-meat/moz-meat-banner.jpg"
+      }
+    ]
+  },
+  {
     "id": "jabulani-rachel",
     "slug": "jabulani-rachel",
     "categoriaLabel": "Branding",
     "categoriaSlug": "branding",
     "destaqueHome": true,
     "corPlaceholder": null,
-    "imagem": "assets/images/portfolio/branding/jabulani-rachel/jabulani-rachel-branding.jpg",
+    "imagem": "assets/images/portfolio/branding/jabulani-rachel/jabulani-rachel-branding.jpeg",
     "temVideo": false,
     "youtubeId": null,
     "descricao": "Design e produção de materiais de brandimg para a Jabulani Rachel, incluindo montagem de vinil, embalagem e rótulo.",
