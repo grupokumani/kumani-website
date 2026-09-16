@@ -34,7 +34,7 @@
   font-weight: var(--fw-bold);
   font-size: var(--fs-md);
   letter-spacing: var(--ls-wide);
-  color: var(--color-text-primary);
+  color: var(--kumani-green);
   flex-shrink: 0;
 }
 
