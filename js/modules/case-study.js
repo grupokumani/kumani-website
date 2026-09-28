@@ -1,8 +1,5 @@
 /**
  * KUMANI — Página /projectos/projecto.html
- * Lê ?slug= do URL, encontra o projecto correspondente em
- * portfolio.json e preenche o template. Se o slug não existir,
- * redirecciona para /portfolio.html em vez de mostrar uma página vazia.
  */
 
 import { qs, resolveAssetPath } from '../utils/dom.js';
@@ -14,7 +11,7 @@ function getSlugFromURL() {
 function renderGalleryItem(item) {
   const style = item.imagem
     ? `background-image:url('${resolveAssetPath(item.imagem)}');background-size:cover;background-position:center;`
-    : `background-color:${item.corPlaceholder};`;
+    : `background-color:${item.corPlaceholder || 'var(--color-neutral-800)'};`;
   return `<div class="case-gallery__item" style="${style}"></div>`;
 }
 
@@ -43,20 +40,16 @@ export async function initCaseStudy() {
     return;
   }
 
-    // Título legível: usa "nome"/"cliente" se existir nos dados;
-  // senão, deriva do slug (ex: "cooperacao-alema" → "Cooperacao Alema").
-  const titulo =
+  // Título interno — só para a aba do browser/SEO, não aparece na página.
+  const tituloInterno =
     projeto.nome ||
     projeto.cliente ||
-    projeto.slug
-      .split('-')
-      .map((palavra) => palavra.charAt(0).toUpperCase() + palavra.slice(1))
-      .join(' ');
+    projeto.slug.split('-').map((w) => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+  document.title = `${tituloInterno} — Case Study — KUMANI`;
+  qs('[data-case-client]').textContent = tituloInterno;
 
-  document.title = `${titulo} — Case Study — KUMANI`;
-
-  qs('[data-case-category]').textContent = projeto.categoriaLabel || '';
-  qs('[data-case-client]').textContent = titulo;
+  const localAno = [projeto.local, projeto.ano].filter(Boolean).join(' | ');
+  qs('[data-case-meta]').textContent = localAno;
 
   const heroMedia = qs('[data-case-hero-media]');
   heroMedia.style.cssText = projeto.imagem
@@ -65,7 +58,12 @@ export async function initCaseStudy() {
 
   qs('[data-case-descricao]').textContent = projeto.descricao || '';
 
-  // Alguns projectos têm "galeria": null ou false — trata como lista vazia.
   const galeria = Array.isArray(projeto.galeria) ? projeto.galeria : [];
   qs('[data-case-gallery]').innerHTML = galeria.map(renderGalleryItem).join('');
+
+  // Passa o contexto do projecto para o formulário de orçamento (ponto 4)
+  const ctaLink = qs('[data-case-quote-link]');
+  if (ctaLink) {
+    ctaLink.href = `/contacto.html?origem=projecto&slug=${encodeURIComponent(projeto.slug)}&categoria=${encodeURIComponent(projeto.categoriaLabel || '')}`;
+  }
 }

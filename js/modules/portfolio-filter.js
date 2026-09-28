@@ -1,28 +1,28 @@
 /**
  * KUMANI — Página /portfolio
  * Busca portfolio.json completo, gera a grelha + os chips de filtro
- * dinamicamente (um chip por categoria única encontrada nos dados,
- * mais "Todos"), e filtra ao clicar sem reload de página.
+ * dinamicamente, e filtra ao clicar sem reload de página.
  */
 
 import { qs, qsa, on } from '../utils/dom.js';
 
 function renderCard(item) {
   const media = item.imagem
-    ? `<img class="work-block__media" src="${item.imagem}" alt="${item.categoriaLabel}" loading="lazy">`
+    ? `<img class="work-block__media" src="${item.imagem}" alt="${item.categoriaLabel || 'Trabalho KUMANI'}" loading="lazy">`
     : `<div class="work-block__media work-block__media--placeholder" style="background-color:${item.corPlaceholder || 'var(--color-neutral-800)'};"></div>`;
+
+  const meta = (item.local && item.ano)
+    ? `<div class="work-block__meta">${item.local} | ${item.ano}</div>`
+    : '';
 
   return `
     <a href="/projectos/projecto.html?slug=${item.slug}"
        class="work-block"
        data-reveal
        data-categoria="${item.categoriaSlug}"
-       aria-label="Ver case study: ${item.categoriaLabel}">
+       aria-label="Ver case study: ${item.categoriaLabel || 'projecto KUMANI'}">
       ${media}
-      <div class="work-block__overlay"></div>
-      <div class="work-block__caption">
-        <div class="work-block__category">${item.categoriaLabel}</div>
-      </div>
+      ${meta}
     </a>
   `;
 }

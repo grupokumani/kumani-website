@@ -135,3 +135,16 @@
   background: rgba(220, 20, 60, 0.08);
   color: var(--color-danger);
 }
+
+/* --- Linhas com 2 campos lado a lado (1 coluna no mobile) --- */
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 var(--space-4);
+}
+
+@media (max-width: 600px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}

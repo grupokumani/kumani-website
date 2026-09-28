@@ -171,102 +171,9 @@
     ]
   },
   {
-    "id": "alex-pizza-place",
-    "slug": "alex-pizza-place",
-    "categoriaLabel": "Marketing Digital",
-    "categoriaSlug": "marketing-digital",
-    "destaqueHome": false,
-    "corPlaceholder": null,
-    "imagem": "assets/images/portfolio/marketing-digital/alex-pizza-place/alex-pizza-place.jpg",
-    "temVideo": false,
-    "youtubeId": null,
-    "descricao": "Design e produção de materiais de comunicação para a Alex Pizza Place, incluindo menu e gestao de redes sociais.",
-    "galeria": [
-      {
-        "corPlaceholder": null,
-        "imagem": "assets/images/portfolio/marketing-digital/alex-pizza-place/alex-pizza-place-1.png"
-      },
-      {
-        "corPlaceholder": null,
-        "imagem": "assets/images/portfolio/marketing-digital/alex-pizza-place/alex-pizza-place-2.jpg"
-      }
-    ]
-  },
-  {
-    "id": "gold-royal-marketing-digital",
-    "slug": "gold-royal-marketing-digital",
-    "categoriaLabel": "Marketing Digital",
-    "categoriaSlug": "marketing-digital",
-    "destaqueHome": false,
-    "corPlaceholder": null,
-    "imagem": "assets/images/portfolio/marketing-digital/gold-royal/gold-royal-social-media.jpg",
-    "temVideo": false,
-    "youtubeId": null,
-    "descricao": "Design e produção de materiais de comunicação para a Gold Royal, incluindo menu e suporte de acrilico.",
-    "galeria": [
-      {
-        "corPlaceholder": null,
-        "imagem": "assets/images/portfolio/marketing-digital/gold-royal/gold-royal-1.jpg"
-      },
-      {
-        "corPlaceholder": null,
-        "imagem": "assets/images/portfolio/marketing-digital/gold-royal/gold-royal-2.jpg"
-      }
-    ]
-  },
-  {
-    "id": "moz-meat-marketing-digital",
-    "slug": "moz-meat-marketing-digital",
-    "categoriaLabel": "Marketing Digital",
-    "categoriaSlug": "marketing-digital",
-    "destaqueHome": false,
-    "corPlaceholder": null,
-    "imagem": "assets/images/portfolio/marketing-digital/moz-meat/moz-meat-social-media.jpg",
-    "temVideo": false,
-    "youtubeId": null,
-    "descricao": "Design e produção de materiais de comunicação para a Moz Meat, incluindo promoções, campanhas publicitáriasonline no Facebook e Instagram e gestao de trafego pago.",
-    "galeria": [
-      {
-        "corPlaceholder": null,
-        "imagem": "assets/images/portfolio/marketing-digital/moz-meat/moz-meat-1.jpg"
-      },
-      {
-        "corPlaceholder": null,
-        "imagem": "assets/images/portfolio/marketing-digital/moz-meat/moz-meat-2.jpg"
-      },
-      {
-        "corPlaceholder": null,
-        "imagem": "assets/images/portfolio/marketing-digital/moz-meat/moz-meat-3.jpg"
-      }
-    ]
-  },
-  {
-    "id": "mr-huolang-marketing-digital",
-    "slug": "mr-huolang-marketing-digital",
-    "categoriaLabel": "Marketing Digital",
-    "categoriaSlug": "marketing-digital",
-    "destaqueHome": false,
-    "corPlaceholder": null,
-    "imagem": "assets/images/portfolio/marketing-digital/mr-huolang/mr-huolang-social-media-1.png",
-    "temVideo": false,
-    "youtubeId": null,
-    "descricao": "Design e produção de materiais de comunicação para a Mr. Huolang, incluindo promoções, campanhas publicitáriasonline no Facebook, Instagram e Tik Tok e gestão de tráfego pago.",
-    "galeria": [
-      {
-        "corPlaceholder": null,
-        "imagem": "assets/images/portfolio/marketing-digital/mr-huolang/mr-huolang-social-media-2.png"
-      },
-      {
-        "corPlaceholder": null,
-        "imagem": "assets/images/portfolio/marketing-digital/mr-huolang/mr-huolang-social-media-3.jpg"
-      }
-    ]
-  },
-  {
     "id": "southern-sun-design-grafico",
     "slug": "southern-sun-design-grafico",
-    "cliente": null,
-    "categoriaLabel": null,
+    "categoriaLabel": "Design Gráfico",
     "categoriaSlug": "design-grafico",
     "destaqueHome": false,
     "corPlaceholder": null,
@@ -286,28 +193,24 @@
     ]
   },
   {
-    "id": "napee-marketing-digital",
-    "slug": "napee-marketing-digital",
-    "categoriaLabel": "Marketing Digital",
-    "categoriaSlug": "marketing-digital",
-    "destaqueHome": false,
+    "id": "jabulani-rachel-paineis",
+    "slug": "jabulani-rachel-paineis",
+    "categoriaLabel": "Painéis",
+    "categoriaSlug": "paineis",
+    "destaqueHome": true,
     "corPlaceholder": null,
-    "imagem": "assets/images/portfolio/marketing-digital/napee/napee-social-media.png",
+    "imagem": "assets/images/portfolio/paineis/jabulani-rachel-paineis.jpg",
     "temVideo": false,
     "youtubeId": null,
-    "descricao": "Design e produção de materiais de comunicação para a marca Napee da Futai Internacional, incluindo promoções, campanhas publicitáriasonline no Facebook e Instagram e gestao de trafego pago.",
+    "descricao": "Design e montagem de banner de vinil.",
     "galeria": [
       {
         "corPlaceholder": null,
-        "imagem": "assets/images/portfolio/marketing-digital/napee/napee-social-media-1.png"
+        "imagem": "assets/images/portfolio/paineis/jabulani-rachel-paineis-1.jpeg"
       },
       {
         "corPlaceholder": null,
-        "imagem": "assets/images/portfolio/marketing-digital/napee/napee-social-media-2.jpg"
-      },
-      {
-        "corPlaceholder": null,
-        "imagem": "assets/images/portfolio/marketing-digital/napee/napee-social-media-3.png"
+        "imagem": "assets/images/portfolio/paineis/jabulani-rachel-paineis-2.jpeg"
       }
     ]
   },
@@ -366,7 +269,7 @@
   {
     "id": "napee-paineis",
     "slug": "napee-paineis",
-    "categoriaLabel": "Branding",
+    "categoriaLabel": "Painéis",
     "categoriaSlug": "paineis",
     "destaqueHome": true,
     "corPlaceholder": null,
@@ -506,7 +409,7 @@
     "temVideo": false,
     "youtubeId": null,
     "descricao": "Design e produção de uma placa de sinalização para a Sunrise View Guest House.",
-    "galeria": null
+     "galeria": null
   },
   {
     "id": "ministro-elcidio-manhique",

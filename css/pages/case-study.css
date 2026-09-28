@@ -29,18 +29,11 @@
   color: var(--color-neutral-0);
 }
 
-.case-hero__category {
-  font-size: var(--fs-xs);
-  text-transform: uppercase;
-  letter-spacing: var(--ls-widest);
-  color: var(--color-brand-gold);
-  margin-bottom: var(--space-3);
-}
-
-.case-hero__client {
-  font-size: var(--fs-4xl);
+.case-hero__meta {
+  font-size: var(--fs-2xl);
   font-weight: var(--fw-bold);
   text-transform: uppercase;
+  letter-spacing: var(--ls-wide);
 }
 
 /* --- Corpo: Problema → Objectivo → Estratégia → Execução → Resultado --- */
@@ -86,9 +79,6 @@
 @media (max-width: 767px) {
   .case-gallery {
     grid-template-columns: 1fr;
-  }
-  .case-hero__client {
-    font-size: var(--fs-3xl);
   }
 }
 

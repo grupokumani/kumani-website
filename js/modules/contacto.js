@@ -1,8 +1,8 @@
 /**
  * KUMANI — Página /contacto
- * Envia o contacto por dois canais em paralelo:
- * 1) Email via /api/enviar-cotacao (Resend) — já validado na Fase 1.
- * 2) WhatsApp, com a mensagem pré-escrita, para resposta mais rápida.
+ * Formulário "inteligente": se vier de um pedido de orçamento a partir
+ * de um projecto do portfólio (?origem=projecto&slug=...&categoria=...),
+ * mostra o contexto e inclui-o na mensagem enviada.
  */
 
 import { qs } from '../utils/dom.js';
@@ -10,12 +10,40 @@ import { mostrarMensagem } from '../utils/form-feedback.js';
 
 const NUMERO_WHATSAPP = '258877335506';
 
-function montarMensagemContacto(dados) {
+function getContexto() {
+  const params = new URLSearchParams(window.location.search);
+  const origem = params.get('origem');
+  if (!origem) return null;
+  return {
+    origem,
+    slug: params.get('slug') || '',
+    categoria: params.get('categoria') || '',
+  };
+}
+
+function mostrarBannerContexto(contexto) {
+  const banner = qs('[data-contact-context]');
+  if (!banner || !contexto) return;
+  banner.textContent = contexto.categoria
+    ? `A pedir orçamento para um projecto semelhante a: ${contexto.categoria}`
+    : 'A pedir orçamento para um projecto semelhante.';
+  banner.style.display = 'block';
+}
+
+function montarMensagemContacto(dados, contexto) {
+  const linhaContexto = contexto
+    ? `Origem: Pedido de orçamento (categoria: ${contexto.categoria || 'n/d'})\n`
+    : '';
+
   return (
-    `Olá! Vim pelo site da KUMANI e gostaria de falar convosco:\n\n` +
-    `Nome: ${dados.nome}\n` +
+    `Olá! Vim pelo site da KUMANI e gostaria de falar convosco:\n` +
+    linhaContexto +
+    `\nNome: ${dados.nome}\n` +
+    `Empresa: ${dados.empresa || '(não indicado)'}\n` +
+    `Área de actuação: ${dados.areaActuacao || '(não indicado)'}\n` +
     `Telefone: ${dados.telefone}\n` +
-    `Email: ${dados.email}\n\n` +
+    `Email: ${dados.email}\n` +
+    `Orçamento disponível: ${dados.orcamento || '(não indicado)'}\n\n` +
     `Mensagem:\n${dados.mensagem}`
   );
 }
@@ -23,6 +51,9 @@ function montarMensagemContacto(dados) {
 export function initContacto() {
   const form = qs('[data-contact-form]');
   if (!form) return;
+
+  const contexto = getContexto();
+  mostrarBannerContexto(contexto);
 
   const submitBtn = qs('[data-contact-submit]', form);
   const messageEl = qs('[data-contact-message]', form);
@@ -33,11 +64,12 @@ export function initContacto() {
 
     const dados = {
       nome: qs('[name="nome"]', form).value.trim(),
-      empresa: '',
+      empresa: qs('[name="empresa"]', form).value.trim(),
+      areaActuacao: qs('[name="areaActuacao"]', form).value.trim(),
       email: qs('[name="email"]', form).value.trim(),
       telefone: qs('[name="telefone"]', form).value.trim(),
-      tipoNecessidade: 'Contacto Geral',
-      orcamento: '',
+      tipoNecessidade: contexto ? `Orçamento — ${contexto.categoria || 'projecto do portfólio'}` : 'Contacto Geral',
+      orcamento: qs('[name="orcamento"]', form).value,
       mensagem: qs('[name="mensagem"]', form).value.trim(),
       consentimento: qs('[name="consentimento"]', form).checked,
     };
@@ -47,12 +79,9 @@ export function initContacto() {
       return;
     }
 
-    // 1) Abre o WhatsApp já, de forma síncrona, para o browser não bloquear o popup.
-    const mensagemWhatsapp = montarMensagemContacto(dados);
-    const linkWhatsapp = `https://wa.me/${NUMERO_WHATSAPP}?text=${encodeURIComponent(mensagemWhatsapp)}`;
+    const linkWhatsapp = `https://wa.me/${NUMERO_WHATSAPP}?text=${encodeURIComponent(montarMensagemContacto(dados, contexto))}`;
     window.open(linkWhatsapp, '_blank', 'noopener');
 
-    // 2) Continua a enviar por email, em paralelo.
     submitBtn.setAttribute('data-loading', 'true');
     submitBtn.disabled = true;
 

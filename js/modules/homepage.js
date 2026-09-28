@@ -78,7 +78,7 @@ function renderProductCard(item) {
 function renderClientLogo(item) {
   const label = item.nome || 'Cliente';
   const content = item.logo
-    ? `<img src="${item.logo}" alt="${label}" loading="lazy" onerror="this.style.display='none'">`
+    ? `<img src="${item.logo}" alt="${label}" loading="lazy" onerror="console.warn('Logótipo não encontrado:', this.src); this.closest('.clients-grid__logo').remove()">`
     : '';
 
   return `<div class="clients-grid__logo" aria-label="${label}">${content}</div>`;

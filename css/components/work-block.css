@@ -150,3 +150,19 @@
     height: 260px;
   }
 }
+
+/* --- "Local | Ano" sobre a imagem, discreto --- */
+.work-block__meta {
+  position: absolute;
+  top: var(--space-3);
+  left: var(--space-3);
+  background: rgba(27, 27, 27, 0.6);
+  color: var(--color-neutral-0);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-bold);
+  letter-spacing: var(--ls-wide);
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+  backdrop-filter: blur(2px);
+}
