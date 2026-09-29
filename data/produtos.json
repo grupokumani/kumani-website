@@ -44,8 +44,7 @@
     "imagem": "assets/images/produtos/fisicos/roll-up.jpg",
     "stock": true,
     "quantidadeMinima": false,
-    "maisVendido": true,
-    "promocao": { "precoOriginal": 1500 }
+    "maisVendido": true
   },
   {
     "id": "revista",
@@ -127,7 +126,8 @@
     "badge": null,
     "corPlaceholder": null,
     "imagem": "assets/images/produtos/fisicos/base-de-copo.jpg",
-    "stock": true
+    "stock": true,
+    "promocao": { "precoOriginal": 190 }
   },
   {
     "id": "cartoes-visita-350gsm",
