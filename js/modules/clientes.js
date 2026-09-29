@@ -7,7 +7,7 @@ import { qs } from '../utils/dom.js';
 function renderClientLogo(item) {
   const label = item.nome || 'Cliente';
   const content = item.logo
-    ? `<img src="${item.logo}" alt="${label}" loading="lazy" onerror="this.style.display='none'">`
+    ? `<img src="${item.logo}" alt="${label}" loading="lazy" onerror="this.parentElement.style.display='none'">`
     : '';
   return `<div class="clients-grid__logo" aria-label="${label}">${content}</div>`;
 }

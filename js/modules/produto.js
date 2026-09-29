@@ -13,6 +13,34 @@ function formatPrice(value, currency) {
   return `${value.toLocaleString('pt-PT')} ${currency}`;
 }
 
+function renderBadges(produto) {
+  const el = qs('[data-product-badge]');
+  if (!el) return;
+
+  const maisVendido = produto.maisVendido || (produto.badge && /mais vendido/i.test(produto.badge));
+  const badges = [];
+  if (produto.promocao) badges.push('<span class="product-card__badge product-card__badge--promo">Promoção</span>');
+  if (maisVendido) badges.push('<span class="product-card__badge product-card__badge--best">Mais vendido</span>');
+  if (!produto.promocao && !maisVendido && produto.badge) {
+    badges.push(`<span class="product-card__badge">${produto.badge}</span>`);
+  }
+
+  if (badges.length === 0) return;
+  el.innerHTML = badges.join('');
+  el.style.display = 'inline-flex';
+}
+
+function renderPreco(produto) {
+  const el = qs('[data-product-price]');
+  if (produto.promocao && produto.promocao.precoOriginal) {
+    el.innerHTML = `
+      <span class="product-card__price--old">${formatPrice(produto.promocao.precoOriginal, produto.moeda)}</span>
+      <span class="product-card__price--now">${formatPrice(produto.preco, produto.moeda)}</span>`;
+  } else {
+    el.textContent = formatPrice(produto.preco, produto.moeda);
+  }
+}
+
 export async function initProdutoDetalhe() {
   const root = qs('[data-product-detail]');
   if (!root) return;
@@ -43,22 +71,24 @@ export async function initProdutoDetalhe() {
   const mediaEl = qs('[data-product-media]');
   mediaEl.style.cssText = produto.imagem
     ? `background-image:url('${resolveAssetPath(produto.imagem)}');background-size:cover;background-position:center;`
-    : `background-color:${produto.corPlaceholder};`;
+    : `background-color:${produto.corPlaceholder || 'var(--color-neutral-200)'};`;
 
-  if (produto.badge) {
-    qs('[data-product-badge]').textContent = produto.badge;
-    qs('[data-product-badge]').style.display = 'inline-block';
-  }
+  renderBadges(produto);
+  renderPreco(produto);
 
   qs('[data-product-name]').textContent = produto.nome;
-  qs('[data-product-price]').textContent = formatPrice(produto.preco, produto.moeda);
   qs('[data-product-descricao]').textContent = produto.descricao;
 
-  let quantidade = 1;
+  const qtdMinima = produto.quantidadeMinima || 1;
+  const minQtyEl = qs('[data-product-min-qty]');
+  if (minQtyEl) minQtyEl.textContent = `Quantidade mínima: ${qtdMinima}`;
+
+  let quantidade = qtdMinima;
   const qtyValueEl = qs('[data-qty-value]');
+  qtyValueEl.textContent = quantidade;
 
   on(qs('[data-qty-decrease]'), 'click', () => {
-    quantidade = Math.max(1, quantidade - 1);
+    quantidade = Math.max(qtdMinima, quantidade - 1);
     qtyValueEl.textContent = quantidade;
   });
 

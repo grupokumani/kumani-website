@@ -85,27 +85,16 @@ export function initContacto() {
     submitBtn.setAttribute('data-loading', 'true');
     submitBtn.disabled = true;
 
-    try {
-      const response = await fetch('/api/enviar-cotacao', {
+        try {
+      await fetch('/api/enviar-cotacao', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(dados),
       });
-      const resultado = await response.json();
-
-      if (!response.ok || !resultado.sucesso) {
-        mostrarMensagem(messageEl, 'success', 'Mensagem aberta no WhatsApp. (O envio por email falhou, mas o seu contacto via WhatsApp já foi enviado.)');
-        return;
-      }
-
-      mostrarMensagem(messageEl, 'success', 'Mensagem enviada por WhatsApp e por email! Entramos em contacto brevemente.');
-      form.reset();
     } catch (error) {
-      console.error('Erro ao enviar contacto por email', error);
-      mostrarMensagem(messageEl, 'success', 'Mensagem aberta no WhatsApp. (O envio por email falhou, mas o seu contacto via WhatsApp já foi enviado.)');
+      console.error('Erro ao enviar contacto por email (WhatsApp já foi enviado)', error);
     } finally {
-      submitBtn.removeAttribute('data-loading');
-      submitBtn.disabled = false;
+      window.location.href = '/sucesso.html';
     }
   });
 }

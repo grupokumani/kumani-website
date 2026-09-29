@@ -89,6 +89,15 @@ export function initCheckout() {
 
     const itensAtuais = obterItens();
     const total = calcularTotal();
+    const itemAbaixoDoMinimo = itensAtuais.find(
+      (item) => item.quantidade < (item.quantidadeMinima || 1)
+    );
+    if (itemAbaixoDoMinimo) {
+      mostrarErro(
+        `A quantidade de "${itemAbaixoDoMinimo.nome}" está abaixo do mínimo exigido (${itemAbaixoDoMinimo.quantidadeMinima}).`
+      );
+      return;
+    }
     const mensagem = montarMensagemPedido(dadosCliente, itensAtuais, total);
     const linkWhatsapp = `https://wa.me/${NUMERO_WHATSAPP}?text=${encodeURIComponent(mensagem)}`;
 
@@ -97,6 +106,6 @@ export function initCheckout() {
     // manualmente pela equipa KUMANI na conversa do WhatsApp.
     limparCarrinho();
     window.open(linkWhatsapp, '_blank', 'noopener');
-    window.location.href = '/encomenda-confirmada.html';
+    window.location.href = '/sucesso.html';
   });
 }

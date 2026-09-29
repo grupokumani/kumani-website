@@ -17,32 +17,17 @@ async function preencherDetalheServico() {
   const slug = getSlugFromURL();
   if (!slug) return null;
 
-  try {
-    const response = await fetch('/data/servicos.json');
-    const servicos = await response.json();
-    const servico = servicos.find((item) => item.slug === slug);
-
-    if (!servico) return null;
-
-    document.title = `${servico.nome} — KUMANI`;
-    qs('[data-service-category]').textContent = 'Serviços KUMANI';
-    qs('[data-service-title]').textContent = servico.nome;
-    qs('[data-service-resumo]').textContent = servico.resumo;
-    qs('[data-service-paraquem]').textContent = servico.paraQuem;
-    qs('[data-service-inclui]').innerHTML = servico.inclui
-      .map((item) => `<li>${item}</li>`)
-      .join('');
-
-    // Pré-selecciona o serviço no <select> do formulário, para o
-    // visitante não ter de repetir o que já demonstrou interesse.
-    const select = qs('[data-field-necessidade]');
-    if (select) select.value = servico.nome;
-
-    return servico;
-  } catch (error) {
-    console.error('Falha ao carregar servicos.json', error);
-    return null;
-  }
+      try {
+      await fetch('/api/enviar-cotacao', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(dados),
+      });
+    } catch (error) {
+      console.error('Erro ao enviar contacto por email (WhatsApp já foi enviado)', error);
+    } finally {
+      window.location.href = '/sucesso.html';
+    }
 }
 
 const NUMERO_WHATSAPP = '258877335506';

@@ -199,18 +199,18 @@
     "categoriaSlug": "paineis",
     "destaqueHome": true,
     "corPlaceholder": null,
-    "imagem": "assets/images/portfolio/paineis/jabulani-rachel-paineis.jpg",
+    "imagem": "assets/images/portfolio/paineis/jabulani-rachel/jabulani-rachel-paineis.jpg",
     "temVideo": false,
     "youtubeId": null,
     "descricao": "Design e montagem de banner de vinil.",
     "galeria": [
       {
         "corPlaceholder": null,
-        "imagem": "assets/images/portfolio/paineis/jabulani-rachel-paineis-1.jpeg"
+        "imagem": "assets/images/portfolio/paineis/jabulani-rachel/jabulani-rachel-paineis-1.jpeg"
       },
       {
         "corPlaceholder": null,
-        "imagem": "assets/images/portfolio/paineis/jabulani-rachel-paineis-2.jpeg"
+        "imagem": "assets/images/portfolio/paineis/jabulani-rachel/jabulani-rachel-paineis-2.jpeg"
       }
     ]
   },
@@ -273,22 +273,22 @@
     "categoriaSlug": "paineis",
     "destaqueHome": true,
     "corPlaceholder": null,
-    "imagem": "assets/images/portfolio/paineis/napee/napee-painel-outdoor.jpeg",
+    "imagem": "assets/images/portfolio/paineis/napee/napee-painel-outdoor.jpg",
     "temVideo": false,
     "youtubeId": null,
     "descricao": "Design e produção de materiais de comunicação para a marca Napee da Futai Internacional, incluindo paineis outdor de diferentes tamanhos.",
     "galeria": [
       {
         "corPlaceholder": null,
-        "imagem": "assets/images/portfolio/branding/napee/napee-painel-outdoor-mini-1.jpeg"
+        "imagem": "assets/images/portfolio/paineis/napee/napee-painel-outdoor-mini-1.jpeg"
       },
       {
         "corPlaceholder": null,
-        "imagem": "assets/images/portfolio/branding/napee/napee-painel-outdoor-mini.jpeg"
+        "imagem": "assets/images/portfolio/paineis/napee/napee-painel-outdoor-mini.jpeg"
       },
       {
         "corPlaceholder": null,
-        "imagem": "assets/images/portfolio/branding/napee/napee-painel.jpg"
+        "imagem": "assets/images/portfolio/paineis/napee/napee-painel.jpg"
       }
     ]
   },
@@ -323,9 +323,9 @@
     "slug": "jabulani-rachel",
     "categoriaLabel": "Branding",
     "categoriaSlug": "branding",
-    "destaqueHome": true,
+    "destaqueHome": false,
     "corPlaceholder": null,
-    "imagem": "assets/images/portfolio/branding/jabulani-rachel/jabulani-rachel-branding.jpeg",
+    "imagem": "assets/images/portfolio/branding/jabulani-rachel/jabulani-rachel-branding.jpg",
     "temVideo": false,
     "youtubeId": null,
     "descricao": "Design e produção de materiais de brandimg para a Jabulani Rachel, incluindo montagem de vinil, embalagem e rótulo.",

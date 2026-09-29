@@ -4,26 +4,32 @@
     "slug": "cartoes-visita-standard",
     "destaqueHome": true,
     "nome": "Cartões de visita",
-    "descricao": "Cartões de visita, a partir de 100 unidades.",
+    "descricao": "Cartões de visita personalizados com a sua marca ou logotipo.",
     "preco": 20,
     "moeda": "MZN",
     "badge": "Mais vendido",
     "corPlaceholder": null,
     "imagem": "assets/images/produtos/fisicos/cartao-de-visita.jpg",
-    "stock": true
+    "stock": true,
+    "quantidadeMinima": 100,
+    "maisVendido": true,
+    "promocao": { "precoOriginal": null }
   },
   {
     "id": "papel-timbrado",
     "slug": "papel-timbrado",
     "destaqueHome": false,
     "nome": "Papel Timbrado",
-    "descricao": "Papel timbrado, a partir de 100 folhas.",
+    "descricao": "Papel timbradopersonalisado com o seu logotipo.",
     "preco": 30,
     "moeda": "MZN",
     "badge": null,
     "corPlaceholder": null,
     "imagem": "assets/images/produtos/fisicos/papel-timbrado.jpg",
-    "stock": true
+    "stock": true,
+    "quantidadeMinima": 100,
+    "maisVendido": true,
+    "promocao": { "precoOriginal": null }
   },
   {
     "id": "roll-up",
@@ -36,7 +42,10 @@
     "badge": "Novo",
     "corPlaceholder": null,
     "imagem": "assets/images/produtos/fisicos/roll-up.jpg",
-    "stock": true
+    "stock": true,
+    "quantidadeMinima": false,
+    "maisVendido": true,
+    "promocao": { "precoOriginal": 1500 }
   },
   {
     "id": "revista",
@@ -62,7 +71,9 @@
     "badge": null,
     "corPlaceholder": null,
     "imagem": "assets/images/produtos/fisicos/envelope-personalizado.jpg",
-    "stock": true
+    "stock": true,
+    "quantidadeMinima": 100,
+    "maisVendido": false,
   },
   {
     "id": "autocolante",
@@ -75,7 +86,9 @@
     "badge": null,
     "corPlaceholder": null,
     "imagem": "assets/images/produtos/fisicos/autocolante.jpg",
-    "stock": true
+    "stock": true,
+    "quantidadeMinima": 100,
+    "maisVendido": false,
   },
   {
     "id": "backdrop",
@@ -127,7 +140,9 @@
     "badge": null,
     "corPlaceholder": null,
     "imagem": "assets/images/produtos/fisicos/cartao-de-visita.jpg",
-    "stock": true
+    "stock": true,
+    "quantidadeMinima": 50,
+    "maisVendido": false,
   },
   {
     "id": "cartoes-visita-250gsm",
@@ -140,7 +155,9 @@
     "badge": null,
     "corPlaceholder": null,
     "imagem": "assets/images/produtos/fisicos/cartao-de-visita.jpg",
-    "stock": true
+    "stock": true,
+    "quantidadeMinima": 50,
+    "maisVendido": false,
   },
   {
     "id": "bone-bordado",
@@ -153,7 +170,9 @@
     "badge": null,
     "corPlaceholder": null,
     "imagem": "assets/images/produtos/fisicos/bone-bordado.jpeg",
-    "stock": true
+    "stock": true,
+    "quantidadeMinima": 30,
+    "maisVendido": false,
   },
   {
     "id": "bone-estampado",
@@ -179,7 +198,9 @@
     "badge": null,
     "corPlaceholder": null,
     "imagem": "assets/images/produtos/fisicos/caixa-de-presente.jpg",
-    "stock": true
+    "stock": true,
+    "quantidadeMinima": 50,
+    "maisVendido": false,
   },
   {
     "id": "caixa-personalizada",
@@ -192,7 +213,9 @@
     "badge": null,
     "corPlaceholder": null,
     "imagem": "assets/images/produtos/fisicos/caixa-personalizada.jpg",
-    "stock": true
+    "stock": true,
+    "quantidadeMinima": 50,
+    "maisVendido": true,
   },
   {
     "id": "camisa",
@@ -218,7 +241,9 @@
     "badge": null,
     "corPlaceholder": null,
     "imagem": "assets/images/produtos/fisicos/camiseta-estampada.jpg",
-    "stock": true
+    "stock": true,
+    "quantidadeMinima": 10,
+    "maisVendido": false,
   },
   {
     "id": "camiseta-polo-estampada",
@@ -231,7 +256,9 @@
     "badge": null,
     "corPlaceholder": null,
     "imagem": "assets/images/produtos/fisicos/camiseta-polo-estampada.jpg",
-    "stock": true
+    "stock": true,
+    "quantidadeMinima": 10,
+    "maisVendido": false,
   },
   {
     "id": "carimbo",
@@ -244,7 +271,9 @@
     "badge": null,
     "corPlaceholder": null,
     "imagem": "assets/images/produtos/fisicos/carimbo.jpeg",
-    "stock": true
+    "stock": true,
+    "quantidadeMinima": 50,
+    "maisVendido": true,
   },
   {
     "id": "chavena",
@@ -257,7 +286,9 @@
     "badge": null,
     "corPlaceholder": null,
     "imagem": "assets/images/produtos/fisicos/chavena.jpg",
-    "stock": true
+    "stock": true,
+    "quantidadeMinima": null,
+    "maisVendido": false,
   },
   {
     "id": "colete",
@@ -361,7 +392,9 @@
     "badge": null,
     "corPlaceholder": null,
     "imagem": "assets/images/produtos/fisicos/guarda-chuva.jpeg",
-    "stock": true
+    "stock": true,
+    "quantidadeMinima": 30,
+    "maisVendido": false,
   },
   {
     "id": "livro-de-facturas",
@@ -413,7 +446,9 @@
     "badge": null,
     "corPlaceholder": null,
     "imagem": "assets/images/produtos/fisicos/moletom.jpeg",
-    "stock": true
+    "stock": true,
+    "quantidadeMinima": 10,
+    "maisVendido": false,
   },
   {
     "id": "mouse-pad",
@@ -426,7 +461,9 @@
     "badge": null,
     "corPlaceholder": null,
     "imagem": "assets/images/produtos/fisicos/mouse-pad.jpg",
-    "stock": true
+    "stock": true,
+    "quantidadeMinima": 10,
+    "maisVendido": false,
   },
   {
     "id": "pasta-de-apresentacao",
@@ -439,7 +476,9 @@
     "badge": null,
     "corPlaceholder": null,
     "imagem": "assets/images/produtos/fisicos/pasta-de-apresentacao.jpg",
-    "stock": true
+    "stock": true,
+    "quantidadeMinima": 30,
+    "maisVendido": false,
   },
   {
     "id": "pin-kumani-doming",
@@ -478,7 +517,9 @@
     "badge": null,
     "corPlaceholder": null,
     "imagem": "assets/images/produtos/fisicos/poster.jpg",
-    "stock": true
+    "stock": true,
+    "quantidadeMinima": 5,
+    "maisVendido": true,
   },
   {
     "id": "rotulo",
@@ -504,7 +545,9 @@
     "badge": null,
     "corPlaceholder": null,
     "imagem": "assets/images/produtos/fisicos/sacola-de-papel.jpg",
-    "stock": true
+    "stock": true,
+    "quantidadeMinima": 100,
+    "maisVendido": false,
   },
   {
     "id": "stand-acrilico",
