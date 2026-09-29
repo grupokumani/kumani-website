@@ -73,7 +73,7 @@
     "imagem": "assets/images/produtos/fisicos/envelope-personalizado.jpg",
     "stock": true,
     "quantidadeMinima": 100,
-    "maisVendido": false,
+    "maisVendido": false
   },
   {
     "id": "autocolante",
@@ -88,7 +88,7 @@
     "imagem": "assets/images/produtos/fisicos/autocolante.jpg",
     "stock": true,
     "quantidadeMinima": 100,
-    "maisVendido": false,
+    "maisVendido": false
   },
   {
     "id": "backdrop",
@@ -142,7 +142,7 @@
     "imagem": "assets/images/produtos/fisicos/cartao-de-visita.jpg",
     "stock": true,
     "quantidadeMinima": 50,
-    "maisVendido": false,
+    "maisVendido": false
   },
   {
     "id": "cartoes-visita-250gsm",
@@ -157,7 +157,7 @@
     "imagem": "assets/images/produtos/fisicos/cartao-de-visita.jpg",
     "stock": true,
     "quantidadeMinima": 50,
-    "maisVendido": false,
+    "maisVendido": false
   },
   {
     "id": "bone-bordado",
@@ -172,7 +172,7 @@
     "imagem": "assets/images/produtos/fisicos/bone-bordado.jpeg",
     "stock": true,
     "quantidadeMinima": 30,
-    "maisVendido": false,
+    "maisVendido": false
   },
   {
     "id": "bone-estampado",
@@ -200,7 +200,7 @@
     "imagem": "assets/images/produtos/fisicos/caixa-de-presente.jpg",
     "stock": true,
     "quantidadeMinima": 50,
-    "maisVendido": false,
+    "maisVendido": false
   },
   {
     "id": "caixa-personalizada",
@@ -215,7 +215,7 @@
     "imagem": "assets/images/produtos/fisicos/caixa-personalizada.jpg",
     "stock": true,
     "quantidadeMinima": 50,
-    "maisVendido": true,
+    "maisVendido": true
   },
   {
     "id": "camisa",
@@ -243,7 +243,7 @@
     "imagem": "assets/images/produtos/fisicos/camiseta-estampada.jpg",
     "stock": true,
     "quantidadeMinima": 10,
-    "maisVendido": false,
+    "maisVendido": false
   },
   {
     "id": "camiseta-polo-estampada",
@@ -258,7 +258,7 @@
     "imagem": "assets/images/produtos/fisicos/camiseta-polo-estampada.jpg",
     "stock": true,
     "quantidadeMinima": 10,
-    "maisVendido": false,
+    "maisVendido": false
   },
   {
     "id": "carimbo",
@@ -273,7 +273,7 @@
     "imagem": "assets/images/produtos/fisicos/carimbo.jpeg",
     "stock": true,
     "quantidadeMinima": 50,
-    "maisVendido": true,
+    "maisVendido": true
   },
   {
     "id": "chavena",
@@ -288,7 +288,7 @@
     "imagem": "assets/images/produtos/fisicos/chavena.jpg",
     "stock": true,
     "quantidadeMinima": null,
-    "maisVendido": false,
+    "maisVendido": false
   },
   {
     "id": "colete",
@@ -394,7 +394,7 @@
     "imagem": "assets/images/produtos/fisicos/guarda-chuva.jpeg",
     "stock": true,
     "quantidadeMinima": 30,
-    "maisVendido": false,
+    "maisVendido": false
   },
   {
     "id": "livro-de-facturas",
@@ -448,7 +448,7 @@
     "imagem": "assets/images/produtos/fisicos/moletom.jpeg",
     "stock": true,
     "quantidadeMinima": 10,
-    "maisVendido": false,
+    "maisVendido": false
   },
   {
     "id": "mouse-pad",
@@ -463,7 +463,7 @@
     "imagem": "assets/images/produtos/fisicos/mouse-pad.jpg",
     "stock": true,
     "quantidadeMinima": 10,
-    "maisVendido": false,
+    "maisVendido": false
   },
   {
     "id": "pasta-de-apresentacao",
@@ -478,7 +478,7 @@
     "imagem": "assets/images/produtos/fisicos/pasta-de-apresentacao.jpg",
     "stock": true,
     "quantidadeMinima": 30,
-    "maisVendido": false,
+    "maisVendido": false
   },
   {
     "id": "pin-kumani-doming",
@@ -519,7 +519,7 @@
     "imagem": "assets/images/produtos/fisicos/poster.jpg",
     "stock": true,
     "quantidadeMinima": 5,
-    "maisVendido": true,
+    "maisVendido": true
   },
   {
     "id": "rotulo",
@@ -547,7 +547,7 @@
     "imagem": "assets/images/produtos/fisicos/sacola-de-papel.jpg",
     "stock": true,
     "quantidadeMinima": 100,
-    "maisVendido": false,
+    "maisVendido": false
   },
   {
     "id": "stand-acrilico",

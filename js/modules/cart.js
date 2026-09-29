@@ -43,7 +43,7 @@ export function adicionarItem(produto, quantidade = 1) {
       imagem: produto.imagem || null,
       corPlaceholder: produto.corPlaceholder || '#DDDDD8',
       quantidade,
-      quantidadeMinima: produto.quantidadeMinima || 1,
+      quantidadeMinima: produto.quantidadeMinima || 1
     });
   }
 
