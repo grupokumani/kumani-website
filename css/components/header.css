@@ -306,8 +306,7 @@ body.menu-open {
 }
 
 /* Abrir com hover (desktop) */
-.header__nav-item--has-dropdown:hover .header__dropdown,
-.header__nav-item--has-dropdown .header__nav-link--parent[aria-expanded="true"] ~ .header__dropdown {
+.header__nav-item--has-dropdown .header__nav-link--btn[aria-expanded="true"] ~ .header__dropdown {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
