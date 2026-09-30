@@ -130,42 +130,47 @@ export function initNav() {
 
   // --- Dropdowns desktop (teclado + rato) ---
 function initDropdowns() {
-  const toggles = document.querySelectorAll('[data-dropdown-toggle]');
-  toggles.forEach((toggle) => {
-    const parent = toggle.closest('.header__nav-item--has-dropdown');
-    const dropdown = parent?.querySelector('.header__dropdown');
-    if (!dropdown) return;
+  const items = document.querySelectorAll('.header__nav-item--has-dropdown');
 
-    // Abrir/fechar com clique (teclado e toque)
-    toggle.addEventListener('click', (e) => {
-      e.preventDefault();
-      const isOpen = toggle.getAttribute('aria-expanded') === 'true';
-      // Fechar todos os outros
-      toggles.forEach((t) => t.setAttribute('aria-expanded', 'false'));
-      toggle.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
+  items.forEach((item) => {
+    const btn = item.querySelector('[data-dropdown-toggle]');
+    const dropdown = item.querySelector('.header__dropdown');
+    if (!btn || !dropdown) return;
+
+    // Abrir/fechar com clique
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isOpen = btn.getAttribute('aria-expanded') === 'true';
+
+      // Fechar todos os outros primeiro
+      document.querySelectorAll('[data-dropdown-toggle][aria-expanded="true"]').forEach((b) => {
+        if (b !== btn) b.setAttribute('aria-expanded', 'false');
+      });
+
+      btn.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
     });
 
-    // Fechar ao pressionar Escape
-    dropdown.addEventListener('keydown', (e) => {
+    // Fechar com Escape
+    item.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') {
-        toggle.setAttribute('aria-expanded', 'false');
-        toggle.focus();
+        btn.setAttribute('aria-expanded', 'false');
+        btn.focus();
       }
     });
 
-    // Fechar ao perder o foco do grupo todo
-    parent.addEventListener('focusout', (e) => {
-      if (!parent.contains(e.relatedTarget)) {
-        toggle.setAttribute('aria-expanded', 'false');
+    // Fechar ao perder o foco do grupo
+    item.addEventListener('focusout', (e) => {
+      if (!item.contains(e.relatedTarget)) {
+        btn.setAttribute('aria-expanded', 'false');
       }
     });
   });
 
   // Fechar ao clicar fora
-  document.addEventListener('click', (e) => {
-    if (!e.target.closest('.header__nav-item--has-dropdown')) {
-      toggles.forEach((t) => t.setAttribute('aria-expanded', 'false'));
-    }
+  document.addEventListener('click', () => {
+    document.querySelectorAll('[data-dropdown-toggle]').forEach((btn) => {
+      btn.setAttribute('aria-expanded', 'false');
+    });
   });
 }
 

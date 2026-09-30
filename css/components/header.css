@@ -245,7 +245,7 @@ body.menu-open {
 }
 
 /* ============================================
-   FASE 5C — DROPDOWNS DESKTOP
+   DROPDOWNS DESKTOP
    ============================================ */
 
 .header__nav-item {
@@ -265,7 +265,8 @@ body.menu-open {
   color: inherit;
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 5px;
+  line-height: inherit;
 }
 
 .header__nav-link--btn::after {
@@ -273,20 +274,20 @@ body.menu-open {
   display: inline-block;
   width: 0;
   height: 0;
-  border-left: 4px solid transparent;
-  border-right: 4px solid transparent;
+  border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
   border-top: 4px solid currentColor;
   transition: transform var(--duration-fast) var(--ease-standard);
+  flex-shrink: 0;
 }
 
-.header__nav-item--has-dropdown:hover .header__nav-link--btn::after,
-.header__nav-item--has-dropdown .header__nav-link--parent[aria-expanded="true"]::after {
+.header__nav-link--btn[aria-expanded="true"]::after {
   transform: rotate(180deg);
 }
 
 .header__dropdown {
   position: absolute;
-  top: calc(100% + 12px);
+  top: calc(100% + 8px);
   left: 0;
   min-width: 240px;
   background: var(--color-neutral-0);
@@ -297,12 +298,38 @@ body.menu-open {
   list-style: none;
   opacity: 0;
   visibility: hidden;
-  transform: translateY(-8px);
-  transition: opacity var(--duration-fast) var(--ease-standard),
-              transform var(--duration-fast) var(--ease-standard),
-              visibility var(--duration-fast);
+  transform: translateY(-6px);
+  transition: opacity 180ms ease,
+              transform 180ms ease,
+              visibility 180ms;
   z-index: 200;
   pointer-events: none;
+}
+
+.header__nav-link--btn[aria-expanded="true"] + .header__dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.header__dropdown-link {
+  display: block;
+  padding: var(--space-3) var(--space-5);
+  font-size: var(--fs-sm);
+  font-weight: normal;
+  letter-spacing: normal;
+  text-transform: none;
+  color: var(--color-text-primary);
+  text-decoration: none;
+  transition: background 120ms ease, color 120ms ease;
+}
+
+.header__dropdown-link:hover,
+.header__dropdown-link:focus {
+  background: var(--color-bg-subtle);
+  color: var(--kumani-green);
+  outline: none;
 }
 
 /* Abrir com hover (desktop) */
