@@ -4,12 +4,12 @@
     <a href="/" class="header__logo" aria-label="KUMANI — página inicial">KUMANI</a>
 
     <nav class="header__nav" aria-label="Navegação principal">
-      <ul class="header__nav-list">
+           <ul class="header__nav-list">
 
-        <!-- SOBRE (com dropdown) -->
+        <!-- SOBRE -->
         <li class="header__nav-item header__nav-item--has-dropdown">
-          <a href="/sobre.html" class="header__nav-link header__nav-link--parent"
-             aria-haspopup="true" aria-expanded="false" data-dropdown-toggle>Sobre</a>
+          <button type="button" class="header__nav-link header__nav-link--btn"
+                  aria-haspopup="true" aria-expanded="false" data-dropdown-toggle>Sobre</button>
           <ul class="header__dropdown" role="menu">
             <li role="none"><a href="/sobre.html#quem-somos" class="header__dropdown-link" role="menuitem">Quem somos</a></li>
             <li role="none"><a href="/sobre.html#missao" class="header__dropdown-link" role="menuitem">Missão e Valores</a></li>
@@ -18,9 +18,9 @@
           </ul>
         </li>
 
-        <!-- SERVIÇOS (com dropdown) -->
+        <!-- SERVIÇOS -->
         <li class="header__nav-item header__nav-item--has-dropdown">
-          <button type="button" class="header__nav-link header__nav-link--parent header__nav-link--btn"
+          <button type="button" class="header__nav-link header__nav-link--btn"
                   aria-haspopup="true" aria-expanded="false" data-dropdown-toggle>Serviços</button>
           <ul class="header__dropdown" role="menu">
             <li role="none"><a href="/servicos/publicidade.html" class="header__dropdown-link" role="menuitem">Publicidade</a></li>
@@ -31,8 +31,33 @@
           </ul>
         </li>
 
-        <li class="header__nav-item"><a href="/portfolio.html" class="header__nav-link">Portfólio</a></li>
-        <li class="header__nav-item"><a href="/loja.html" class="header__nav-link">Gráfica</a></li>
+        <!-- PORTFÓLIO -->
+        <li class="header__nav-item header__nav-item--has-dropdown">
+          <button type="button" class="header__nav-link header__nav-link--btn"
+                  aria-haspopup="true" aria-expanded="false" data-dropdown-toggle>Portfólio</button>
+          <ul class="header__dropdown" role="menu">
+            <li role="none"><a href="/portfolio.html" class="header__dropdown-link" role="menuitem">Ver todos os trabalhos</a></li>
+            <li role="none"><a href="/portfolio.html?categoria=design-grafico" class="header__dropdown-link" role="menuitem">Design Gráfico</a></li>
+            <li role="none"><a href="/portfolio.html?categoria=marketing-digital" class="header__dropdown-link" role="menuitem">Marketing Digital</a></li>
+            <li role="none"><a href="/portfolio.html?categoria=branding" class="header__dropdown-link" role="menuitem">Branding</a></li>
+            <li role="none"><a href="/portfolio.html?categoria=paineis" class="header__dropdown-link" role="menuitem">Painéis</a></li>
+            <li role="none"><a href="/portfolio.html?categoria=relacoes-publicas-e-internacionais" class="header__dropdown-link" role="menuitem">Relações Públicas</a></li>
+          </ul>
+        </li>
+
+        <!-- GRÁFICA -->
+        <li class="header__nav-item header__nav-item--has-dropdown">
+          <button type="button" class="header__nav-link header__nav-link--btn"
+                  aria-haspopup="true" aria-expanded="false" data-dropdown-toggle>Gráfica</button>
+          <ul class="header__dropdown" role="menu">
+            <li role="none"><a href="/loja.html" class="header__dropdown-link" role="menuitem">Ver todos os produtos</a></li>
+            <li role="none"><a href="/loja.html?categoria=cartoes" class="header__dropdown-link" role="menuitem">Cartões de Visita</a></li>
+            <li role="none"><a href="/loja.html?categoria=impressao" class="header__dropdown-link" role="menuitem">Impressão</a></li>
+            <li role="none"><a href="/loja.html?categoria=brinde" class="header__dropdown-link" role="menuitem">Brindes Corporativos</a></li>
+            <li role="none"><a href="/loja.html?categoria=sinalizacao" class="header__dropdown-link" role="menuitem">Sinalização</a></li>
+          </ul>
+        </li>
+
         <li class="header__nav-item"><a href="/eventos.html" class="header__nav-link">Eventos</a></li>
         <li class="header__nav-item"><a href="/recursos.html" class="header__nav-link">Recursos</a></li>
         <li class="header__nav-item"><a href="/contacto.html" class="header__nav-link">Contacto</a></li>
