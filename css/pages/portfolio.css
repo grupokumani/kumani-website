@@ -80,3 +80,137 @@
     font-size: var(--fs-3xl);
   }
 }
+
+/* --- Modal lightbox --- */
+.portfolio-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-5);
+  opacity: 0;
+  transition: opacity 250ms ease;
+}
+
+.portfolio-modal.is-open {
+  opacity: 1;
+}
+
+.portfolio-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(27,27,27,0.85);
+  backdrop-filter: blur(4px);
+  cursor: pointer;
+}
+
+.portfolio-modal__box {
+  position: relative;
+  background: var(--color-neutral-0);
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  max-width: 640px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  transform: translateY(20px) scale(0.97);
+  transition: transform 250ms ease;
+  box-shadow: 0 24px 64px rgba(0,0,0,0.35);
+}
+
+.portfolio-modal.is-open .portfolio-modal__box {
+  transform: translateY(0) scale(1);
+}
+
+.portfolio-modal__close {
+  position: absolute;
+  top: var(--space-4);
+  right: var(--space-4);
+  z-index: 10;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(27,27,27,0.6);
+  color: var(--color-neutral-0);
+  border: none;
+  cursor: pointer;
+  font-size: var(--fs-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(4px);
+}
+
+.portfolio-modal__img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+}
+
+.portfolio-modal__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.portfolio-modal__body {
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.portfolio-modal__tags {
+  display: flex;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.portfolio-modal__tag {
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-bold);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-wide);
+  padding: 4px 12px;
+  border-radius: var(--radius-sm);
+  background: var(--kumani-green);
+  color: var(--color-neutral-0);
+}
+
+.portfolio-modal__tag--outline {
+  background: transparent;
+  border: 1px solid var(--color-border-strong);
+  color: var(--color-text-secondary);
+}
+
+.portfolio-modal__desc {
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+  font-size: var(--fs-base);
+}
+
+.portfolio-modal__actions {
+  display: flex;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+
+.portfolio-modal__cta {
+  flex: 1;
+  text-align: center;
+  justify-content: center;
+}
+
+@media (max-width: 480px) {
+  .portfolio-modal {
+    padding: 0;
+    align-items: flex-end;
+  }
+  .portfolio-modal__box {
+    border-radius: var(--radius-card) var(--radius-card) 0 0;
+    max-height: 92vh;
+  }
+}

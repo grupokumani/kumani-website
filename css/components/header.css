@@ -13,10 +13,13 @@
               box-shadow var(--duration-base) var(--ease-standard);
 }
 
-.header--scrolled,
-.header--static {
-  background-color: var(--color-bg);
-  box-shadow: var(--shadow-sm);
+.header--scrolled .header__logo,
+.header--static .header__logo {
+  color: var(--kumani-green);
+}
+
+.header:not(.header--scrolled):not(.header--static) .header__logo {
+  color: var(--color-neutral-0);
 }
 
 .header__inner {

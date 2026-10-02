@@ -4,7 +4,9 @@
 
 :root {
   /* --- Verde oficial KUMANI (fonte única de verdade) --- */
-  --kumani-green: #214f04;
+    --kumani-green: #2d7a06;
+  --kumani-green-rgb: 45, 122, 6;
+  --kumani-green-vivid: #39a108;
   --kumani-green-rgb: 33, 79, 4;
 
   /* --- Cores de marca --- */

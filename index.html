@@ -2,11 +2,14 @@
 <html lang="pt-MZ">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>KUMANI — O Futuro da Publicidade em Moçambique</title>
-  <meta name="description" content="A KUMANI é uma agência de publicidade moçambicana: publicidade, marketing digital, design gráfico, imagem corporativa, sinalização, impressão, gráfica e móveis.">
-  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
-    <link rel="stylesheet" href="/css/tokens/colors.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>KUMANI — Publicidade à medida do seu negócio</title>
+  <meta name="description" content="A KUMANI é a agência de publicidade e comunicação criativa de Moçambique. Fazemos marcas crescer — com estratégia, arte e impacto real.">
+  <link rel="icon" type="image/svg+xml" href="/assets/icons/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/tokens/colors.css">
   <link rel="stylesheet" href="/css/tokens/typography.css">
   <link rel="stylesheet" href="/css/tokens/spacing.css">
   <link rel="stylesheet" href="/css/tokens/breakpoints.css">
@@ -24,139 +27,214 @@
   <link rel="stylesheet" href="/css/components/form.css">
   <link rel="stylesheet" href="/css/components/indicators.css">
   <link rel="stylesheet" href="/css/components/clients-cta-footer.css">
-  <link rel="stylesheet" href="/css/pages/portfolio.css">
-  <link rel="stylesheet" href="/css/pages/case-study.css">
-  <link rel="stylesheet" href="/css/pages/servicos.css">
-  <link rel="stylesheet" href="/css/pages/loja.css">
-  <link rel="stylesheet" href="/css/pages/produto.css">
-  <link rel="stylesheet" href="/css/pages/carrinho-checkout.css">
+  <link rel="stylesheet" href="/css/pages/home-sprint.css">
   <link rel="stylesheet" href="/css/utilities/utilities.css">
   <link rel="stylesheet" href="/css/components/search.css">
   <link rel="stylesheet" href="/css/components/whatsapp-float.css">
   <link rel="canonical" href="https://www.grupokumani.com/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="KUMANI">
-  <meta property="og:title" content="KUMANI — O Futuro da Publicidade em Moçambique">
-  <meta property="og:description" content="A KUMANI é uma agência de publicidade moçambicana: publicidade, marketing digital, design gráfico, imagem corporativa, sinalização, impressão, gráfica e móveis.">
+  <meta property="og:title" content="KUMANI — Publicidade à medida do seu negócio">
+  <meta property="og:description" content="A agência criativa de Moçambique que faz marcas crescer com estratégia, arte e impacto real.">
   <meta property="og:url" content="https://www.grupokumani.com/">
   <meta property="og:image" content="https://www.grupokumani.com/assets/images/hero/kumani-poster.jpg">
   <meta property="og:locale" content="pt_MZ">
   <meta name="twitter:card" content="summary_large_image">
   <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "AdvertisingAgency",
-  "name": "KUMANI",
-  "url": "https://www.grupokumani.com",
-  "logo": "https://www.grupokumani.com/assets/images/hero/kumani-poster.jpg",
-  "description": "Agência de publicidade moçambicana: publicidade, marketing digital, design gráfico, imagem corporativa, sinalização, impressão, gráfica e móveis.",
-  "areaServed": "MZ",
-  "address": {
-    "@type": "PostalAddress",
-    "addressCountry": "MZ"
-  },
-  "sameAs": [
-    "https://instagram.com/kumani_media",
-    "https://facebook.com/Kumani"
-  ]
-}
-</script>
+  {
+    "@context": "https://schema.org",
+    "@type": "AdvertisingAgency",
+    "name": "KUMANI",
+    "url": "https://www.grupokumani.com",
+    "description": "Agência de publicidade e comunicação criativa em Moçambique.",
+    "areaServed": "MZ",
+    "address": { "@type": "PostalAddress", "addressCountry": "MZ" },
+    "sameAs": ["https://instagram.com/kumani_media","https://facebook.com/Kumani","https://www.linkedin.com/company/kumani-sa/"]
+  }
+  </script>
 </head>
 <body data-page="home">
 
   <a href="#main-content" class="skip-link">Saltar para o conteúdo principal</a>
-
   <div data-partial="header"></div>
 
   <main id="main-content">
 
-    <section class="hero" data-hero>
-      <div class="hero__media">
-        <video
-          class="hero__video"
-          data-hero-video
-          autoplay
-          muted
-          loop
-          playsinline
-          poster="assets/images/hero/kumani-poster.jpg">
-          <source src="assets/videos/hero/kumani-video.mp4" type="video/mp4">
-        </video>
-        <div class="hero__fallback" data-hero-fallback>
-          <div class="hero__slide hero__slide--1"></div>
-          <div class="hero__slide hero__slide--2"></div>
-          <div class="hero__slide hero__slide--3"></div>
-        </div>
-        <div class="hero__overlay"></div>
-      </div>
+    <!-- ═══════════════════════════════
+         HERO — vídeo + headline forte
+    ═══════════════════════════════ -->
+    <section class="hero" data-hero aria-label="Intro KUMANI">
+      <video class="hero__video" autoplay muted loop playsinline preload="auto"
+             poster="/assets/images/hero/kumani-poster.jpg" data-hero-video>
+        <source src="/assets/videos/hero/kumani-video.mp4" type="video/mp4">
+      </video>
+      <div class="hero__overlay"></div>
 
-      <div class="hero__content">
-        <p class="hero__badge">Mude para Melhor</p>
+      <!-- Gráfico decorativo africano SVG -->
+      <svg class="hero__deco" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="200" cy="200" r="180" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+        <circle cx="200" cy="200" r="120" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+        <circle cx="200" cy="200" r="60"  fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+        <line x1="200" y1="20"  x2="200" y2="380" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+        <line x1="20"  y1="200" x2="380" y2="200" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+        <line x1="73"  y1="73"  x2="327" y2="327" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+        <line x1="327" y1="73"  x2="73"  y2="327" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+        <polygon points="200,40 360,150 360,250 200,360 40,250 40,150"
+                 fill="none" stroke="rgba(33,79,4,0.25)" stroke-width="1"/>
+      </svg>
+
+      <div class="hero__content" data-reveal-hero>
+        <span class="hero__badge">
+          <span class="hero__badge-dot"></span>
+          Agência criativa — Moçambique
+        </span>
         <h1 class="hero__headline">
-          <span class="hero__line" data-hero-line>publicidade</span>
-          <span class="hero__line" data-hero-line>a medida do seu negócio</span>
+          Publicidade<br>
+          <em class="hero__headline-accent">que move</em><br>
+          negócios.
         </h1>
-        <a href="contacto.html" class="hero__cta">Fale connosco</a>
+        <div class="hero__ctas">
+          <a href="/contacto.html" class="btn btn--hero-primary">Vamos trabalhar juntos</a>
+          <a href="/portfolio.html" class="btn btn--hero-ghost">Ver o nosso trabalho →</a>
+        </div>
+      </div>
+
+      <div class="hero__scroll-hint" aria-hidden="true">
+        <span>scroll</span>
+        <div class="hero__scroll-line"></div>
       </div>
     </section>
 
+    <!-- ═══════════════════════════════
+         INDICADORES
+    ═══════════════════════════════ -->
     <section class="indicators" aria-label="Números da KUMANI">
-      <div class="indicators__item">
-        <div class="indicators__value">10 anos</div>
-        <div class="indicators__label">No mercado</div>
+      <div class="indicators__item" data-reveal>
+        <div class="indicators__value">10</div>
+        <div class="indicators__label">Anos em 2027</div>
       </div>
-      <div class="indicators__item">
-        <div class="indicators__value">50+ clientes</div>
-        <div class="indicators__label">Servidos com resultados</div>
+      <div class="indicators__item" data-reveal>
+        <div class="indicators__value">25+</div>
+        <div class="indicators__label">Clientes servidos</div>
       </div>
-      <div class="indicators__item">
-        <div class="indicators__value">100% moçambicana</div>
-        <div class="indicators__label">Marca registada</div>
+      <div class="indicators__item" data-reveal>
+        <div class="indicators__value">100%</div>
+        <div class="indicators__label">Moçambicana</div>
       </div>
-      <div class="indicators__item">
-        <div class="indicators__value">30+ Campanhas</div>
-        <div class="indicators__label">Entregues com sucesso</div>
+      <div class="indicators__item" data-reveal>
+        <div class="indicators__value">30+</div>
+        <div class="indicators__label">Campanhas entregues</div>
       </div>
     </section>
 
+    <!-- ═══════════════════════════════
+         PORTFÓLIO — grelha destaque
+    ═══════════════════════════════ -->
     <section class="section section--bleed">
       <div class="section__header section__header--padded">
         <h2 class="section__title">O nosso trabalho</h2>
         <a href="/portfolio.html" class="section__link">Ver portfólio →</a>
       </div>
       <div class="work-grid work-grid--bleed" data-work-grid>
-        <!-- Preenchido por js/modules/homepage.js a partir de data/portfolio.json -->
-        </div>
-      </section>
-
-    <section class="section section--subtle">
-      <div class="section__header">
-        <h2 class="section__title">Produtos</h2>
-        <a href="loja.html" class="section__link">Ver catálogo completo →</a>
-      </div>
-      <div class="product-grid" data-product-grid>
-        <!-- Preenchido por js/modules/homepage.js a partir de data/produtos.json -->
+        <!-- JS: homepage.js / portfolio.json -->
       </div>
     </section>
 
+    <!-- ═══════════════════════════════
+         SERVIÇOS — cards
+    ═══════════════════════════════ -->
+    <section class="section section--subtle home-services">
+      <div class="section__header section__header--padded">
+        <h2 class="section__title">O que fazemos</h2>
+        <a href="/sobre.html#servicos" class="section__link">Ver todos →</a>
+      </div>
+      <div class="home-services__grid">
+        <a href="/servicos/publicidade.html" class="home-service-card">
+          <div class="home-service-card__icon"></div>
+          <h3>Publicidade</h3>
+          <p>Campanhas, painéis e outdoors que colocam a sua marca onde os clientes estão.</p>
+          <span class="home-service-card__arrow">→</span>
+        </a>
+        <a href="/servicos/imagem-corporativa.html" class="home-service-card">
+          <div class="home-service-card__icon"></div>
+          <h3>Imagem Corporativa</h3>
+          <p>Identidade visual completa — do logótipo ao manual de normas.</p>
+          <span class="home-service-card__arrow">→</span>
+        </a>
+        <a href="/servicos/gestao-redes-sociais.html" class="home-service-card">
+          <div class="home-service-card__icon"></div>
+          <h3>Redes Sociais</h3>
+          <p>Conteúdo, estratégia e gestão das suas plataformas digitais.</p>
+          <span class="home-service-card__arrow">→</span>
+        </a>
+        <a href="/servicos/websites.html" class="home-service-card">
+          <div class="home-service-card__icon"></div>
+          <h3>Websites</h3>
+          <p>Sites rápidos, responsivos e optimizados para converter visitantes.</p>
+          <span class="home-service-card__arrow">→</span>
+        </a>
+        <a href="/servicos/relacoes-publicas.html" class="home-service-card">
+          <div class="home-service-card__icon"></div>
+          <h3>Relações Públicas</h3>
+          <p>Comunicação institucional e gestão de reputação com impacto.</p>
+          <span class="home-service-card__arrow">→</span>
+        </a>
+        <a href="/eventos.html" class="home-service-card">
+          <div class="home-service-card__icon"></div>
+          <h3>Eventos</h3>
+          <p>Organização, decoração e cobertura media de eventos memoráveis.</p>
+          <span class="home-service-card__arrow">→</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════
+         PRODUTOS — destaque
+    ═══════════════════════════════ -->
+    <section class="section section--subtle">
+      <div class="section__header section__header--padded">
+        <h2 class="section__title">Loja</h2>
+        <a href="/loja.html" class="section__link">Ver catálogo completo →</a>
+      </div>
+      <div class="product-grid u-padded" data-product-grid>
+        <!-- JS: homepage.js / produtos.json -->
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════
+         CLIENTES
+    ═══════════════════════════════ -->
     <section class="section section--dark">
-      <div class="section__header">
+      <div class="section__header section__header--padded">
         <h2 class="section__title section__title--on-dark">Confiam em nós</h2>
       </div>
       <div class="clients-grid" data-clients-grid>
-        <!-- Preenchido por js/modules/homepage.js a partir de data/clientes.json -->
+        <!-- JS: homepage.js / clientes.json -->
       </div>
     </section>
 
+    <!-- ═══════════════════════════════
+         CTA FINAL — verde, impactante
+    ═══════════════════════════════ -->
     <section class="cta-final">
-      <h2 class="cta-final__headline">Vamos conversar sobre o seu próximo projecto?</h2>
-      <a href="contacto.html" class="btn btn--secondary">Fale connosco</a>
+      <!-- Gráfico decorativo -->
+      <svg class="cta-final__deco" viewBox="0 0 300 300" aria-hidden="true">
+        <circle cx="150" cy="150" r="140" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+        <circle cx="150" cy="150" r="90"  fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+        <circle cx="150" cy="150" r="40"  fill="rgba(255,255,255,0.03)" stroke="none"/>
+        <line x1="150" y1="10" x2="150" y2="290" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+        <line x1="10" y1="150" x2="290" y2="150" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+      </svg>
+      <div class="cta-final__content">
+        <p class="cta-final__eyebrow">Vamos conversar</p>
+        <h2 class="cta-final__headline">Pronto para<br><em>brilhar</em>?</h2>
+        <a href="/contacto.html" class="btn btn--cta-white">Fale connosco agora</a>
+      </div>
     </section>
 
   </main>
 
   <div data-partial="footer"></div>
-
-  <script type="module" src="js/main.js"></script>
+  <script type="module" src="/js/main.js"></script>
 </body>
 </html>
