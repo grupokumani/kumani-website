@@ -68,6 +68,8 @@ function abrirModal(item) {
     </div>
   `;
 
+    // Expõe globalmente para a homepage também poder usar
+  window.abrirPortfolioModal = abrirModal;
   document.body.appendChild(modal);
   document.body.style.overflow = 'hidden';
 

@@ -7,6 +7,7 @@
 
 import { qs } from '../utils/dom.js';
 import { mostrarMensagem } from '../utils/form-feedback.js';
+import { initLocationSelector } from '../utils/location-selector.js';
 
 const NUMERO_WHATSAPP = '258877335506';
 
@@ -43,6 +44,10 @@ function montarMensagemContacto(dados, contexto) {
     `Área de actuação: ${dados.areaActuacao || '(não indicado)'}\n` +
     `Telefone: ${dados.telefone}\n` +
     `Email: ${dados.email}\n` +
+    `Sector de actividade: ${dados.sector || '(não indicado)'}\n` +
+    `País: ${dados.pais || '(não indicado)'}\n` +
+    (dados.provincia ? `Província: ${dados.provincia}\n` : '') +
+    (dados.distrito ? `Distrito: ${dados.distrito}\n` : '') +
     `Orçamento disponível: ${dados.orcamento || '(não indicado)'}\n\n` +
     `Mensagem:\n${dados.mensagem}`
   );
@@ -50,6 +55,7 @@ function montarMensagemContacto(dados, contexto) {
 
 export function initContacto() {
   const form = qs('[data-contact-form]');
+  initLocationSelector(qs('[data-location-selector]', form));
   if (!form) return;
 
   const contexto = getContexto();
@@ -68,6 +74,10 @@ export function initContacto() {
       areaActuacao: qs('[name="areaActuacao"]', form).value.trim(),
       email: qs('[name="email"]', form).value.trim(),
       telefone: qs('[name="telefone"]', form).value.trim(),
+      pais: qs('[name="pais"]', form)?.value || '',
+      provincia: qs('[name="provincia"]', form)?.value || '',
+      distrito: qs('[name="distrito"]', form)?.value || '',
+      sector: qs('[name="sector"]', form)?.value || '',
       tipoNecessidade: contexto ? `Orçamento — ${contexto.categoria || 'projecto do portfólio'}` : 'Contacto Geral',
       orcamento: qs('[name="orcamento"]', form).value,
       mensagem: qs('[name="mensagem"]', form).value.trim(),

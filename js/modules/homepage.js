@@ -31,10 +31,19 @@ function renderWorkBlock(item) {
     : '';
 
   return `
-    <a href="/projectos/projecto.html?slug=${item.slug}" class="work-block" data-reveal aria-label="Ver case study: ${item.categoriaLabel || 'projecto KUMANI'}">
+    <button type="button"
+      class="work-block work-block--clickable"
+      data-reveal
+      data-slug="${item.slug}"
+      data-imagem="${item.imagem || ''}"
+      data-categoria="${item.categoriaLabel || ''}"
+      data-local="${item.local || ''}"
+      data-ano="${item.ano || ''}"
+      data-descricao="${(item.descricao || '').replace(/"/g, '&quot;')}"
+      aria-label="Ver detalhes: ${item.categoriaLabel || 'projecto'}">
       ${media}
       ${playIcon}
-    </a>
+    </button>
   `;
 }
 
@@ -93,6 +102,22 @@ export async function initHomepage() {
    const portfolio = await fetchJSON('data/portfolio.json');
    const destaques = portfolio.filter((item) => item.destaqueHome);
    workGridEl.innerHTML = renderWorkGrid(destaques);
+  }
+    // Modal para os trabalhos em destaque na homepage
+  if (workGridEl) {
+    workGridEl.addEventListener('click', (e) => {
+      const card = e.target.closest('[data-slug]');
+      if (!card) return;
+      const item = {
+        slug: card.dataset.slug,
+        imagem: card.dataset.imagem,
+        categoriaLabel: card.dataset.categoria,
+        local: card.dataset.local,
+        ano: card.dataset.ano,
+        descricao: card.dataset.descricao,
+      };
+      if (window.abrirPortfolioModal) window.abrirPortfolioModal(item);
+    });
   }
 
   if (productGridEl) {

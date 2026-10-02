@@ -1,10 +1,13 @@
 /* ============================================
-   KUMANI — PÁGINA: SOBRE
+   KUMANI — PÁGINA: SOBRE (redesign)
    ============================================ */
 
+/* --- Hero intro --- */
 .sobre-hero {
-  padding: var(--space-11) var(--space-container-x) var(--space-9);
-  max-width: 720px;
+  padding: var(--space-11) var(--space-container-x) var(--space-8);
+  max-width: 860px;
+  margin-inline: auto;
+  text-align: center;
 }
 
 .sobre-hero__eyebrow {
@@ -12,13 +15,13 @@
   font-weight: var(--fw-bold);
   text-transform: uppercase;
   letter-spacing: var(--ls-widest);
-  color: var(--color-brand-primary-text);
+  color: var(--kumani-green);
   margin-bottom: var(--space-4);
 }
 
 .sobre-hero__title {
-  font-size: clamp(1.75rem, 6vw, var(--fs-3xl));
-  font-weight: var(--fw-bold);
+  font-size: clamp(2rem, 5vw, var(--fs-3xl));
+  font-weight: 700;
   text-transform: uppercase;
   line-height: 1.05;
   margin-bottom: var(--space-5);
@@ -28,80 +31,86 @@
 .sobre-hero__intro {
   font-size: var(--fs-lg);
   color: var(--color-text-secondary);
-  line-height: 1.6;
+  line-height: 1.7;
+  max-width: 640px;
+  margin-inline: auto;
 }
 
+/* --- Estatísticas --- */
 .sobre-stats {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: var(--space-4);
-  padding: 0 var(--space-container-x) var(--space-11);
-  max-width: 960px;
+  gap: 0;
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  margin: 0 var(--space-container-x) var(--space-11);
 }
 
 .sobre-stats__item {
-  border-top: 3px solid var(--color-brand-primary);
-  padding: var(--space-5) 0;
+  text-align: center;
+  padding: var(--space-8) var(--space-5);
+  border-right: 1px solid var(--color-border);
+}
+
+.sobre-stats__item:last-child {
+  border-right: none;
 }
 
 .sobre-stats__value {
-  font-size: var(--fs-2xl);
-  font-weight: var(--fw-bold);
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 700;
+  color: var(--kumani-green);
+  line-height: 1;
+  margin-bottom: var(--space-2);
 }
 
 .sobre-stats__label {
   font-size: var(--fs-sm);
   color: var(--color-text-secondary);
-  margin-top: var(--space-1);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-wide);
 }
 
+/* --- Missão --- */
 .sobre-mission {
-  background: var(--color-bg-subtle);
-  padding: var(--space-9) var(--space-container-x);
+  background: var(--color-neutral-900);
+  padding: var(--space-11) var(--space-container-x);
+  text-align: center;
 }
 
 .sobre-mission__inner {
-  max-width: 720px;
+  max-width: 680px;
+  margin-inline: auto;
+}
+
+.sobre-mission__eyebrow {
+  font-size: 11px;
+  font-weight: var(--fw-bold);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-widest);
+  color: var(--kumani-green);
+  margin-bottom: var(--space-4);
 }
 
 .sobre-mission__title {
   font-size: var(--fs-2xl);
-  font-weight: var(--fw-bold);
+  font-weight: 700;
   text-transform: uppercase;
-  margin-bottom: var(--space-4);
-}
-
-.sobre-mission__text {
-  color: var(--color-text-secondary);
-  line-height: 1.7;
-}
-
-.sobre-cta {
-  padding: var(--space-9) var(--space-container-x);
-  text-align: center;
-}
-
-.sobre-cta__title {
-  font-size: var(--fs-2xl);
-  font-weight: var(--fw-bold);
-  text-transform: uppercase;
+  color: var(--color-neutral-0);
   margin-bottom: var(--space-5);
 }
 
-@media (max-width: 767px) {
-  .sobre-stats {
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--space-3);
-  }
-  .sobre-stats__value {
-    font-size: var(--fs-xl);
-  }
+.sobre-mission__text {
+  color: rgba(255,255,255,0.65);
+  line-height: 1.8;
+  font-size: var(--fs-md);
 }
 
-/* --- Bloco de Equipa --- */
-.sobre-team {
+/* --- Valores --- */
+.sobre-values {
   padding: var(--space-11) var(--space-container-x);
-  max-width: 1100px;
+  text-align: center;
 }
 
 .sobre-team__eyebrow {
@@ -109,26 +118,58 @@
   font-weight: var(--fw-bold);
   text-transform: uppercase;
   letter-spacing: var(--ls-widest);
-  color: var(--color-brand-primary-text);
+  color: var(--kumani-green);
   margin-bottom: var(--space-3);
 }
 
 .sobre-team__title {
   font-size: var(--fs-2xl);
-  font-weight: var(--fw-bold);
+  font-weight: 700;
   text-transform: uppercase;
   margin-bottom: var(--space-8);
+}
+
+.sobre-values__grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: var(--space-5);
+  text-align: left;
+}
+
+.sobre-values__item {
+  border-top: 3px solid var(--kumani-green);
+  padding-top: var(--space-4);
+}
+
+.sobre-values__item h3 {
+  font-size: var(--fs-base);
+  font-weight: 700;
+  margin-bottom: var(--space-2);
+}
+
+.sobre-values__item p {
+  font-size: var(--fs-sm);
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+/* --- Equipa --- */
+.sobre-team {
+  padding: var(--space-11) var(--space-container-x);
+  text-align: center;
+  background: var(--color-bg-subtle);
 }
 
 .sobre-team-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: var(--space-6);
+  text-align: left;
+  margin-top: var(--space-8);
 }
 
 .sobre-team-card__photo-wrap {
-  position: relative;
-  aspect-ratio: 3 / 4;
+  aspect-ratio: 3/4;
   border-radius: var(--radius-card);
   overflow: hidden;
   background: var(--color-neutral-200);
@@ -139,9 +180,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: grayscale(100%);
-  transition: filter var(--duration-base) var(--ease-standard),
-              transform var(--duration-slow) var(--ease-standard);
+  transition: filter 400ms ease, transform 400ms ease;
 }
 
 .sobre-team-card:hover .sobre-team-card__photo {
@@ -150,16 +189,16 @@
 }
 
 .sobre-team-card__name {
-  font-size: var(--fs-lg);
-  font-weight: var(--fw-bold);
+  font-size: var(--fs-base);
+  font-weight: 700;
   text-transform: uppercase;
-  margin-bottom: var(--space-1);
+  margin-bottom: 2px;
 }
 
 .sobre-team-card__role {
   font-size: var(--fs-sm);
-  color: var(--color-brand-primary-text);
-  font-weight: var(--fw-bold);
+  color: var(--kumani-green);
+  font-weight: 700;
   margin-bottom: var(--space-2);
 }
 
@@ -172,35 +211,18 @@
   border-radius: 50%;
   border: 1px solid var(--color-neutral-300);
   color: var(--color-text-secondary);
-  transition: background var(--duration-fast) var(--ease-standard),
-              color var(--duration-fast) var(--ease-standard),
-              border-color var(--duration-fast) var(--ease-standard);
+  transition: background 150ms, color 150ms, border-color 150ms;
 }
 
 .sobre-team-card__linkedin:hover {
-  background: var(--color-brand-primary);
-  border-color: var(--color-brand-primary);
-  color: var(--color-text-on-brand);
+  background: var(--kumani-green);
+  border-color: var(--kumani-green);
+  color: var(--color-neutral-0);
 }
 
-@media (max-width: 1023px) {
-  .sobre-team-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 480px) {
-  .sobre-team-grid {
-    gap: var(--space-4);
-  }
-  .sobre-team-card__name {
-    font-size: var(--fs-base);
-  }
-}
-
+/* --- Serviços no Sobre --- */
 .sobre-services {
   padding: var(--space-11) var(--space-container-x);
-  max-width: 1100px;
   text-align: center;
 }
 
@@ -212,68 +234,53 @@
   text-align: left;
 }
 
+.sobre-services__item {
+  border-top: 2px solid var(--color-border);
+  padding-top: var(--space-4);
+  transition: border-color 200ms ease;
+}
+
+.sobre-services__item:hover {
+  border-top-color: var(--kumani-green);
+}
+
 .sobre-services__item h3 {
-  font-size: var(--fs-md);
-  font-weight: var(--fw-bold);
+  font-size: var(--fs-base);
+  font-weight: 700;
   margin-bottom: var(--space-2);
 }
 
 .sobre-services__item p {
-  color: var(--color-text-secondary);
-  font-size: var(--fs-sm);
-}
-
-@media (max-width: 1023px) {
-  .sobre-services__grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 480px) {
-  .sobre-services__grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-.sobre-values {
-  padding: var(--space-11) var(--space-container-x);
-  max-width: 1100px;
-  text-align: center;
-}
-
-.sobre-values__grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: var(--space-5);
-  margin-top: var(--space-8);
-  text-align: left;
-}
-
-.sobre-values__item {
-  border-top: 3px solid var(--kumani-green);
-  padding-top: var(--space-4);
-}
-
-.sobre-values__item h3 {
-  font-size: var(--fs-md);
-  font-weight: var(--fw-bold);
-  margin-bottom: var(--space-2);
-}
-
-.sobre-values__item p {
   font-size: var(--fs-sm);
   color: var(--color-text-secondary);
   line-height: 1.6;
 }
 
+/* --- CTA --- */
+.sobre-cta {
+  padding: var(--space-9) var(--space-container-x);
+  text-align: center;
+}
+
+.sobre-cta__title {
+  font-size: var(--fs-2xl);
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: var(--space-5);
+}
+
+/* --- Responsive --- */
 @media (max-width: 1023px) {
-  .sobre-values__grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
+  .sobre-values__grid { grid-template-columns: repeat(3, 1fr); }
+  .sobre-services__grid { grid-template-columns: repeat(2, 1fr); }
+  .sobre-team-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 600px) {
-  .sobre-values__grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+  .sobre-stats { grid-template-columns: 1fr; }
+  .sobre-stats__item { border-right: none; border-bottom: 1px solid var(--color-border); }
+  .sobre-stats__item:last-child { border-bottom: none; }
+  .sobre-values__grid { grid-template-columns: repeat(2, 1fr); }
+  .sobre-services__grid { grid-template-columns: 1fr; }
+  .sobre-team-grid { grid-template-columns: repeat(2, 1fr); gap: var(--space-4); }
 }

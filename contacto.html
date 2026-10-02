@@ -55,18 +55,18 @@
       <h1 style="font-size:36px;font-weight:700;text-transform:uppercase;">Vamos conversar.</h1>
     </section>
 
-    <section style="padding:0 24px 64px;max-width:760px;">
+        <section style="padding:0 24px 64px;max-width:760px;">
       <form data-contact-form novalidate>
 
-        <div data-contact-context style="display:none;background:var(--color-bg-subtle);border-left:3px solid var(--kumani-green);padding:12px 16px;margin-bottom:24px;font-size:14px;"></div>
+        <div data-contact-context style="display:none;background:var(--color-bg-subtle);border-left:3px solid var(--kumani-green);padding:12px 16px;margin-bottom:24px;font-size:14px;border-radius:4px;"></div>
 
         <div class="form-row">
           <div class="field">
             <label class="field__label" for="ct-nome">Nome<span class="field__required">*</span></label>
-            <input class="field__input" id="ct-nome" name="nome" type="text" required>
+            <input class="field__input" id="ct-nome" name="nome" type="text" required autocomplete="name">
           </div>
           <div class="field">
-            <label class="field__label" for="ct-empresa">Empresa</label>
+            <label class="field__label" for="ct-empresa">Empresa / Organização</label>
             <input class="field__input" id="ct-empresa" name="empresa" type="text">
           </div>
         </div>
@@ -74,18 +74,72 @@
         <div class="form-row">
           <div class="field">
             <label class="field__label" for="ct-email">Email<span class="field__required">*</span></label>
-            <input class="field__input" id="ct-email" name="email" type="email" required>
+            <input class="field__input" id="ct-email" name="email" type="email" required autocomplete="email">
           </div>
           <div class="field">
             <label class="field__label" for="ct-telefone">Telefone<span class="field__required">*</span></label>
-            <input class="field__input" id="ct-telefone" name="telefone" type="tel" required>
+            <input class="field__input" id="ct-telefone" name="telefone" type="tel" required autocomplete="tel">
           </div>
         </div>
 
         <div class="form-row">
           <div class="field">
-            <label class="field__label" for="ct-area">Área de actuação</label>
-            <input class="field__input" id="ct-area" name="areaActuacao" type="text" placeholder="Ex: Restauração, Retalho, Saúde...">
+            <label class="field__label" for="ct-sector">Sector de actividade</label>
+            <select class="field__input" id="ct-sector" name="sector">
+              <option value="">Seleccione um sector</option>
+              <optgroup label="Alimentação e Bebidas">
+                <option>Restauração e Hotelaria</option>
+                <option>Indústria Alimentar</option>
+                <option>Bebidas e Cervejeiras</option>
+              </optgroup>
+              <optgroup label="Comércio e Retalho">
+                <option>Supermercados e Grande Distribuição</option>
+                <option>Comércio a Retalho</option>
+                <option>E-commerce</option>
+                <option>Importação e Exportação</option>
+              </optgroup>
+              <optgroup label="Serviços Profissionais">
+                <option>Advocacia e Jurídico</option>
+                <option>Contabilidade e Auditoria</option>
+                <option>Consultoria e Gestão</option>
+                <option>Recursos Humanos</option>
+              </optgroup>
+              <optgroup label="Saúde e Bem-estar">
+                <option>Clínicas e Hospitais</option>
+                <option>Farmácias e Laboratórios</option>
+                <option>Bem-estar e Fitness</option>
+                <option>Beleza e Estética</option>
+              </optgroup>
+              <optgroup label="Tecnologia e Inovação">
+                <option>Tecnologia e Software</option>
+                <option>Telecomunicações</option>
+                <option>Startups e Tech</option>
+              </optgroup>
+              <optgroup label="Finanças e Seguros">
+                <option>Banca e Microfinanças</option>
+                <option>Seguros</option>
+                <option>Imobiliário e Construção</option>
+              </optgroup>
+              <optgroup label="Educação e Cultura">
+                <option>Educação e Ensino</option>
+                <option>Cultura e Artes</option>
+                <option>Media e Entretenimento</option>
+              </optgroup>
+              <optgroup label="Sector Público e ONG">
+                <option>Governo e Instituições Públicas</option>
+                <option>ONG e Organizações Internacionais</option>
+                <option>Cooperação e Desenvolvimento</option>
+              </optgroup>
+              <optgroup label="Outros">
+                <option>Turismo e Viagens</option>
+                <option>Desporto e Recreação</option>
+                <option>Moda e Têxtil</option>
+                <option>Agricultura e Agronegócio</option>
+                <option>Energia e Recursos Naturais</option>
+                <option>Transportes e Logística</option>
+                <option>Outro</option>
+              </optgroup>
+            </select>
           </div>
           <div class="field">
             <label class="field__label" for="ct-orcamento">Orçamento disponível</label>
@@ -94,19 +148,24 @@
               <option value="Até 10.000 MZN">Até 10.000 MZN</option>
               <option value="10.000 – 50.000 MZN">10.000 – 50.000 MZN</option>
               <option value="50.000 – 150.000 MZN">50.000 – 150.000 MZN</option>
-              <option value="Mais de 150.000 MZN">Mais de 150.000 MZN</option>
+              <option value="150.000 – 500.000 MZN">150.000 – 500.000 MZN</option>
+              <option value="Mais de 500.000 MZN">Mais de 500.000 MZN</option>
+              <option value="A definir com a KUMANI">A definir com a KUMANI</option>
             </select>
           </div>
         </div>
 
+        <!-- Selector de localização -->
+        <div data-location-selector></div>
+
         <div class="field">
-          <label class="field__label" for="ct-mensagem">Mensagem<span class="field__required">*</span></label>
-          <textarea class="field__textarea" id="ct-mensagem" name="mensagem" required></textarea>
+          <label class="field__label" for="ct-mensagem">Mensagem / Descrição do projecto<span class="field__required">*</span></label>
+          <textarea class="field__textarea" id="ct-mensagem" name="mensagem" required rows="5" placeholder="Descreva brevemente o que precisa..."></textarea>
         </div>
 
         <div class="field field--checkbox">
           <input type="checkbox" id="ct-consentimento" name="consentimento" required>
-          <label class="field__label" for="ct-consentimento">Autorizo a KUMANI a usar os meus dados para me contactar.</label>
+          <label class="field__label" for="ct-consentimento">Autorizo a KUMANI a usar os meus dados para contacto comercial.</label>
         </div>
 
         <button type="submit" class="btn btn--primary btn--full" data-contact-submit>Enviar mensagem</button>
