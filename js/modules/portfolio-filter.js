@@ -131,7 +131,16 @@ export async function initPortfolioFilter() {
 
   gridEl.innerHTML = portfolio.map(renderCard).join('');
 
-  // Filtrar automaticamente pelo parâmetro ?filter= na URL
+  // Abrir modal ao clicar num card
+  qsa('[data-slug]', gridEl).forEach((card) => {
+    on(card, 'click', () => {
+      const slug = card.dataset.slug;
+      const item = portfolio.find((p) => p.slug === slug);
+      if (item) abrirModal(item);
+    });
+  });
+
+    // Filtrar automaticamente pelo parâmetro ?filter= na URL
   const urlFilter = new URLSearchParams(window.location.search).get('filter');
   if (urlFilter && filterEl) {
     const chip = filterEl.querySelector(`[data-filter="${urlFilter}"]`);
@@ -142,15 +151,6 @@ export async function initPortfolioFilter() {
       setTimeout(() => gridEl.scrollIntoView({ behavior: 'smooth', block: 'start' }), 300);
     }
   }
-
-  // Abrir modal ao clicar num card
-  qsa('[data-slug]', gridEl).forEach((card) => {
-    on(card, 'click', () => {
-      const slug = card.dataset.slug;
-      const item = portfolio.find((p) => p.slug === slug);
-      if (item) abrirModal(item);
-    });
-  });
 
   // Filtros
   if (filterEl) {

@@ -64,10 +64,12 @@
           <div class="field">
             <label class="field__label" for="ct-nome">Nome<span class="field__required">*</span></label>
             <input class="field__input" id="ct-nome" name="nome" type="text" required autocomplete="name">
+            <span class="field__error" aria-live="polite"></span>
           </div>
           <div class="field">
             <label class="field__label" for="ct-empresa">Empresa / Organização</label>
             <input class="field__input" id="ct-empresa" name="empresa" type="text">
+            <span class="field__error" aria-live="polite"></span>
           </div>
         </div>
 
@@ -75,10 +77,12 @@
           <div class="field">
             <label class="field__label" for="ct-email">Email<span class="field__required">*</span></label>
             <input class="field__input" id="ct-email" name="email" type="email" required autocomplete="email">
+            <span class="field__error" aria-live="polite"></span>
           </div>
           <div class="field">
-            <label class="field__label" for="ct-telefone">Telefone<span class="field__required">*</span></label>
+            <label class="field__label" for="ct-telefone">Telefone (WhatsApp)<span class="field__required">*</span></label>
             <input class="field__input" id="ct-telefone" name="telefone" type="tel" required autocomplete="tel">
+            <span class="field__error" aria-live="polite"></span>
           </div>
         </div>
 
@@ -159,13 +163,25 @@
         <div data-location-selector></div>
 
         <div class="field">
+          <label class="field__label">Anexos <small style="font-weight:normal;color:var(--color-text-secondary)">(opcional — até 5 ficheiros, máx. 5MB cada: PDF, Word, Excel, imagens)</small></label>
+          <label class="field__anexos-label">
+            <input type="file" data-anexos-input multiple accept=".pdf,.doc,.docx,.xls,.xlsx,.jpg,.jpeg,.png,.webp,.gif">
+            <span>Clique para seleccionar ficheiros</span>
+          </label>
+          <div data-anexos-lista style="margin-top:var(--space-2);display:flex;flex-wrap:wrap;"></div>
+          <span class="field__anexos-aviso" data-anexos-aviso aria-live="polite"></span>
+        </div>
+
+        <div class="field">
           <label class="field__label" for="ct-mensagem">Mensagem / Descrição do projecto<span class="field__required">*</span></label>
           <textarea class="field__textarea" id="ct-mensagem" name="mensagem" required rows="5" placeholder="Descreva brevemente o que precisa..."></textarea>
+          <span class="field__error" aria-live="polite"></span>
         </div>
 
         <div class="field field--checkbox">
           <input type="checkbox" id="ct-consentimento" name="consentimento" required>
           <label class="field__label" for="ct-consentimento">Autorizo a KUMANI a usar os meus dados para contacto comercial.</label>
+          <span class="field__error" aria-live="polite"></span>
         </div>
 
         <button type="submit" class="btn btn--primary btn--full" data-contact-submit>Enviar mensagem</button>
