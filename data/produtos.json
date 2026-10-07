@@ -32,7 +32,7 @@
   {
     "id": "camiseta-polo-estampada",
     "slug": "camiseta-polo-estampada",
-    "destaqueHome": false,
+    "destaqueHome": true,
     "nome": "Camiseta Polo Estampada",
     "descricao": "Camiseta polo estampada com o seu logótipo ou design.",
     "preco": 800,
