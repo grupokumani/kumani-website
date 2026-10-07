@@ -131,6 +131,18 @@ export async function initPortfolioFilter() {
 
   gridEl.innerHTML = portfolio.map(renderCard).join('');
 
+  // Filtrar automaticamente pelo parâmetro ?filter= na URL
+  const urlFilter = new URLSearchParams(window.location.search).get('filter');
+  if (urlFilter && filterEl) {
+    const chip = filterEl.querySelector(`[data-filter="${urlFilter}"]`);
+    if (chip) {
+      // Simula clique no chip correspondente
+      chip.click();
+      // Scroll suave até à grelha
+      setTimeout(() => gridEl.scrollIntoView({ behavior: 'smooth', block: 'start' }), 300);
+    }
+  }
+
   // Abrir modal ao clicar num card
   qsa('[data-slug]', gridEl).forEach((card) => {
     on(card, 'click', () => {

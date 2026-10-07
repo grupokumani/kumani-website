@@ -167,7 +167,8 @@ function initDropdowns() {
   });
 
   // Fechar ao clicar fora
-  document.addEventListener('click', () => {
+  document.addEventListener('click', (e) => {
+    if (e.target.closest('.header__mobile-panel')) return;
     document.querySelectorAll('[data-dropdown-toggle]').forEach((btn) => {
       btn.setAttribute('aria-expanded', 'false');
     });
@@ -180,19 +181,37 @@ function initMobileAccordion() {
   btns.forEach((btn) => {
     const sub = btn.nextElementSibling;
     if (!sub) return;
-    btn.addEventListener('click', () => {
+
+    btn.addEventListener('click', (e) => {
+      // CRÍTICO: impedir que o clique feche o painel mobile
+      e.stopPropagation();
+
       const isOpen = btn.getAttribute('aria-expanded') === 'true';
-      // Fechar todos os outros
+
+      // Fechar outros acordeões abertos
       btns.forEach((b) => {
-        b.setAttribute('aria-expanded', 'false');
-        const s = b.nextElementSibling;
-        if (s) s.classList.remove('is-open');
+        if (b !== btn) {
+          b.setAttribute('aria-expanded', 'false');
+          const s = b.nextElementSibling;
+          if (s) s.classList.remove('is-open');
+        }
       });
-      if (!isOpen) {
-        btn.setAttribute('aria-expanded', 'true');
-        sub.classList.add('is-open');
-      }
+
+      btn.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
+      sub.classList.toggle('is-open', !isOpen);
     });
   });
-}
+
+  // Fechar painel ao clicar num link dentro do sub-menu
+  document.querySelectorAll('.header__mobile-sub-link').forEach((link) => {
+    link.addEventListener('click', () => {
+      const panel = document.querySelector('[data-mobile-panel]');
+      const toggle = document.querySelector('[data-menu-toggle]');
+      if (panel) {
+        panel.classList.remove('is-open');
+        document.body.classList.remove('menu-open');
+      }
+      if (toggle) toggle.setAttribute('aria-expanded', 'false');
+    });
+  });
 }
