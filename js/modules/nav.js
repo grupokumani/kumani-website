@@ -74,8 +74,8 @@ function initMobileMenu(header) {
   on(document, 'keydown', (event) => {
     const isOpen = toggle.getAttribute('aria-expanded') === 'true';
     if (isOpen && event.key === 'Escape') {
-        closeMenu();
-    }    
+      closeMenu();
+    }
   });
 
   // Fecha o menu automaticamente ao navegar para outra página
@@ -118,6 +118,17 @@ function initCartCount(header) {
   document.addEventListener('cart:updated', render);
 }
 
+export function initNav() {
+  const header = qs('[data-nav-root]');
+  initDropdowns();
+  initMobileAccordion();
+  if (!header) return;
+
+  initStickyBehaviour(header);
+  initMobileMenu(header);
+  initCartCount(header);
+
+  // --- Dropdowns desktop (teclado + rato) ---
 function initDropdowns() {
   const items = document.querySelectorAll('.header__nav-item--has-dropdown');
 
@@ -156,8 +167,7 @@ function initDropdowns() {
   });
 
   // Fechar ao clicar fora
-  document.addEventListener('click', (e) => {
-    if (e.target.closest('.header__mobile-panel')) return;
+  document.addEventListener('click', () => {
     document.querySelectorAll('[data-dropdown-toggle]').forEach((btn) => {
       btn.setAttribute('aria-expanded', 'false');
     });
@@ -170,48 +180,19 @@ function initMobileAccordion() {
   btns.forEach((btn) => {
     const sub = btn.nextElementSibling;
     if (!sub) return;
-
-    btn.addEventListener('click', (e) => {
-      // CRÍTICO: impedir que o clique feche o painel mobile
-      e.stopPropagation();
-
+    btn.addEventListener('click', () => {
       const isOpen = btn.getAttribute('aria-expanded') === 'true';
-
-      // Fechar outros acordeões abertos
+      // Fechar todos os outros
       btns.forEach((b) => {
-        if (b !== btn) {
-          b.setAttribute('aria-expanded', 'false');
-          const s = b.nextElementSibling;
-          if (s) s.classList.remove('is-open');
-        }
+        b.setAttribute('aria-expanded', 'false');
+        const s = b.nextElementSibling;
+        if (s) s.classList.remove('is-open');
       });
-
-      btn.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
-      sub.classList.toggle('is-open', !isOpen);
-    });
-  });
-
-  // Fechar painel ao clicar num link dentro do sub-menu
-  document.querySelectorAll('.header__mobile-sub-link').forEach((link) => {
-    link.addEventListener('click', () => {
-      const panel = document.querySelector('[data-mobile-panel]');
-      const toggle = document.querySelector('[data-menu-toggle]');
-      if (panel) {
-        panel.classList.remove('is-open');
-        document.body.classList.remove('menu-open');
+      if (!isOpen) {
+        btn.setAttribute('aria-expanded', 'true');
+        sub.classList.add('is-open');
       }
-      if (toggle) toggle.setAttribute('aria-expanded', 'false');
     });
   });
 }
-
-export function initNav() {
-  const header = qs('[data-nav-root]');
-  initDropdowns();
-  initMobileAccordion();
-  if (!header) return;
-
-  initStickyBehaviour(header);
-  initMobileMenu(header);
-  initCartCount(header);
 }
