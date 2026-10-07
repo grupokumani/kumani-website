@@ -203,15 +203,4 @@ function initMobileAccordion() {
       if (toggle) toggle.setAttribute('aria-expanded', 'false');
     });
   });
-}
-
-export function initNav() {
-  const header = qs('[data-nav-root]');
-  initDropdowns();
-  initMobileAccordion();
-  if (!header) return;
-
-  initStickyBehaviour(header);
-  initMobileMenu(header);
-  initCartCount(header);
-}
+}52
