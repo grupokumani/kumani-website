@@ -118,17 +118,6 @@ function initCartCount(header) {
   document.addEventListener('cart:updated', render);
 }
 
-export function initNav() {
-  const header = qs('[data-nav-root]');
-  initDropdowns();
-  initMobileAccordion();
-  if (!header) return;
-
-  initStickyBehaviour(header);
-  initMobileMenu(header);
-  initCartCount(header);
-
-  // --- Dropdowns desktop (teclado + rato) ---
 function initDropdowns() {
   const items = document.querySelectorAll('.header__nav-item--has-dropdown');
 
@@ -214,4 +203,15 @@ function initMobileAccordion() {
       if (toggle) toggle.setAttribute('aria-expanded', 'false');
     });
   });
+}
+
+export function initNav() {
+  const header = qs('[data-nav-root]');
+  initDropdowns();
+  initMobileAccordion();
+  if (!header) return;
+
+  initStickyBehaviour(header);
+  initMobileMenu(header);
+  initCartCount(header);
 }
