@@ -74,8 +74,8 @@ function initMobileMenu(header) {
   on(document, 'keydown', (event) => {
     const isOpen = toggle.getAttribute('aria-expanded') === 'true';
     if (isOpen && event.key === 'Escape') {
-      closeMenu();
-    }
+        closeMenu();
+    }    
   });
 
   // Fecha o menu automaticamente ao navegar para outra página
@@ -203,4 +203,15 @@ function initMobileAccordion() {
       if (toggle) toggle.setAttribute('aria-expanded', 'false');
     });
   });
-}52
+}
+
+export function initNav() {
+  const header = qs('[data-nav-root]');
+  initDropdowns();
+  initMobileAccordion();
+  if (!header) return;
+
+  initStickyBehaviour(header);
+  initMobileMenu(header);
+  initCartCount(header);
+}
