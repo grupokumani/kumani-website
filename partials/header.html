@@ -27,24 +27,12 @@
             <li role="none"><a href="/servicos/gestao-redes-sociais.html" class="header__dropdown-link" role="menuitem">Gestão de Redes Sociais</a></li>
             <li role="none"><a href="/servicos/websites.html" class="header__dropdown-link" role="menuitem">Websites</a></li>
             <li role="none"><a href="/servicos/relacoes-publicas.html" class="header__dropdown-link" role="menuitem">Relações Públicas</a></li>
-          </ul>
-        </li>
-
-        <!-- PORTFÓLIO -->
-        <li class="header__nav-item header__nav-item--has-dropdown">
-          <button type="button" class="header__nav-link header__nav-link--btn"
-                  aria-haspopup="true" aria-expanded="false" data-dropdown-toggle>Portfólio</button>
-          <ul class="header__dropdown" role="menu">
-            <li role="none"><a href="/portfolio.html" class="header__dropdown-link" role="menuitem">Ver todos os trabalhos</a></li>
-            <li role="none"><a href="/portfolio.html?filter=design-grafico" class="header__dropdown-link" role="menuitem">Design Gráfico</a></li>
-            <li role="none"><a href="/portfolio.html?filter=marketing-digital" class="header__dropdown-link" role="menuitem">Marketing Digital</a></li>
-            <li role="none"><a href="/portfolio.html?filter=branding" class="header__dropdown-link" role="menuitem">Branding</a></li>
-            <li role="none"><a href="/portfolio.html?filter=paineis" class="header__dropdown-link" role="menuitem">Painéis</a></li>
-            <li role="none"><a href="/portfolio.html?filter=relacoes-publicas-e-internacionais" class="header__dropdown-link" role="menuitem">Relações Públicas e Internacionais</a></li>
+            <li role="none"><a href="/servicos/eventos.html" class="header__dropdown-link" role="menuitem">Eventos</a></li>
           </ul>
         </li>
 
         <!-- LOJA -->
+        <li class="header__nav-item"><a href="/portfolio.html" class="header__nav-link">Portfólio</a></li>
         <li class="header__nav-item"><a href="/loja.html" class="header__nav-link">Loja</a></li>
         <li class="header__nav-item"><a href="/recursos.html" class="header__nav-link">Recursos</a></li>
         <li class="header__nav-item"><a href="/contacto.html" class="header__nav-link">Contacto</a></li>
@@ -70,6 +58,33 @@
         </span>
       </button>
     </div>
+
+  <!-- Botão flutuante de chamada -->
+<div class="call-float" id="call-float">
+  <button class="call-float__btn" id="call-float-toggle" aria-label="Solicitar chamada" title="Ligar para si">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 11.5 19.79 19.79 0 0 1 1.61 2.84 2 2 0 0 1 3.59 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.5a16 16 0 0 0 6 6l.86-.86a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.5 16l.42.92z"/></svg>
+  </button>
+
+  <div class="call-float__panel" id="call-float-panel" role="dialog" aria-modal="true" aria-label="Solicitar chamada" hidden>
+    <button class="call-float__close" id="call-float-close" aria-label="Fechar">✕</button>
+    <h3 class="call-float__title">Ligamos para si</h3>
+    <p class="call-float__sub">Deixe o seu nome e número — contactamos em breve.</p>
+    <form class="call-float__form" id="call-float-form" novalidate>
+      <div class="field">
+        <label class="field__label" for="cf-nome">Nome<span class="field__required">*</span></label>
+        <input class="field__input" id="cf-nome" name="nome" type="text" required autocomplete="name" placeholder="O seu nome">
+      </div>
+      <div class="field">
+        <label class="field__label" for="cf-telefone">Telefone<span class="field__required">*</span></label>
+        <input class="field__input" id="cf-telefone" name="telefone" type="tel" required autocomplete="tel" placeholder="+258 8X XXX XXXX">
+      </div>
+      <div class="field" style="display:none" id="cf-msg-wrap">
+        <p class="call-float__feedback" id="cf-feedback"></p>
+      </div>
+      <button type="submit" class="btn btn--primary btn--full" id="cf-submit">Solicitar chamada</button>
+    </form>
+  </div>
+</div>
 
   </div>
 
