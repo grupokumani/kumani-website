@@ -22,12 +22,14 @@ import { initEquipa } from './modules/equipa.js';
 import { initSearch } from './modules/search.js';
 import { initWhatsappFloat } from './modules/whatsapp-float.js';
 import { initRevealOnScroll } from './utils/reveal-on-scroll.js';
+import { initCallFloat } from './modules/call-float.js';
 
 async function bootstrap() {
   await loadAllPartials();
   initNav();
   initSearch();
   initWhatsappFloat();
+  initCallFloat();
   initBackButton();
 
   const page = document.body.dataset.page;

@@ -57,9 +57,8 @@ function abrirModal(item) {
         </div>
         <p class="portfolio-modal__desc">${item.descricao || ''}</p>
         <div class="portfolio-modal__actions">
-          <a href="https://wa.me/${NUMERO_WHATSAPP}?text=${mensagem}"
-             class="btn btn--primary portfolio-modal__cta"
-             target="_blank" rel="noopener">
+          <a href="/contacto.html?origem=portfolio&categoria=${encodeURIComponent(item.categoriaLabel || '')}&slug=${encodeURIComponent(item.slug || '')}"
+             class="btn btn--primary portfolio-modal__cta">
             Solicitar orçamento →
           </a>
           <button type="button" class="btn btn--secondary" data-modal-close>Fechar</button>
