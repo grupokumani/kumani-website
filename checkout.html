@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Checkout — KUMANI</title>
+  <title>Checkout</title>
   <link rel="icon" type="image/svg+xml" href="/assets/icons/favicon.svg">
-    <link rel="stylesheet" href="/css/tokens/colors.css">
+  <link rel="stylesheet" href="/css/tokens/colors.css">
   <link rel="stylesheet" href="/css/tokens/typography.css">
   <link rel="stylesheet" href="/css/tokens/spacing.css">
   <link rel="stylesheet" href="/css/tokens/breakpoints.css">
@@ -14,85 +14,254 @@
   <link rel="stylesheet" href="/css/base/reset.css">
   <link rel="stylesheet" href="/css/base/elements.css">
   <link rel="stylesheet" href="/css/layout/container.css">
-  <link rel="stylesheet" href="/css/layout/grid.css">
   <link rel="stylesheet" href="/css/components/header.css">
-  <link rel="stylesheet" href="/css/components/hero.css">
   <link rel="stylesheet" href="/css/components/button.css">
-  <link rel="stylesheet" href="/css/components/work-block.css">
-  <link rel="stylesheet" href="/css/components/product-card.css">
   <link rel="stylesheet" href="/css/components/form.css">
-  <link rel="stylesheet" href="/css/components/indicators.css">
   <link rel="stylesheet" href="/css/components/clients-cta-footer.css">
-  <link rel="stylesheet" href="/css/pages/portfolio.css">
-  <link rel="stylesheet" href="/css/pages/case-study.css">
-  <link rel="stylesheet" href="/css/pages/servicos.css">
-  <link rel="stylesheet" href="/css/pages/loja.css">
-  <link rel="stylesheet" href="/css/pages/produto.css">
-  <link rel="stylesheet" href="/css/pages/carrinho-checkout.css">
   <link rel="stylesheet" href="/css/utilities/utilities.css">
   <link rel="stylesheet" href="/css/components/search.css">
   <link rel="stylesheet" href="/css/components/whatsapp-float.css">
-  <link rel="stylesheet" href="/css/components/call-float.css">
-  <link rel="canonical" href="https://www.grupokumani.com/">
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="KUMANI">
-  <meta property="og:title" content="KUMANI — O Futuro da Publicidade em Moçambique">
-  <meta property="og:description" content="A KUMANI é uma agência de publicidade moçambicana: publicidade, marketing digital, design gráfico, imagem corporativa, sinalização, impressão, gráfica e móveis.">
-  <meta property="og:url" content="https://www.grupokumani.com/">
-  <meta property="og:image" content="https://www.grupokumani.com/assets/images/hero/kumani-poster.jpg">
-  <meta property="og:locale" content="pt_MZ">
-  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="/css/pages/checkout-v2.css">
 </head>
 <body data-page="checkout">
 
   <a href="#main-content" class="skip-link">Saltar para o conteúdo principal</a>
+  <div data-partial="header"></div>
 
- <div data-partial="header"></div>
- <button type="button" data-back-button aria-label="Voltar à página anterior">Voltar</button>
+  <main id="main-content" class="u-header-offset checkout-page">
 
-  <main id="main-content" class="u-header-offset">
-    <div class="checkout-page">
-      <h1 class="checkout-page__title">Checkout</h1>
-
-      <div class="checkout-grid">
-        <form data-checkout-form novalidate>
-          <div class="field">
-            <label class="field__label" for="c-nome">Nome<span class="field__required">*</span></label>
-            <input class="field__input" id="c-nome" name="nome" type="text" required>
-          </div>
-          <div class="field">
-            <label class="field__label" for="c-telefone">Telefone (M-Pesa/e-Mola)<span class="field__required">*</span></label>
-            <input class="field__input" id="c-telefone" name="telefone" type="tel" required>
-          </div>
-          <div class="field">
-            <label class="field__label" for="c-email">Email</label>
-            <input class="field__input" id="c-email" name="email" type="email">
-          </div>
-          <div class="field">
-            <label class="field__label" for="c-morada">Morada de entrega<span class="field__required">*</span></label>
-            <textarea class="field__textarea" id="c-morada" name="morada" required></textarea>
-          </div>
-
-          <div class="form-message form-message--error" data-checkout-error style="display:none;"></div>
-
-          <button type="submit" class="btn btn--primary btn--full" data-checkout-submit>
-            Enviar o pedido via Whatsapp
-          </button>
-        </form>
-
-        <aside class="checkout-summary">
-          <div data-checkout-items></div>
-          <div class="checkout-summary__total">
-            <span>Total</span>
-            <span data-checkout-total></span>
-          </div>
-        </aside>
+    <!-- PROGRESSO -->
+    <div class="ck-progress">
+      <div class="ck-progress__inner">
+        <button class="ck-progress__step ck-progress__step--active" data-step-btn="1" type="button">
+          <span class="ck-progress__num">1</span>
+          <span class="ck-progress__label">Entrega</span>
+        </button>
+        <div class="ck-progress__line"></div>
+        <button class="ck-progress__step" data-step-btn="2" type="button" disabled>
+          <span class="ck-progress__num">2</span>
+          <span class="ck-progress__label">Pagamento</span>
+        </button>
       </div>
+    </div>
+
+    <div class="ck-layout">
+
+      <!-- COLUNA PRINCIPAL -->
+      <div class="ck-main">
+
+        <!-- PASSO 1: ENTREGA -->
+        <section class="ck-section" id="ck-step-1" data-step="1">
+          <h2 class="ck-section__title">Os seus dados</h2>
+          <p class="ck-section__sub">Só precisamos do essencial para preparar a sua encomenda.</p>
+
+          <form id="ck-form-entrega" novalidate>
+            <div class="ck-field-row">
+              <div class="ck-field">
+                <label class="ck-label" for="ck-nome">Nome completo<span class="ck-req">*</span></label>
+                <input class="ck-input" id="ck-nome" name="nome" type="text" required autocomplete="name" placeholder="O seu nome">
+                <span class="ck-err" id="ck-nome-err"></span>
+              </div>
+              <div class="ck-field">
+                <label class="ck-label" for="ck-email">Email</label>
+                <input class="ck-input" id="ck-email" name="email" type="email" autocomplete="email" placeholder="para@exemplo.com">
+              </div>
+            </div>
+
+            <div class="ck-field">
+              <label class="ck-label" for="ck-whatsapp">
+                WhatsApp<span class="ck-req">*</span>
+                <span class="ck-label-hint">Enviamos a confirmação por aqui</span>
+              </label>
+              <div class="ck-input-prefix-wrap">
+                <span class="ck-input-prefix">+258</span>
+                <input class="ck-input ck-input--prefixed" id="ck-whatsapp" name="whatsapp" type="tel" required autocomplete="tel" placeholder="84 XXX XXXX">
+              </div>
+              <span class="ck-err" id="ck-whatsapp-err"></span>
+            </div>
+
+            <div class="ck-field-row">
+              <div class="ck-field">
+                <label class="ck-label" for="ck-tipo-entrega">Tipo de entrega<span class="ck-req">*</span></label>
+                <div class="ck-radio-group">
+                  <label class="ck-radio-card">
+                    <input type="radio" name="tipoEntrega" value="recolha" checked>
+                    <span class="ck-radio-card__content">
+                      <span class="ck-radio-card__icon">🏪</span>
+                      <span>
+                        <strong>Recolha</strong>
+                        <small>Grátis — Marracuene, Maputo</small>
+                      </span>
+                    </span>
+                  </label>
+                  <label class="ck-radio-card">
+                    <input type="radio" name="tipoEntrega" value="entrega">
+                    <span class="ck-radio-card__content">
+                      <span class="ck-radio-card__icon">🚚</span>
+                      <span>
+                        <strong>Entrega</strong>
+                        <small>Sob custo adicional</small>
+                      </span>
+                    </span>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <div class="ck-field" id="ck-morada-wrap" style="display:none;">
+              <label class="ck-label" for="ck-morada">Morada de entrega<span class="ck-req">*</span></label>
+              <textarea class="ck-input ck-input--textarea" id="ck-morada" name="morada" placeholder="Bairro, rua, número ou referência de localização…" rows="3"></textarea>
+            </div>
+
+            <div class="ck-field">
+              <label class="ck-label" for="ck-nota">
+                Nota para a encomenda
+                <span class="ck-label-hint">Opcional — instruções especiais, prazo, etc.</span>
+              </label>
+              <textarea class="ck-input ck-input--textarea" id="ck-nota" name="nota" placeholder="Ex: preciso para o dia 15, quero em papel fosco…" rows="3"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn--primary btn--full ck-btn-next">
+              Continuar para pagamento →
+            </button>
+          </form>
+        </section>
+
+        <!-- PASSO 2: PAGAMENTO -->
+        <section class="ck-section" id="ck-step-2" data-step="2" hidden>
+          <h2 class="ck-section__title">Método de pagamento</h2>
+          <p class="ck-section__sub">Escolha como prefere pagar. Não processamos dados de cartão — confirma tudo de forma segura.</p>
+
+          <!-- Aviso PaySuite (a remover quando activo) -->
+          <div class="ck-notice ck-notice--info" id="ck-paysuite-aviso">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4m0 4h.01"/></svg>
+            Pagamento online via M-Pesa/e-Mola será activado em breve. Por agora, use transferência ou WhatsApp.
+          </div>
+
+          <!-- OPÇÕES DE PAGAMENTO -->
+          <div class="ck-payment-methods">
+
+            <!-- TRANSFERÊNCIA -->
+            <div class="ck-payment-card" data-method="transferencia">
+              <label class="ck-payment-card__header">
+                <input type="radio" name="metodoPagamento" value="transferencia" checked>
+                <div class="ck-payment-card__info">
+                  <span class="ck-payment-card__title">🏦 Transferência / Depósito</span>
+                  <span class="ck-payment-card__desc">Transfira e envie o comprovativo</span>
+                </div>
+              </label>
+              <div class="ck-payment-card__body">
+                <div class="ck-bank-info">
+                  <div class="ck-bank-info__row">
+                    <span>Banco</span><strong>BCI</strong>
+                  </div>
+                  <div class="ck-bank-info__row">
+                    <span>Titular</span><strong>Marvin Jorge Caetano Torres</strong>
+                  </div>
+                  <div class="ck-bank-info__row">
+                    <span>NIB</span>
+                    <span class="ck-bank-info__nib">
+                      <strong id="ck-nib">0008.0000.2384.0095.101.95</strong>
+                      <button type="button" class="ck-copy-btn" data-copy="0001 0000 00000000000 12" title="Copiar NIB">📋</button>
+                    </span>
+                  </div>
+                  <div class="ck-bank-info__row">
+                    <span>Referência</span><strong id="ck-ref-display">—</strong>
+                  </div>
+                </div>
+                <div class="ck-field" style="margin-top:var(--space-4);">
+                  <label class="ck-label" for="ck-comprovativo">
+                    Comprovativo<span class="ck-req">*</span>
+                    <span class="ck-label-hint">Foto ou PDF — máx. 10MB</span>
+                  </label>
+                  <label class="ck-file-label" for="ck-comprovativo-input">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                    <span id="ck-comprovativo-label">Seleccionar ficheiro</span>
+                    <input type="file" id="ck-comprovativo-input" accept=".jpg,.jpeg,.png,.pdf" style="display:none">
+                  </label>
+                  <span class="ck-err" id="ck-comprovativo-err"></span>
+                </div>
+                <div class="ck-field" style="margin-top:var(--space-3);">
+                  <label class="ck-label" for="ck-ref-transf">Referência da transferência</label>
+                  <input class="ck-input" id="ck-ref-transf" name="refTransf" type="text" placeholder="Ex: TRANSF123456 (opcional)">
+                </div>
+              </div>
+            </div>
+
+            <!-- M-PESA (estrutura pronta, desactivada) -->
+            <div class="ck-payment-card ck-payment-card--disabled" data-method="mpesa">
+              <label class="ck-payment-card__header">
+                <input type="radio" name="metodoPagamento" value="mpesa" disabled>
+                <div class="ck-payment-card__info">
+                  <span class="ck-payment-card__title">📱 M-Pesa</span>
+                  <span class="ck-payment-card__desc">Em breve — pagamento automático</span>
+                </div>
+                <span class="ck-badge ck-badge--soon">Em breve</span>
+              </label>
+            </div>
+
+            <!-- E-MOLA (estrutura pronta, desactivada) -->
+            <div class="ck-payment-card ck-payment-card--disabled" data-method="emola">
+              <label class="ck-payment-card__header">
+                <input type="radio" name="metodoPagamento" value="emola" disabled>
+                <div class="ck-payment-card__info">
+                  <span class="ck-payment-card__title">📱 e-Mola</span>
+                  <span class="ck-payment-card__desc">Em breve — pagamento automático</span>
+                </div>
+                <span class="ck-badge ck-badge--soon">Em breve</span>
+              </label>
+            </div>
+
+            <!-- WHATSAPP -->
+            <div class="ck-payment-card" data-method="whatsapp">
+              <label class="ck-payment-card__header">
+                <input type="radio" name="metodoPagamento" value="whatsapp">
+                <div class="ck-payment-card__info">
+                  <span class="ck-payment-card__title">💬 Encomendar por WhatsApp</span>
+                  <span class="ck-payment-card__desc">Enviamos a lista e combinamos o pagamento consigo</span>
+                </div>
+              </label>
+            </div>
+
+          </div>
+
+          <div class="ck-terms">
+            <label class="ck-checkbox">
+              <input type="checkbox" id="ck-termos" required>
+              <span>Aceito os <a href="/termos-loja.html" target="_blank">Termos da Loja</a> e autorizo a KUMANI a usar os meus dados para processar esta encomenda.</span>
+            </label>
+            <span class="ck-err" id="ck-termos-err"></span>
+          </div>
+
+          <button type="button" id="ck-btn-pagar" class="btn btn--primary btn--full">
+            Confirmar encomenda
+          </button>
+
+          <button type="button" class="ck-btn-back" data-step-btn="1">← Editar dados de entrega</button>
+        </section>
+
+      </div>
+
+      <!-- COLUNA RESUMO -->
+      <aside class="ck-aside">
+        <div class="ck-summary">
+          <h3 class="ck-summary__title">Resumo do pedido</h3>
+          <div class="ck-summary__items" data-checkout-items></div>
+          <div class="ck-summary__divider"></div>
+          <div class="ck-summary__total-row">
+            <span>Total</span>
+            <strong class="ck-summary__total-value" data-checkout-total>—</strong>
+          </div>
+          <p class="ck-summary__note" id="ck-ref-nota" style="display:none">
+            Use a referência <strong id="ck-ref-aside">—</strong> na transferência.
+          </p>
+        </div>
+      </aside>
+
     </div>
   </main>
 
   <div data-partial="footer"></div>
-
   <script type="module" src="/js/main.js"></script>
 </body>
 </html>

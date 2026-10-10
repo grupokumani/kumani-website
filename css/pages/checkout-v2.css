@@ -1,0 +1,531 @@
+/* ============================================
+   KUMANI — CHECKOUT v2
+   2 passos: Entrega → Pagamento
+   Design premium, mobile-first
+   ============================================ */
+
+.checkout-page {
+  min-height: 100vh;
+  background: var(--color-bg-subtle);
+  padding-bottom: var(--space-11);
+}
+
+/* --- Progresso --- */
+.ck-progress {
+  background: var(--color-neutral-0);
+  border-bottom: 1px solid var(--color-border);
+  padding: var(--space-4) var(--space-container-x);
+  position: sticky;
+  top: 72px;
+  z-index: 10;
+}
+
+.ck-progress__inner {
+  max-width: 600px;
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.ck-progress__step {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  color: var(--color-neutral-400);
+  font-size: var(--fs-sm);
+  transition: color 200ms ease;
+}
+
+.ck-progress__step--active,
+.ck-progress__step--done {
+  color: var(--kumani-green);
+  font-weight: 700;
+}
+
+.ck-progress__num {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 2px solid currentColor;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+  flex-shrink: 0;
+  transition: background 200ms ease;
+}
+
+.ck-progress__step--active .ck-progress__num {
+  background: var(--kumani-green);
+  color: var(--color-neutral-0);
+  border-color: var(--kumani-green);
+}
+
+.ck-progress__step--done .ck-progress__num {
+  background: var(--kumani-green);
+  color: var(--color-neutral-0);
+  border-color: var(--kumani-green);
+}
+
+.ck-progress__line {
+  flex: 1;
+  height: 2px;
+  background: var(--color-border);
+  border-radius: 2px;
+}
+
+/* --- Layout 2 colunas --- */
+.ck-layout {
+  max-width: 1100px;
+  margin: var(--space-7) auto 0;
+  padding-inline: var(--space-container-x);
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: var(--space-6);
+  align-items: start;
+}
+
+/* --- Secção (passo) --- */
+.ck-section {
+  background: var(--color-neutral-0);
+  border-radius: 16px;
+  padding: var(--space-7);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+}
+
+.ck-section__title {
+  font-size: var(--fs-xl);
+  font-weight: 700;
+  margin-bottom: var(--space-1);
+}
+
+.ck-section__sub {
+  color: var(--color-text-secondary);
+  font-size: var(--fs-sm);
+  margin-bottom: var(--space-6);
+}
+
+/* --- Campos --- */
+.ck-field-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+  margin-bottom: var(--space-4);
+}
+
+.ck-field {
+  margin-bottom: var(--space-4);
+}
+
+.ck-label {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-2);
+}
+
+.ck-req {
+  color: var(--color-danger);
+}
+
+.ck-label-hint {
+  font-size: 10px;
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: 0;
+  color: var(--color-neutral-400);
+}
+
+.ck-input {
+  width: 100%;
+  padding: var(--space-3) var(--space-4);
+  border: 1.5px solid var(--color-border);
+  border-radius: 10px;
+  font-size: var(--fs-base);
+  font-family: var(--font-primary);
+  color: var(--color-text-primary);
+  background: var(--color-neutral-0);
+  transition: border-color 150ms ease, box-shadow 150ms ease;
+  box-sizing: border-box;
+}
+
+.ck-input:focus {
+  outline: none;
+  border-color: var(--kumani-green);
+  box-shadow: 0 0 0 3px rgba(45,122,6,0.12);
+}
+
+.ck-input--error {
+  border-color: var(--color-danger) !important;
+}
+
+.ck-input--textarea {
+  resize: vertical;
+  min-height: 88px;
+}
+
+.ck-input-prefix-wrap {
+  display: flex;
+  align-items: stretch;
+}
+
+.ck-input-prefix {
+  display: flex;
+  align-items: center;
+  padding: var(--space-3) var(--space-3);
+  background: var(--color-bg-subtle);
+  border: 1.5px solid var(--color-border);
+  border-right: none;
+  border-radius: 10px 0 0 10px;
+  font-size: var(--fs-sm);
+  font-weight: 700;
+  color: var(--color-text-secondary);
+  white-space: nowrap;
+}
+
+.ck-input--prefixed {
+  border-radius: 0 10px 10px 0;
+  flex: 1;
+}
+
+.ck-err {
+  display: block;
+  font-size: var(--fs-xs);
+  color: var(--color-danger);
+  margin-top: 4px;
+  min-height: 16px;
+}
+
+/* --- Radio cards (tipo entrega) --- */
+.ck-radio-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3);
+}
+
+.ck-radio-card {
+  display: block;
+  cursor: pointer;
+}
+
+.ck-radio-card input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.ck-radio-card__content {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  border: 1.5px solid var(--color-border);
+  border-radius: 12px;
+  transition: border-color 150ms ease, background 150ms ease;
+  font-size: var(--fs-sm);
+}
+
+.ck-radio-card__content strong { display: block; margin-bottom: 2px; }
+.ck-radio-card__content small { color: var(--color-text-secondary); font-size: 11px; }
+
+.ck-radio-card__icon { font-size: 1.3rem; flex-shrink: 0; }
+
+.ck-radio-card input:checked + .ck-radio-card__content {
+  border-color: var(--kumani-green);
+  background: rgba(45,122,6,0.04);
+}
+
+/* --- Métodos de pagamento --- */
+.ck-payment-methods {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-bottom: var(--space-5);
+}
+
+.ck-payment-card {
+  border: 1.5px solid var(--color-border);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: border-color 150ms ease;
+}
+
+.ck-payment-card:has(input:checked) {
+  border-color: var(--kumani-green);
+}
+
+.ck-payment-card--disabled {
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+.ck-payment-card__header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-4);
+  cursor: pointer;
+}
+
+.ck-payment-card__header input[type="radio"] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--kumani-green);
+  flex-shrink: 0;
+}
+
+.ck-payment-card__info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.ck-payment-card__title { font-size: var(--fs-base); font-weight: 700; }
+.ck-payment-card__desc { font-size: var(--fs-xs); color: var(--color-text-secondary); }
+
+.ck-payment-card__body {
+  padding: 0 var(--space-4) var(--space-4);
+}
+
+.ck-badge {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 20px;
+  flex-shrink: 0;
+}
+
+.ck-badge--soon {
+  background: var(--color-bg-subtle);
+  color: var(--color-neutral-500);
+  border: 1px solid var(--color-border);
+}
+
+/* --- Info bancária --- */
+.ck-bank-info {
+  background: var(--color-bg-subtle);
+  border-radius: 10px;
+  padding: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.ck-bank-info__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: var(--fs-sm);
+  gap: var(--space-4);
+}
+
+.ck-bank-info__row span:first-child {
+  color: var(--color-text-secondary);
+  flex-shrink: 0;
+}
+
+.ck-bank-info__nib {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.ck-copy-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 2px 4px;
+  border-radius: 4px;
+  transition: background 150ms ease;
+}
+
+.ck-copy-btn:hover { background: var(--color-border); }
+
+/* --- Upload de ficheiro --- */
+.ck-file-label {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  border: 1.5px dashed var(--color-border);
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: var(--fs-sm);
+  color: var(--color-text-secondary);
+  transition: border-color 150ms ease, color 150ms ease;
+}
+
+.ck-file-label:hover {
+  border-color: var(--kumani-green);
+  color: var(--kumani-green);
+}
+
+/* --- Termos --- */
+.ck-terms {
+  margin-bottom: var(--space-5);
+}
+
+.ck-checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  font-size: var(--fs-sm);
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  line-height: 1.5;
+}
+
+.ck-checkbox input {
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
+  accent-color: var(--kumani-green);
+  flex-shrink: 0;
+}
+
+.ck-checkbox a { color: var(--kumani-green); text-decoration: underline; }
+
+/* --- Botões nav --- */
+.ck-btn-next {
+  margin-top: var(--space-2);
+}
+
+.ck-btn-back {
+  display: block;
+  width: 100%;
+  margin-top: var(--space-3);
+  background: none;
+  border: none;
+  color: var(--color-text-secondary);
+  font-size: var(--fs-sm);
+  cursor: pointer;
+  text-align: center;
+  padding: var(--space-3);
+  transition: color 150ms ease;
+}
+
+.ck-btn-back:hover { color: var(--kumani-green); }
+
+/* --- Aviso --- */
+.ck-notice {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  border-radius: 10px;
+  font-size: var(--fs-sm);
+  margin-bottom: var(--space-5);
+  line-height: 1.5;
+}
+
+.ck-notice--info {
+  background: #fffbeb;
+  border: 1px solid #fbbf24;
+  color: #92400e;
+}
+
+/* --- Resumo aside --- */
+.ck-aside {
+  position: sticky;
+  top: 140px;
+}
+
+.ck-summary {
+  background: var(--color-neutral-0);
+  border-radius: 16px;
+  padding: var(--space-6);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+}
+
+.ck-summary__title {
+  font-size: var(--fs-base);
+  font-weight: 700;
+  margin-bottom: var(--space-5);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.ck-summary__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+}
+
+.ck-summary__item-name {
+  font-size: var(--fs-sm);
+  line-height: 1.4;
+  flex: 1;
+}
+
+.ck-summary__item-qty {
+  font-size: var(--fs-xs);
+  color: var(--color-text-secondary);
+}
+
+.ck-summary__item-price {
+  font-size: var(--fs-sm);
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.ck-summary__divider {
+  height: 1px;
+  background: var(--color-border);
+  margin: var(--space-4) 0;
+}
+
+.ck-summary__total-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: var(--fs-base);
+  font-weight: 700;
+}
+
+.ck-summary__total-value {
+  color: var(--kumani-green);
+  font-size: var(--fs-xl);
+}
+
+.ck-summary__note {
+  margin-top: var(--space-4);
+  font-size: var(--fs-xs);
+  color: var(--color-text-secondary);
+  background: var(--color-bg-subtle);
+  padding: var(--space-3);
+  border-radius: 8px;
+  line-height: 1.5;
+}
+
+/* --- Responsive --- */
+@media (max-width: 1023px) {
+  .ck-layout {
+    grid-template-columns: 1fr;
+  }
+  .ck-aside {
+    position: static;
+    order: -1;
+  }
+}
+
+@media (max-width: 600px) {
+  .ck-section { padding: var(--space-5); }
+  .ck-field-row { grid-template-columns: 1fr; }
+  .ck-radio-group { grid-template-columns: 1fr; }
+  .ck-progress { top: 60px; }
+}
