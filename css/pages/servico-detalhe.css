@@ -203,3 +203,105 @@
   position: relative;
   z-index: 1;
 }
+
+/* --- Pilares de eventos com imagem real --- */
+.eventos-pilares-visual {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-6);
+  margin-top: var(--space-8);
+}
+
+.eventos-pilar-visual {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  overflow: hidden;
+}
+
+.eventos-pilar-visual__img {
+  aspect-ratio: 16/9;
+  overflow: hidden;
+}
+
+.eventos-pilar-visual__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 400ms ease;
+}
+
+.eventos-pilar-visual:hover .eventos-pilar-visual__img img {
+  transform: scale(1.04);
+}
+
+.eventos-pilar-visual__body {
+  padding: var(--space-5);
+}
+
+.eventos-pilar-visual__body h3 {
+  font-size: var(--fs-md);
+  font-weight: 700;
+  margin-bottom: var(--space-2);
+  border-left: 3px solid var(--kumani-green);
+  padding-left: var(--space-3);
+}
+
+.eventos-pilar-visual__body p {
+  font-size: var(--fs-sm);
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+}
+
+/* --- Grelha de tipos (já existia, garantir que está aqui) --- */
+.eventos-tipos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-4);
+  margin-top: var(--space-8);
+}
+
+.eventos-tipo-card {
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  position: relative;
+}
+
+.eventos-tipo-card__img {
+  aspect-ratio: 4/3;
+  overflow: hidden;
+}
+
+.eventos-tipo-card__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 500ms ease;
+}
+
+.eventos-tipo-card:hover .eventos-tipo-card__img img {
+  transform: scale(1.05);
+}
+
+.eventos-tipo-card__label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(27,27,27,0.85) 0%, transparent 100%);
+  color: var(--color-neutral-0);
+  font-size: var(--fs-sm);
+  font-weight: 700;
+  padding: var(--space-5) var(--space-4) var(--space-3);
+  letter-spacing: var(--ls-wide);
+}
+
+@media (max-width: 1023px) {
+  .eventos-pilares-visual { grid-template-columns: 1fr; }
+  .eventos-tipos { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 480px) {
+  .eventos-tipos { grid-template-columns: 1fr; }
+}
