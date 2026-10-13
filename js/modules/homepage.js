@@ -99,10 +99,21 @@ export async function initHomepage() {
   const clientsGridEl = qs('[data-clients-grid]');
 
   if (workGridEl) {
-   const portfolio = await fetchJSON('data/portfolio.json');
-   const destaques = portfolio.filter((item) => item.destaqueHome);
-   workGridEl.innerHTML = renderWorkGrid(destaques);
+    const portfolio = await fetchJSON('data/portfolio.json');
+    const destaques = portfolio.filter((item) => item.destaqueHome);
+    workGridEl.innerHTML = renderWorkGrid(destaques);
+
+    // Abrir modal ao clicar num card — mesmo comportamento da página de portfólio
+    workGridEl.addEventListener('click', (e) => {
+      const card = e.target.closest('[data-slug]');
+      if (!card) return;
+      const item = portfolio.find((p) => p.slug === card.dataset.slug);
+      if (item && window.abrirPortfolioModal) {
+        window.abrirPortfolioModal(item);
+      }
+    });
   }
+
     // Modal para os trabalhos em destaque na homepage
   if (workGridEl) {
     workGridEl.addEventListener('click', (e) => {
@@ -124,8 +135,45 @@ export async function initHomepage() {
     const produtos = await fetchJSON('data/produtos.json');
     const destaques = produtos.filter((item) => item.destaqueHome).slice(0, 6);
     productGridEl.innerHTML = destaques.map(renderProductCard).join('');
-  }
 
+    // Stepper de quantidade
+    productGridEl.querySelectorAll('[data-qty-widget]').forEach((widget) => {
+      const min = parseInt(widget.dataset.qtyMin, 10) || 1;
+      const valueEl = widget.querySelector('[data-qty-value]');
+      widget.querySelector('[data-qty-decrease]')?.addEventListener('click', () => {
+        const atual = parseInt(valueEl.textContent, 10);
+        if (atual > min) valueEl.textContent = atual - 1;
+      });
+      widget.querySelector('[data-qty-increase]')?.addEventListener('click', () => {
+        valueEl.textContent = parseInt(valueEl.textContent, 10) + 1;
+      });
+    });
+
+    // Botão "Pedir agora" — adicionar ao carrinho
+    productGridEl.addEventListener('click', (e) => {
+      const btn = e.target.closest('[data-add-to-cart]');
+      if (!btn) return;
+      const card = btn.closest('[data-product-id]');
+      if (!card) return;
+      const produto = destaques.find((p) => p.id === card.dataset.productId);
+      if (!produto) return;
+      const quantidade = parseInt(card.querySelector('[data-qty-value]')?.textContent, 10) || 1;
+
+      // Importar e usar adicionarItem dinamicamente para não criar dependência circular
+      import('./cart.js').then(({ adicionarItem }) => {
+        adicionarItem(produto, quantidade);
+        // Feedback visual rápido no botão
+        const orig = btn.textContent;
+        btn.textContent = '✓ Adicionado!';
+        btn.disabled = true;
+        setTimeout(() => {
+          btn.textContent = orig;
+          btn.disabled = false;
+        }, 1800);
+      });
+    });
+  }
+  
   if (clientsGridEl) {
     const clientes = await fetchJSON('data/clientes.json');
     clientsGridEl.innerHTML = clientes.map(renderClientLogo).join('');
